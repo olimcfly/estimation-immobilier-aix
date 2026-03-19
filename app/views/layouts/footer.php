@@ -6,7 +6,7 @@
   <div class="container footer-container">
     <div class="footer-grid">
       <div class="footer-column footer-brand-column">
-        <p class="brand-footer">Maison d’Estimation <span>Bordeaux</span></p>
+        <p class="brand-footer">Estimation Immobilier <span>Lanion</span></p>
         <p class="muted footer-description">L’expertise immobilière d’exception au cœur de Bordeaux. Une estimation précise, confidentielle et élégante de votre patrimoine.</p>
       </div>
 
@@ -22,7 +22,7 @@
       <!-- COLONNE 1: LOGO + DESCRIPTION -->
       <div>
         <p class="brand-footer">
-          Estimation <span>Bordeaux</span>
+          Estimation Immobilier <span>Lanion</span>
         </p>
         <p class="muted" style="margin: 0.8rem 0 0; font-size: 0.95rem; line-height: 1.6;">
           Plateforme d'estimation immobilière fiable et rapide à Bordeaux. 
@@ -122,7 +122,7 @@
     </div>
 
     <div class="footer-bottom">
-      <p class="muted">&copy; 2026 Maison d’Estimation Bordeaux. Tous droits réservés.</p>
+      <p class="muted">&copy; 2026 Estimation Immobilier Lanion. Tous droits réservés.</p>
     </div>
   </div>
 </footer>

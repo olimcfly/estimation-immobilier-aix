@@ -449,7 +449,7 @@
 <!-- ============================= -->
 <header class="site-header">
   <div class="container nav-wrapper">
-    <a href="/" class="brand">Bordeaux<span>Estimate</span></a>
+    <a href="/" class="brand">Estimation Immobilier <span>Lanion</span></a>
 
     <nav class="top-nav" aria-label="Navigation principale">
       <div class="nav-item has-dropdown">

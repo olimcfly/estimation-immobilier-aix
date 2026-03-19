@@ -242,8 +242,8 @@ em {
 
 /* Hero section - FULL WIDTH PREMIUM */
 .page-hero {
-  padding: 0;
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 60%, #001a3a 100%);
+  padding: 0 !important;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 60%, #001a3a 100%) !important;
   position: relative;
   overflow: hidden;
 }
@@ -269,10 +269,14 @@ em {
   max-width: 860px;
   margin: 0 auto;
   text-align: center;
-  background: none;
-  border: none;
-  box-shadow: none;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
   padding: 0;
+  opacity: 1;
+  animation: none;
+  transform: none;
 }
 
 .page-hero-inner .eyebrow {

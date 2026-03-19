@@ -15,118 +15,149 @@ $featuredDistricts = defined('FEATURED_DISTRICTS') && is_array(FEATURED_DISTRICT
 $page_title = sprintf('Estimation Immobilière %s | Évaluez Votre Bien en 1 Minute', $cityName);
 ?>
 
-<!-- ============================================ -->
+<!-- ================================================ -->
 <!-- HERO ULTRA-PREMIUM -->
-<!-- ============================================ -->
-<section class="hero" style="--primary: #003f87; --primary-rgb: 0, 63, 135; --accent: #FFD700; --accent-rgb: 255, 215, 0;">
-  <div class="container hero-grid">
-    <!-- COLONNE 1: HEADLINE + COPY -->
-    <div>
-      <!-- BADGE -->
-      <p class="eyebrow">
-        <i class="fas fa-certificate"></i> Estimation certifiée • Données 2024
-      </p>
-
-      <!-- HEADLINE H1 -->
-      <h1>Estimez votre bien immobilier à <?= e($cityName) ?></h1>
-
-      <!-- SUBHEADLINE -->
-      <p class="lead">Bienvenue en <?= e($regionName) ?></p>
-
-      <figure style="margin: 1.5rem 0 0; border-radius: 14px; overflow: hidden; border: 2px solid rgba(var(--accent-rgb), 0.55);">
-        <img src="<?= e($heroImageUrl) ?>" alt="<?= e($heroImageAlt) ?>" style="width: 100%; height: auto; display: block; aspect-ratio: 16 / 9; object-fit: cover;">
-      </figure>
-
-      <p style="margin-top: 1rem; color: var(--text); line-height: 1.7;">
-        Découvrez la vraie valeur de votre propriété à <?= e($cityName) ?> et sa région.
-        Depuis le port jusqu'aux hauteurs de Brélévenez, nos estimations couvrent toute la zone.
-      </p>
-
-      <p style="margin-top: 0.8rem; font-weight: 700; color: var(--primary);">
-        Prix moyen constaté : <?= number_format((float) $prixM2Moyen, 0, ',', ' ') ?>€ / m²
-      </p>
-
-      <!-- TRUST INDICATORS -->
-      <ul class="trust-list">
-        <li>
-          <i class="fas fa-users"></i> 
-          <strong><?= e($featuredDistricts[0] ?? '') ?></strong> • Quartier central prisé
-        </li>
-        <li>
-          <i class="fas fa-star"></i> 
-          <strong><?= e($featuredDistricts[1] ?? '') ?></strong> • Ambiance littorale du territoire
-        </li>
-        <li>
-          <i class="fas fa-shield-alt"></i> 
-          <strong><?= e($featuredDistricts[2] ?? '') ?></strong> • Secteur recherché près du port
-        </li>
-      </ul>
-
-      <!-- SOCIAL PROOF -->
-      <div style="margin-top: 2rem; padding: 1.2rem; background: rgba(var(--primary-rgb), 0.04); border-radius: 12px; border-left: 3px solid var(--primary);">
-        <p style="margin: 0 0 0.5rem 0; font-size: 0.85rem; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">
-          <i class="fas fa-quote-left"></i> Témoignage client
+<!-- ================================================ -->
+<section class="section page-hero" style="padding: var(--space-20) var(--space-4) var(--space-16);">
+  <div class="container">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-8); align-items: center;">
+      
+      <!-- COLONNE GAUCHE: HEADLINE + COPY -->
+      <div>
+        <!-- Badge -->
+        <p class="eyebrow">
+          <i class="fas fa-certificate"></i> Estimation certifiée • Données 2024
         </p>
-        <p style="margin: 0; font-style: italic; color: var(--text); line-height: 1.6;">
-          "L'estimation était très proche de l'offre reçue. Recommandé pour avoir un avis fiable avant de vendre !"
+
+        <!-- H1 Principal -->
+        <h1 style="margin-bottom: var(--space-4); background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+          Estimez votre bien immobilier à <?= htmlspecialchars($cityName); ?>
+        </h1>
+
+        <!-- Subheadline -->
+        <p class="lead" style="margin-bottom: var(--space-6);">
+          Découvrez la vraie valeur de votre propriété en moins d'une minute. Analyse précise basée sur 5000+ transactions réelles de votre région.
         </p>
-        <p style="margin: 0.8rem 0 0; font-size: 0.85rem; color: var(--muted); font-weight: 600;">
-          — Propriétaire • <?= e($cityName) ?>
+
+        <!-- Image Hero -->
+        <figure style="margin: var(--space-6) 0; border-radius: var(--radius-xl); overflow: hidden; border: 2px solid var(--accent); box-shadow: var(--shadow-lg);">
+          <img 
+            src="<?= htmlspecialchars($heroImageUrl); ?>" 
+            alt="<?= htmlspecialchars($heroImageAlt); ?>" 
+            style="width: 100%; height: auto; display: block; aspect-ratio: 16 / 9; object-fit: cover; transition: transform var(--trans-slow);"
+            onmouseover="this.style.transform='scale(1.03)'"
+            onmouseout="this.style.transform='scale(1)'"
+          >
+        </figure>
+
+        <!-- Description -->
+        <p style="margin-bottom: var(--space-6); color: var(--text); line-height: var(--line-lg);">
+          De <?= htmlspecialchars($featuredDistricts[0] ?? ''); ?> au cœur de la ville jusqu'aux hauteurs de <?= htmlspecialchars($featuredDistricts[2] ?? ''); ?>, nos estimations couvrent toute la zone de <?= htmlspecialchars($cityName); ?> et région.
         </p>
+
+        <!-- Stat clé -->
+        <div style="background: linear-gradient(135deg, rgba(0, 63, 135, 0.1), rgba(255, 215, 0, 0.08)); border-radius: var(--radius-lg); padding: var(--space-4); margin-bottom: var(--space-6);">
+          <p style="margin: 0; font-size: var(--size-xs); color: var(--text-muted); text-transform: uppercase; font-weight: 600;">
+            <i class="fas fa-chart-line"></i> Prix moyen constaté
+          </p>
+          <p style="margin: var(--space-2) 0 0; font-family: var(--font-primary); font-size: var(--size-3xl); font-weight: 800; color: var(--primary);">
+            <?= number_format((int) $prixM2Moyen, 0, ',', ' '); ?>€ / m²
+          </p>
+        </div>
+
+        <!-- Trust Indicators -->
+        <div style="display: flex; flex-direction: column; gap: var(--space-3); margin-bottom: var(--space-6);">
+          <div style="display: flex; align-items: center; gap: var(--space-2);">
+            <i class="fas fa-check-circle" style="color: var(--success); font-weight: 700;"></i>
+            <span style="color: var(--text);">
+              <strong><?= htmlspecialchars($featuredDistricts[0] ?? ''); ?></strong> • Quartier central très prisé
+            </span>
+          </div>
+          <div style="display: flex; align-items: center; gap: var(--space-2);">
+            <i class="fas fa-check-circle" style="color: var(--success); font-weight: 700;"></i>
+            <span style="color: var(--text);">
+              <strong><?= htmlspecialchars($featuredDistricts[1] ?? ''); ?></strong> • Ambiance littorale recherchée
+            </span>
+          </div>
+          <div style="display: flex; align-items: center; gap: var(--space-2);">
+            <i class="fas fa-check-circle" style="color: var(--success); font-weight: 700;"></i>
+            <span style="color: var(--text);">
+              <strong><?= htmlspecialchars($featuredDistricts[2] ?? ''); ?></strong> • Secteur patrimoine en hausse
+            </span>
+          </div>
+        </div>
+
+        <!-- Social Proof -->
+        <div style="background: rgba(0, 63, 135, 0.04); border-left: 4px solid var(--primary); border-radius: var(--radius-lg); padding: var(--space-4); margin-bottom: var(--space-6);">
+          <p style="margin: 0 0 var(--space-2) 0; font-size: var(--size-xs); color: var(--primary); text-transform: uppercase; font-weight: 600; letter-spacing: 0.05em;">
+            <i class="fas fa-quote-left"></i> Témoignage client
+          </p>
+          <p style="margin: 0; font-style: italic; color: var(--text); line-height: var(--line-lg);">
+            "L'estimation était très proche de l'offre reçue. Super rapide et fiable. Je recommande !"
+          </p>
+          <p style="margin: var(--space-3) 0 0; font-size: var(--size-sm); color: var(--text-muted); font-weight: 600;">
+            — Propriétaire • <?= htmlspecialchars($cityName); ?>
+          </p>
+        </div>
+
+        <!-- Boutons CTA -->
+        <div style="display: flex; gap: var(--space-4); flex-wrap: wrap;">
+          <a href="#form-estimation" class="btn btn-primary" style="display: flex; align-items: center; gap: var(--space-2);">
+            <i class="fas fa-bolt"></i> Estimer gratuitement
+          </a>
+          <a href="#how-it-works" class="btn btn-outline" style="display: flex; align-items: center; gap: var(--space-2);">
+            <i class="fas fa-info-circle"></i> Comment ça marche
+          </a>
+        </div>
       </div>
 
-      <!-- CTA BUTTONS -->
-      <div class="hero-actions">
-        <a href="#form-estimation" class="btn btn-primary" style="background: #003f87; border-color: #003f87;">
-          <i class="fas fa-bolt"></i> Estimer gratuitement
-        </a>
-        <a href="#how-it-works" class="btn btn-ghost">
-          <i class="fas fa-info-circle"></i> Comment ça marche
-        </a>
-      </div>
-    </div>
-
-    <!-- COLONNE 2: FORMULAIRE HERO -->
-    <aside class="hero-panel card" id="form-estimation">
-      <div class="panel-header">
-        <h2>
-          <i class="fas fa-calculator"></i> Estimation gratuite
+      <!-- COLONNE DROITE: FORMULAIRE HERO -->
+      <aside class="card" id="form-estimation" style="padding: var(--space-8); position: sticky; top: 100px; height: fit-content;">
+        <!-- En-tête -->
+        <h2 style="margin-top: 0; margin-bottom: var(--space-2); display: flex; align-items: center; gap: var(--space-2);">
+          <i class="fas fa-calculator" style="color: var(--primary);"></i> Estimation gratuite
         </h2>
-        <p class="muted">Remplissez les infos de votre bien pour obtenir votre fourchette de prix.</p>
-      </div>
+        <p style="margin: 0 0 var(--space-6) 0; color: var(--text-secondary); font-size: var(--size-sm);">
+          Remplissez les infos de votre bien pour obtenir votre fourchette de prix estimée en 60 secondes.
+        </p>
 
-      <form action="/estimation" method="post" class="form-grid">
-        <!-- LIGNE 1: LOCALISATION -->
-        <div class="form-row">
-          <label for="city">
-            <span><i class="fas fa-map-marker-alt"></i> Ville</span>
+        <!-- Formulaire -->
+        <form action="/estimation" method="post" class="form-grid" style="gap: var(--space-3);">
+          
+          <!-- Ville -->
+          <label for="city" class="full-width">
+            <span>
+              <i class="fas fa-map-marker-alt"></i> Ville *
+            </span>
             <input 
               type="text" 
               id="city" 
               name="city" 
-              placeholder="<?= e($cityName) ?>, Perros-Guirec, Trébeurden..." 
+              placeholder="<?= htmlspecialchars($cityName); ?>, Perros-Guirec..." 
               required
-              autocomplete="off"
             >
           </label>
 
-          <label for="postal_code">
-            <span><i class="fas fa-envelope"></i> Code postal</span>
+          <!-- Code postal -->
+          <label for="postal_code" class="full-width">
+            <span>
+              <i class="fas fa-envelope"></i> Code postal *
+            </span>
             <input 
               type="text" 
               id="postal_code" 
               name="postal_code" 
-              placeholder="33000" 
+              placeholder="22300" 
               maxlength="5"
               required
             >
           </label>
-        </div>
 
-        <!-- LIGNE 2: TYPE & SURFACE -->
-        <div class="form-row">
-          <label for="property_type">
-            <span><i class="fas fa-home"></i> Type de bien</span>
+          <!-- Type de bien -->
+          <label for="property_type" class="full-width">
+            <span>
+              <i class="fas fa-home"></i> Type de bien *
+            </span>
             <select id="property_type" name="property_type" required>
               <option value="">-- Sélectionner --</option>
               <option value="apartment">Appartement</option>
@@ -137,8 +168,11 @@ $page_title = sprintf('Estimation Immobilière %s | Évaluez Votre Bien en 1 Min
             </select>
           </label>
 
-          <label for="surface">
-            <span><i class="fas fa-ruler-combined"></i> Surface (m²)</span>
+          <!-- Surface -->
+          <label for="surface" class="full-width">
+            <span>
+              <i class="fas fa-ruler-combined"></i> Surface (m²) *
+            </span>
             <input 
               type="number" 
               id="surface" 
@@ -150,12 +184,12 @@ $page_title = sprintf('Estimation Immobilière %s | Évaluez Votre Bien en 1 Min
               required
             >
           </label>
-        </div>
 
-        <!-- LIGNE 3: PIÈCES & ANNÉE -->
-        <div class="form-row">
-          <label for="rooms">
-            <span><i class="fas fa-door-open"></i> Nombre de pièces</span>
+          <!-- Pièces -->
+          <label for="rooms" class="full-width">
+            <span>
+              <i class="fas fa-door-open"></i> Pièces *
+            </span>
             <input 
               type="number" 
               id="rooms" 
@@ -167,8 +201,11 @@ $page_title = sprintf('Estimation Immobilière %s | Évaluez Votre Bien en 1 Min
             >
           </label>
 
-          <label for="year_built">
-            <span><i class="fas fa-calendar"></i> Année construction</span>
+          <!-- Année construction -->
+          <label for="year_built" class="full-width">
+            <span>
+              <i class="fas fa-calendar"></i> Année construction *
+            </span>
             <input 
               type="number" 
               id="year_built" 
@@ -179,12 +216,12 @@ $page_title = sprintf('Estimation Immobilière %s | Évaluez Votre Bien en 1 Min
               required
             >
           </label>
-        </div>
 
-        <!-- LIGNE 4: ÉTAGE & ÉTAT -->
-        <div class="form-row">
-          <label for="floor">
-            <span><i class="fas fa-building"></i> Étage</span>
+          <!-- Étage -->
+          <label for="floor" class="full-width">
+            <span>
+              <i class="fas fa-building"></i> Étage *
+            </span>
             <select id="floor" name="floor" required>
               <option value="">-- Sélectionner --</option>
               <option value="0">Rez-de-chaussée</option>
@@ -196,8 +233,11 @@ $page_title = sprintf('Estimation Immobilière %s | Évaluez Votre Bien en 1 Min
             </select>
           </label>
 
-          <label for="condition">
-            <span><i class="fas fa-tools"></i> État général</span>
+          <!-- État général -->
+          <label for="condition" class="full-width">
+            <span>
+              <i class="fas fa-tools"></i> État général *
+            </span>
             <select id="condition" name="condition" required>
               <option value="">-- Sélectionner --</option>
               <option value="excellent">Excellent (neuf/rénové)</option>
@@ -206,244 +246,287 @@ $page_title = sprintf('Estimation Immobilière %s | Évaluez Votre Bien en 1 Min
               <option value="poor">Mauvais (gros travaux)</option>
             </select>
           </label>
-        </div>
 
-        <!-- LIGNE 5: CHAMBRES & SALLE BAIN -->
-        <div class="form-row">
+          <!-- Chambres -->
           <label for="bedrooms">
-            <span><i class="fas fa-bed"></i> Chambres</span>
+            <span>
+              <i class="fas fa-bed"></i> Chambres
+            </span>
             <input 
               type="number" 
               id="bedrooms" 
               name="bedrooms" 
               min="0" 
               max="10"
-              placeholder="2" 
-              required
+              placeholder="2"
             >
           </label>
 
+          <!-- Salles de bain -->
           <label for="bathrooms">
-            <span><i class="fas fa-bath"></i> Salles de bain</span>
+            <span>
+              <i class="fas fa-bath"></i> Salles de bain
+            </span>
             <input 
               type="number" 
               id="bathrooms" 
               name="bathrooms" 
               min="0" 
               max="5"
-              placeholder="1" 
-              required
+              placeholder="1"
             >
           </label>
+
+          <!-- Bouton de soumission -->
+          <button type="submit" class="btn btn-primary full-width" style="margin-top: var(--space-2);">
+            <i class="fas fa-bolt"></i> Obtenir mon estimation
+          </button>
+
+          <!-- Reassurance -->
+          <p style="font-size: var(--size-xs); color: var(--text-muted); text-align: center; margin: var(--space-3) 0 0;">
+            <i class="fas fa-check-circle"></i> Gratuit • 
+            <i class="fas fa-zap"></i> 60 secondes • 
+            <i class="fas fa-lock"></i> Sécurisé
+          </p>
+        </form>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================ -->
+<!-- PROCESSUS EXPLICITE -->
+<!-- ================================================ -->
+<section class="section section-alt" id="how-it-works">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">
+        <i class="fas fa-bolt"></i> Processus rapide
+      </p>
+      <h2>Comment fonctionne l'estimation ?</h2>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-6);">
+      <!-- Étape 1 -->
+      <article class="card" style="padding: var(--space-6); text-align: center;">
+        <div style="width: 80px; height: 80px; background: linear-gradient(135deg, rgba(0, 63, 135, 0.15), rgba(255, 215, 0, 0.1)); border-radius: var(--radius-xl); display: flex; align-items: center; justify-content: center; margin: 0 auto var(--space-4);">
+          <i class="fas fa-edit" style="font-size: var(--size-3xl); color: var(--primary);"></i>
         </div>
-
-        <!-- BOUTON SOUMISSION -->
-        <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; font-size: 1rem; padding: 1rem; background: #003f87; border-color: #003f87;">
-          <i class="fas fa-bolt"></i> Obtenir mon estimation gratuite
-        </button>
-
-        <!-- REASSURANCE -->
-        <p class="form-footer" style="text-align: center; margin: 1rem 0 0; font-size: 0.8rem;">
-          <i class="fas fa-check-circle"></i> 100% gratuit • 
-          <i class="fas fa-zap"></i> Résultat en 1 min • 
-          <i class="fas fa-lock"></i> Sécurisé & confidentiel
+        <div style="font-family: var(--font-primary); font-size: var(--size-3xl); font-weight: 800; color: var(--accent); margin-bottom: var(--space-2);">1</div>
+        <h3 style="margin: 0 0 var(--space-2) 0;">Remplissez le formulaire</h3>
+        <p style="margin: 0; color: var(--text-secondary); font-size: var(--size-sm);">
+          Localisation, type, surface, pièces, état. Information essentielles en quelques secondes.
         </p>
-      </form>
-    </aside>
-  </div>
-</section>
-
-<!-- ============================================ -->
-<!-- COMMENT ÇA MARCHE (HOW IT WORKS) -->
-<!-- ============================================ -->
-<section class="section" id="how-it-works">
-  <div class="container">
-    <div class="section-heading">
-      <p class="eyebrow">
-        <i class="fas fa-bolt"></i> Processus simple & rapide
-      </p>
-      <h2>Comment fonctionne notre estimation ?</h2>
-    </div>
-
-    <div class="steps-grid">
-      <!-- ÉTAPE 1 -->
-      <article class="card step-card">
-        <div class="step-icon">
-          <i class="fas fa-edit"></i>
-        </div>
-        <div class="step-number">1</div>
-        <h3>Remplissez le formulaire</h3>
-        <p>Vous entrez les caractéristiques essentielles de votre bien : localisation, type, surface, pièces, état.</p>
       </article>
 
-      <!-- ÉTAPE 2 -->
-      <article class="card step-card">
-        <div class="step-icon">
-          <i class="fas fa-database"></i>
+      <!-- Étape 2 -->
+      <article class="card" style="padding: var(--space-6); text-align: center;">
+        <div style="width: 80px; height: 80px; background: linear-gradient(135deg, rgba(0, 63, 135, 0.15), rgba(255, 215, 0, 0.1)); border-radius: var(--radius-xl); display: flex; align-items: center; justify-content: center; margin: 0 auto var(--space-4);">
+          <i class="fas fa-database" style="font-size: var(--size-3xl); color: var(--primary);"></i>
         </div>
-        <div class="step-number">2</div>
-        <h3>Analyse des données</h3>
-        <p>Notre moteur analyse les références réelles de transactions dans votre quartier pour une évaluation précise.</p>
+        <div style="font-family: var(--font-primary); font-size: var(--size-3xl); font-weight: 800; color: var(--accent); margin-bottom: var(--space-2);">2</div>
+        <h3 style="margin: 0 0 var(--space-2) 0;">Analyse des données</h3>
+        <p style="margin: 0; color: var(--text-secondary); font-size: var(--size-sm);">
+          Notre moteur compare avec 5000+ transactions réelles de votre quartier pour précision maximale.
+        </p>
       </article>
 
-      <!-- ÉTAPE 3 -->
-      <article class="card step-card">
-        <div class="step-icon">
-          <i class="fas fa-chart-bar"></i>
+      <!-- Étape 3 -->
+      <article class="card" style="padding: var(--space-6); text-align: center;">
+        <div style="width: 80px; height: 80px; background: linear-gradient(135deg, rgba(0, 63, 135, 0.15), rgba(255, 215, 0, 0.1)); border-radius: var(--radius-xl); display: flex; align-items: center; justify-content: center; margin: 0 auto var(--space-4);">
+          <i class="fas fa-chart-bar" style="font-size: var(--size-3xl); color: var(--primary);"></i>
         </div>
-        <div class="step-number">3</div>
-        <h3>Recevez l'estimation</h3>
-        <p>Vous obtenez une fourchette de prix, l'analyse comparative et des insights sur votre marché local.</p>
+        <div style="font-family: var(--font-primary); font-size: var(--size-3xl); font-weight: 800; color: var(--accent); margin-bottom: var(--space-2);">3</div>
+        <h3 style="margin: 0 0 var(--space-2) 0;">Recevez l'estimation</h3>
+        <p style="margin: 0; color: var(--text-secondary); font-size: var(--size-sm);">
+          Fourchette de prix, analyse comparative et insights sur votre marché local en quelques secondes.
+        </p>
       </article>
     </div>
   </div>
 </section>
 
-<!-- ============================================ -->
+<!-- ================================================ -->
 <!-- AVANTAGES CLÉS -->
-<!-- ============================================ -->
-<section class="section section-alt" id="benefits">
+<!-- ================================================ -->
+<section class="section">
   <div class="container">
     <div class="section-heading">
       <p class="eyebrow">
-        <i class="fas fa-crown"></i> Pourquoi nous choisir
+        <i class="fas fa-crown"></i> Nos avantages
       </p>
-      <h2>L'estimation immobilière fiable</h2>
+      <h2>L'estimation immobilière fiable et rapide</h2>
     </div>
 
-    <div class="features-grid">
-      <!-- AVANTAGE 1 -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--space-6);">
+      <!-- Avantage 1 -->
       <article class="card feature-card">
         <div class="feature-icon">
           <i class="fas fa-database"></i>
         </div>
         <h3>Données actualisées</h3>
-        <p>Base de données de 5000+ transactions récentes en Gironde. Marché temps réel, pas de données obsolètes.</p>
+        <p>
+          Base de 5000+ transactions récentes. Marché temps réel, jamais de données obsolètes. Toujours à jour.
+        </p>
       </article>
 
-      <!-- AVANTAGE 2 -->
+      <!-- Avantage 2 -->
       <article class="card feature-card">
         <div class="feature-icon">
           <i class="fas fa-robot"></i>
         </div>
         <h3>Algorithme intelligent</h3>
-        <p>Machine learning entraîné sur les tendances de <?= e($cityName) ?> et du <?= e($featuredDistricts[1] ?? 'Trégor') ?>. Précision ±5% en conditions normales.</p>
+        <p>
+          Machine learning entraîné sur les tendances de <?= htmlspecialchars($cityName); ?>. Précision ±5% en conditions normales.
+        </p>
       </article>
 
-      <!-- AVANTAGE 3 -->
+      <!-- Avantage 3 -->
       <article class="card feature-card">
         <div class="feature-icon">
           <i class="fas fa-clock"></i>
         </div>
         <h3>Résultat immédiat</h3>
-        <p>Pas d'attente, pas de formulaire complexe. Estimation complète en moins de 60 secondes.</p>
+        <p>
+          Pas d'attente, pas de formulaire complexe. Estimation complète en moins de 60 secondes. Rapide et efficace.
+        </p>
       </article>
 
-      <!-- AVANTAGE 4 -->
+      <!-- Avantage 4 -->
       <article class="card feature-card">
         <div class="feature-icon">
           <i class="fas fa-shield-alt"></i>
         </div>
         <h3>100% confidentiel</h3>
-        <p>Vos données ne sont jamais vendues. RGPD conforme. Chiffrement SSL/TLS de bout en bout.</p>
+        <p>
+          Vos données ne sont jamais vendues. RGPD conforme. Chiffrement SSL/TLS de bout en bout. Sécurisé.
+        </p>
       </article>
 
-      <!-- AVANTAGE 5 -->
+      <!-- Avantage 5 -->
       <article class="card feature-card">
         <div class="feature-icon">
           <i class="fas fa-handshake"></i>
         </div>
         <h3>Support expert</h3>
-        <p>Experts immobiliers locaux disponibles pour clarifier votre estimation et vous conseiller.</p>
+        <p>
+          Experts immobiliers locaux disponibles pour clarifier votre estimation et vous conseiller personnellement.
+        </p>
       </article>
 
-      <!-- AVANTAGE 6 -->
+      <!-- Avantage 6 -->
       <article class="card feature-card">
         <div class="feature-icon">
           <i class="fas fa-star"></i>
         </div>
-        <h3>Gratuit & sans engagement</h3>
-        <p>Estimation complète 100% gratuite. Aucune obligation d'être recontacté ou d'avancer.</p>
+        <h3>Gratuit et sans engagement</h3>
+        <p>
+          Estimation complète 100% gratuite. Zéro obligation. Utilisez-la pour explorer vos options librement.
+        </p>
       </article>
     </div>
   </div>
 </section>
 
-<!-- ============================================ -->
+<!-- ================================================ -->
 <!-- EXEMPLE DE RÉSULTAT -->
-<!-- ============================================ -->
-<section class="section" id="example-result">
+<!-- ================================================ -->
+<section class="section section-alt" id="example-result">
   <div class="container">
     <div class="section-heading">
       <p class="eyebrow">
-        <i class="fas fa-eye"></i> Voici ce que vous recevrez
+        <i class="fas fa-eye"></i> Exemple de résultat
       </p>
-      <h2>Exemple d'estimation détaillée</h2>
+      <h2>Voici ce que vous recevrez</h2>
     </div>
 
-    <div class="result-layout">
-      <!-- RÉSUMÉ PRINCIPAL -->
-      <div class="result-summary card">
-        <div class="result-header">
-          <p class="eyebrow">
-            <i class="fas fa-check-circle"></i> Estimation pour
+    <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: var(--space-8); align-items: start;">
+      <!-- Résumé principal -->
+      <div class="card" style="padding: var(--space-8);">
+        <p class="eyebrow">
+          <i class="fas fa-check-circle"></i> Estimation pour
+        </p>
+        <h2 style="margin-top: 0; margin-bottom: var(--space-6);">
+          T3 • <?= htmlspecialchars($cityName); ?> <?= htmlspecialchars($featuredDistricts[0] ?? ''); ?>
+        </h2>
+        <p style="color: var(--text-secondary); margin-bottom: var(--space-6);">
+          85 m² • Année 2005 • État bon
+        </p>
+
+        <!-- KPI Grid -->
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); margin-bottom: var(--space-6);">
+          <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: var(--radius-lg); padding: var(--space-4); text-align: center;">
+            <p style="margin: 0 0 var(--space-2) 0; font-size: var(--size-xs); color: var(--text-muted); text-transform: uppercase; font-weight: 600;">
+              <i class="fas fa-arrow-down"></i> Minimum
+            </p>
+            <p style="margin: 0; font-family: var(--font-primary); font-size: var(--size-2xl); font-weight: 800; color: var(--success);">
+              290 K€
+            </p>
+          </div>
+
+          <div style="background: linear-gradient(135deg, rgba(0, 63, 135, 0.1), rgba(255, 215, 0, 0.1)); border: 2px solid var(--primary); border-radius: var(--radius-lg); padding: var(--space-4); text-align: center;">
+            <p style="margin: 0 0 var(--space-2) 0; font-size: var(--size-xs); color: var(--text-muted); text-transform: uppercase; font-weight: 600;">
+              <i class="fas fa-target"></i> Estimation
+            </p>
+            <p style="margin: 0; font-family: var(--font-primary); font-size: var(--size-2xl); font-weight: 800; color: var(--primary);">
+              315 K€
+            </p>
+          </div>
+
+          <div style="background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); border-radius: var(--radius-lg); padding: var(--space-4); text-align: center;">
+            <p style="margin: 0 0 var(--space-2) 0; font-size: var(--size-xs); color: var(--text-muted); text-transform: uppercase; font-weight: 600;">
+              <i class="fas fa-arrow-up"></i> Maximum
+            </p>
+            <p style="margin: 0; font-family: var(--font-primary); font-size: var(--size-2xl); font-weight: 800; color: var(--info);">
+              340 K€
+            </p>
+          </div>
+        </div>
+
+        <!-- Prix au m² -->
+        <div style="background: var(--bg-alt); border-radius: var(--radius-lg); padding: var(--space-4); margin-bottom: var(--space-4);">
+          <p style="margin: 0 0 var(--space-2) 0; font-size: var(--size-xs); color: var(--text-muted); text-transform: uppercase; font-weight: 600;">
+            <i class="fas fa-coins"></i> Prix au m²
           </p>
-          <h2>T3 • <?= e($cityName) ?> <?= e($featuredDistricts[0] ?? '') ?></h2>
-          <p>85 m² • Année 2005 • État bon</p>
-        </div>
-
-        <div class="kpi-grid">
-          <div class="kpi-box kpi-low">
-            <p class="kpi-label"><i class="fas fa-arrow-down"></i> Prix minimum</p>
-            <p class="kpi-value">290 K€</p>
-          </div>
-
-          <div class="kpi-box kpi-mid">
-            <p class="kpi-label"><i class="fas fa-target"></i> Estimation centrale</p>
-            <p class="kpi-value">315 K€</p>
-          </div>
-
-          <div class="kpi-box kpi-high">
-            <p class="kpi-label"><i class="fas fa-arrow-up"></i> Prix maximum</p>
-            <p class="kpi-value">340 K€</p>
-          </div>
-        </div>
-
-        <div class="result-detail">
-          <p class="detail-label"><i class="fas fa-coins"></i> Prix au m²</p>
-          <p class="detail-value">€<?= number_format($prixM2Moyen, 0, ',', ' ') ?></p>
-          <p class="detail-info">Moyenne pour votre quartier : €3 000 - €3 450</p>
+          <p style="margin: 0; font-family: var(--font-primary); font-size: var(--size-2xl); font-weight: 800; color: var(--primary);">
+            €<?= number_format($prixM2Moyen, 0, ',', ' '); ?>
+          </p>
+          <p style="margin: var(--space-2) 0 0; font-size: var(--size-xs); color: var(--text-muted);">
+            Moyenne quartier: €3,000 - €3,450
+          </p>
         </div>
       </div>
 
-      <!-- INSIGHTS -->
-      <div style="display: flex; flex-direction: column; gap: 1.5rem;">
-        <div class="card" style="padding: 1.5rem; border-left: 4px solid var(--primary);">
-          <h3 style="margin: 0 0 1rem 0; display: flex; align-items: center; gap: 0.5rem; color: var(--primary);">
-            <i class="fas fa-chart-line"></i> Tendance du marché
+      <!-- Insights -->
+      <div style="display: flex; flex-direction: column; gap: var(--space-4);">
+        <!-- Tendance marché -->
+        <div class="card" style="padding: var(--space-6); border-left: 4px solid var(--primary);">
+          <h3 style="margin: 0 0 var(--space-3) 0; display: flex; align-items: center; gap: var(--space-2); color: var(--primary);">
+            <i class="fas fa-chart-line"></i> Tendance marché
           </h3>
-          <p style="margin: 0; color: var(--text); font-weight: 600;">
-            <i class="fas fa-arrow-up" style="color: #22c55e;"></i> 
-            <span style="color: #22c55e;">Marché haussier</span>
+          <p style="margin: 0; color: var(--text);">
+            <i class="fas fa-arrow-trend-up" style="color: var(--success);"></i>
+            <strong style="color: var(--success);">Marché haussier</strong>
           </p>
-          <p style="margin: 0.5rem 0 0; color: var(--muted); font-size: 0.9rem;">
-            Marché actif sur <?= e($cityName) ?> et le <?= e($featuredDistricts[1] ?? 'Trégor') ?> ces 12 derniers mois.
+          <p style="margin: var(--space-2) 0 0; color: var(--text-secondary); font-size: var(--size-sm);">
+            Marché actif sur <?= htmlspecialchars($cityName); ?> ces 12 derniers mois. Demande strong.
           </p>
         </div>
 
-        <div class="card" style="padding: 1.5rem; border-left: 4px solid var(--accent);">
-          <h3 style="margin: 0 0 1rem 0; display: flex; align-items: center; gap: 0.5rem; color: var(--primary);">
+        <!-- Facteurs clés -->
+        <div class="card" style="padding: var(--space-6); border-left: 4px solid var(--accent);">
+          <h3 style="margin: 0 0 var(--space-3) 0; display: flex; align-items: center; gap: var(--space-2); color: var(--primary);">
             <i class="fas fa-info-circle"></i> Facteurs clés
           </h3>
-          <ul style="margin: 0; padding-left: 1.5rem; list-style: none;">
-            <li style="margin-bottom: 0.5rem; color: var(--text);">
-              <span style="color: var(--primary); font-weight: 700;">✓</span> Localisation recherchée (<?= e($featuredDistricts[0] ?? '') ?>)
+          <ul style="margin: 0; padding-left: 0; list-style: none;">
+            <li style="margin-bottom: var(--space-2); color: var(--text); font-size: var(--size-sm);">
+              <span style="color: var(--primary); font-weight: 700;">✓</span> Localisation recherchée
             </li>
-            <li style="margin-bottom: 0.5rem; color: var(--text);">
+            <li style="margin-bottom: var(--space-2); color: var(--text); font-size: var(--size-sm);">
               <span style="color: var(--primary); font-weight: 700;">✓</span> Bien entretenu (+5%)
             </li>
-            <li style="color: var(--text);">
-              <span style="color: var(--primary); font-weight: 700;">•</span> Proximité du <?= e($featuredDistricts[2] ?? 'Port') ?> (+2%)
+            <li style="color: var(--text); font-size: var(--size-sm);">
+              <span style="color: var(--primary); font-weight: 700;">•</span> Proximité <?= htmlspecialchars($featuredDistricts[2] ?? ''); ?> (+2%)
             </li>
           </ul>
         </div>
@@ -452,80 +535,95 @@ $page_title = sprintf('Estimation Immobilière %s | Évaluez Votre Bien en 1 Min
   </div>
 </section>
 
-<!-- ============================================ -->
-<!-- FAQ SECTION -->
-<!-- ============================================ -->
+<!-- ================================================ -->
+<!-- FAQ -->
+<!-- ================================================ -->
 <section class="section" id="faq">
   <div class="container">
     <div class="section-heading">
       <p class="eyebrow">
         <i class="fas fa-comments"></i> Questions fréquentes
       </p>
-      <h2>Vos réponses en un coup d'œil</h2>
+      <h2>Vos réponses rapides</h2>
     </div>
 
     <div class="faq-grid">
-      <!-- FAQ 1 -->
       <article class="card faq-card">
-        <h3><i class="fas fa-question-circle"></i> L'estimation est-elle gratuite ?</h3>
-        <p>Oui, 100% gratuit et sans engagement. Utilisez-la autant que vous le souhaitez pour explorer différents scénarios.</p>
+        <h3>
+          <i class="fas fa-question-circle"></i> L'estimation est-elle gratuite ?
+        </h3>
+        <p>
+          Oui, 100% gratuit et sans engagement. Utilisez-la autant que vous le souhaitez pour explorer différents scénarios.
+        </p>
       </article>
 
-      <!-- FAQ 2 -->
       <article class="card faq-card">
-        <h3><i class="fas fa-question-circle"></i> Combien de temps faut-il ?</h3>
-        <p>Estimation immédiate après validation. Vous avez votre fourchette de prix en moins de 60 secondes.</p>
+        <h3>
+          <i class="fas fa-question-circle"></i> Combien de temps faut-il ?
+        </h3>
+        <p>
+          Estimation immédiate après validation du formulaire. Vous avez votre fourchette de prix en moins de 60 secondes.
+        </p>
       </article>
 
-      <!-- FAQ 3 -->
       <article class="card faq-card">
-        <h3><i class="fas fa-question-circle"></i> À quelle précision m'attendre ?</h3>
-        <p>Précision moyenne ±5% basée sur les données réelles de transactions. Peut varier selon l'état du bien et la localisation exacte.</p>
+        <h3>
+          <i class="fas fa-question-circle"></i> À quelle précision m'attendre ?
+        </h3>
+        <p>
+          Précision moyenne ±5% basée sur données réelles. Varie selon l'état du bien, localisation exacte, et marché local.
+        </p>
       </article>
 
-      <!-- FAQ 4 -->
       <article class="card faq-card">
-        <h3><i class="fas fa-question-circle"></i> Mes données sont-elles sécurisées ?</h3>
-        <p>Oui. Chiffrement SSL/TLS, stockage sécurisé, et conformité RGPD. Vos données ne sont jamais vendues à des tiers.</p>
+        <h3>
+          <i class="fas fa-question-circle"></i> Mes données sont-elles sécurisées ?
+        </h3>
+        <p>
+          Oui. Chiffrement SSL/TLS, stockage sécurisé, conformité RGPD. Vos données ne sont jamais vendues à des tiers.
+        </p>
       </article>
 
-      <!-- FAQ 5 -->
       <article class="card faq-card">
-        <h3><i class="fas fa-question-circle"></i> Serai-je harcelé par des appels commerciaux ?</h3>
-        <p>Non. Nous respectons votre choix. Si vous laissez vos coordonnées, vous avez le contrôle total. Désinscription possible à tout moment.</p>
+        <h3>
+          <i class="fas fa-question-circle"></i> Serai-je harcelé par des appels commerciaux ?
+        </h3>
+        <p>
+          Non. Nous respectons votre choix. Désinscription en un clic si vous le souhaitez. Contrôle total en vos mains.
+        </p>
       </article>
 
-      <!-- FAQ 6 -->
       <article class="card faq-card">
-        <h3><i class="fas fa-question-circle"></i> Puis-je faire plusieurs estimations ?</h3>
-        <p>Oui ! Estimez votre bien, celui d'un ami, explorez différents scénarios. Aucune limite, c'est 100% gratuit.</p>
+        <h3>
+          <i class="fas fa-question-circle"></i> Puis-je faire plusieurs estimations ?
+        </h3>
+        <p>
+          Oui ! Estimez votre bien, celui d'un ami, explorez différents scénarios. Aucune limite, c'est gratuit.
+        </p>
       </article>
     </div>
   </div>
 </section>
 
-<!-- ============================================ -->
+<!-- ================================================ -->
 <!-- CTA FINAL HAUTE CONVERSION -->
-<!-- ============================================ -->
+<!-- ================================================ -->
 <section class="section">
   <div class="container">
-    <div class="card" style="padding: 3rem; background: linear-gradient(135deg, rgba(var(--primary-rgb), 0.05), rgba(var(--accent-rgb), 0.03)); border: 2px solid var(--accent); text-align: center;">
-      <p class="eyebrow" style="margin-bottom: 1rem;">
-        <i class="fas fa-rocket"></i> Plus attendre pour connaître la valeur
+    <div class="cta-final card">
+      <p class="eyebrow">
+        <i class="fas fa-rocket"></i> N'attendez plus pour connaître la vraie valeur
       </p>
-      <h2 style="margin-bottom: 1rem; font-size: 2rem;">
-        Estimez votre bien à <?= e($cityName) ?> en 60 secondes
-      </h2>
-      <p class="lead" style="max-width: 600px; margin: 0 auto 2rem;">
-        Découvrez la vraie valeur de votre propriété à <?= e($cityName) ?> et sa région.
-        Depuis le port jusqu'aux hauteurs de Brélévenez, nos estimations couvrent toute la zone.
+      <h2>Estimez votre bien à <?= htmlspecialchars($cityName); ?> en 60 secondes</h2>
+      <p class="lead">
+        Découvrez la valeur précise de votre propriété. De <?= htmlspecialchars($featuredDistricts[0] ?? ''); ?> au cœur de la ville jusqu'aux hauteurs, nos estimations couvrent toute la zone.
       </p>
-      <a href="#form-estimation" class="btn btn-primary" style="display: inline-flex; font-size: 1.1rem; padding: 1.2rem 2rem; background: #003f87; border-color: #003f87;">
-        <i class="fas fa-calculator"></i> Lancer mon estimation gratuite
+      <a href="#form-estimation" class="btn btn-primary">
+        <i class="fas fa-calculator"></i> Commencer l'estimation gratuitement
       </a>
-      <p style="margin-top: 1.5rem; font-size: 0.85rem; color: var(--muted);">
-        <i class="fas fa-clock"></i> Résultat en 1 minute • 
-        <i class="fas fa-lock"></i> Données sécurisées • 
+      <p style="font-size: var(--size-sm); color: var(--text-muted); margin: var(--space-4) 0 0;">
+        <i class="fas fa-clock"></i> 60 secondes • 
+        <i class="fas fa-lock"></i> Sécurisé • 
         <i class="fas fa-check-circle"></i> Sans engagement
       </p>
     </div>

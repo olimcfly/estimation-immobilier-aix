@@ -368,6 +368,18 @@ em {
   font-weight: 600;
 }
 
+/* Dropdown toggle chevron */
+.dropdown-toggle .fa-chevron-down {
+  font-size: 10px;
+  opacity: 0.5;
+  transition: transform var(--trans-fast);
+}
+
+.nav-item:hover .dropdown-toggle .fa-chevron-down {
+  transform: rotate(180deg);
+  opacity: 1;
+}
+
 .dropdown-menu {
   position: absolute;
   top: 100%;

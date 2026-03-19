@@ -50,46 +50,57 @@
 
       <!-- NAVIGATION PRINCIPALE -->
       <nav class="nav-main" aria-label="Navigation principale" id="nav-main">
-        
+
         <!-- Estimation Dropdown -->
-        <div class="nav-item nav-dropdown" id="dropdown-estimation">
+        <div class="nav-item nav-dropdown">
           <a href="/#form-estimation" class="nav-link dropdown-toggle">
-            <i class="fas fa-calculator"></i> Estimation
+            <i class="fas fa-calculator"></i> Estimation <i class="fas fa-chevron-down fa-xs"></i>
           </a>
           <ul class="dropdown-menu" aria-label="Sous-menu estimation">
-            <li><a href="/#form-estimation"><i class="fas fa-edit"></i> Estimer mon bien</a></li>
-            <li><a href="/#example-result"><i class="fas fa-eye"></i> Voir un exemple</a></li>
-            <li><a href="/#how-it-works"><i class="fas fa-cog"></i> Comment ça marche</a></li>
+            <li><a href="/#form-estimation"><i class="fas fa-bolt"></i> Estimer mon bien</a></li>
+            <li><a href="/exemples-estimation"><i class="fas fa-eye"></i> Exemples d'estimation</a></li>
             <li><a href="/processus-estimation"><i class="fas fa-list-check"></i> Notre processus</a></li>
+            <li><a href="/calculatrice"><i class="fas fa-calculator"></i> Calculatrice</a></li>
           </ul>
         </div>
 
-        <!-- Quartiers Link -->
-        <a href="/quartiers" class="nav-link">
-          <i class="fas fa-map-marked-alt"></i> Quartiers
-        </a>
+        <!-- Immobilier Dropdown -->
+        <div class="nav-item nav-dropdown">
+          <a href="/quartiers" class="nav-link dropdown-toggle">
+            <i class="fas fa-building"></i> Immobilier <i class="fas fa-chevron-down fa-xs"></i>
+          </a>
+          <ul class="dropdown-menu" aria-label="Sous-menu immobilier">
+            <li><a href="/quartiers"><i class="fas fa-map-marked-alt"></i> Quartiers de Lannion</a></li>
+            <li><a href="/services"><i class="fas fa-briefcase"></i> Nos services</a></li>
+            <li><a href="/#how-it-works"><i class="fas fa-cog"></i> Comment ça marche</a></li>
+          </ul>
+        </div>
 
         <!-- Ressources Dropdown -->
-        <div class="nav-item nav-dropdown" id="dropdown-ressources">
-          <a href="#" class="nav-link dropdown-toggle">
-            <i class="fas fa-book-open"></i> Ressources
+        <div class="nav-item nav-dropdown">
+          <a href="/blog" class="nav-link dropdown-toggle">
+            <i class="fas fa-book-open"></i> Ressources <i class="fas fa-chevron-down fa-xs"></i>
           </a>
           <ul class="dropdown-menu" aria-label="Sous-menu ressources">
+            <li><a href="/blog"><i class="fas fa-newspaper"></i> Blog & articles</a></li>
             <li><a href="/guides"><i class="fas fa-file-pdf"></i> Guides complets</a></li>
             <li><a href="/podcast"><i class="fas fa-podcast"></i> Podcast immobilier</a></li>
             <li><a href="/newsletter"><i class="fas fa-envelope-open-text"></i> Newsletter</a></li>
           </ul>
         </div>
 
-        <!-- À propos Link -->
-        <a href="/a-propos" class="nav-link">
-          <i class="fas fa-info-circle"></i> À propos
-        </a>
-
-        <!-- Contact Link -->
-        <a href="/contact" class="nav-link">
-          <i class="fas fa-envelope"></i> Contact
-        </a>
+        <!-- À propos Dropdown -->
+        <div class="nav-item nav-dropdown">
+          <a href="/a-propos" class="nav-link dropdown-toggle">
+            <i class="fas fa-users"></i> À propos <i class="fas fa-chevron-down fa-xs"></i>
+          </a>
+          <ul class="dropdown-menu" aria-label="Sous-menu à propos">
+            <li><a href="/a-propos"><i class="fas fa-info-circle"></i> Qui sommes-nous</a></li>
+            <li><a href="/contact"><i class="fas fa-envelope"></i> Contact</a></li>
+            <li><a href="/mentions-legales"><i class="fas fa-gavel"></i> Mentions légales</a></li>
+            <li><a href="/rgpd"><i class="fas fa-shield-alt"></i> RGPD</a></li>
+          </ul>
+        </div>
 
       </nav>
 

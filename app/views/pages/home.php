@@ -30,7 +30,7 @@ $page_title = sprintf('Estimation Immobilière %s | Évaluez Votre Bien en 1 Min
         </p>
 
         <!-- H1 Principal -->
-        <h1 style="margin-bottom: var(--space-4); background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+        <h1 style="background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
           Estimez votre bien immobilier à <?= htmlspecialchars($cityName); ?>
         </h1>
 
@@ -518,14 +518,14 @@ $page_title = sprintf('Estimation Immobilière %s | Évaluez Votre Bien en 1 Min
           <h3 style="margin-bottom: var(--space-3); display: flex; align-items: center; gap: var(--space-2); color: var(--primary);">
             <i class="fas fa-info-circle"></i> Facteurs clés
           </h3>
-          <ul style="margin: 0; padding-left: 0; list-style: none;">
-            <li style="margin-bottom: var(--space-2); color: var(--text); font-size: var(--size-sm);">
+          <ul style="list-style: none;">
+            <li style="margin-bottom: var(--space-2); font-size: var(--size-sm);">
               <span style="color: var(--primary); font-weight: 700;">✓</span> Localisation recherchée
             </li>
-            <li style="margin-bottom: var(--space-2); color: var(--text); font-size: var(--size-sm);">
+            <li style="margin-bottom: var(--space-2); font-size: var(--size-sm);">
               <span style="color: var(--primary); font-weight: 700;">✓</span> Bien entretenu (+5%)
             </li>
-            <li style="color: var(--text); font-size: var(--size-sm);">
+            <li style="font-size: var(--size-sm);">
               <span style="color: var(--primary); font-weight: 700;">•</span> Proximité <?= htmlspecialchars($featuredDistricts[2] ?? ''); ?> (+2%)
             </li>
           </ul>
@@ -621,9 +621,9 @@ $page_title = sprintf('Estimation Immobilière %s | Évaluez Votre Bien en 1 Min
       <a href="#form-estimation" class="btn btn-primary">
         <i class="fas fa-calculator"></i> Commencer l'estimation gratuitement
       </a>
-      <p style="font-size: var(--size-sm); color: var(--text-muted); margin: var(--space-4) 0 0;">
-        <i class="fas fa-clock"></i> 60 secondes • 
-        <i class="fas fa-lock"></i> Sécurisé • 
+      <p class="text-muted" style="font-size: var(--size-sm); margin: var(--space-4) 0 0;">
+        <i class="fas fa-clock"></i> 60 secondes •
+        <i class="fas fa-lock"></i> Sécurisé •
         <i class="fas fa-check-circle"></i> Sans engagement
       </p>
     </div>

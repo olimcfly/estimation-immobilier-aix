@@ -1,4 +1,44 @@
-<?php $page_title = 'Estimation Immobilière Bordeaux | Évaluez Votre Bien en 1 Minute'; ?>
+<?php
+$cityName = defined('CITY_NAME') ? (string) CITY_NAME : 'Lannion';
+$regionName = defined('REGION_NAME') ? (string) REGION_NAME : 'Bretagne';
+$prixM2Moyen = defined('PRIX_M2_MOYEN') ? (int) PRIX_M2_MOYEN : 3200;
+$heroImageUrl = defined('HERO_IMAGE_URL')
+    ? (string) HERO_IMAGE_URL
+    : 'https://images.unsplash.com/photo-1530530824905-661c29882fd3?auto=format&fit=crop&w=1400&q=80';
+$featuredDistricts = defined('FEATURED_DISTRICTS')
+    ? FEATURED_DISTRICTS
+    : ['Centre-Ville', 'Trégor', 'Port'];
+
+$page_title = "Estimez votre bien immobilier à {$cityName}";
+?>
+
+<style>
+  .hero-visual {
+    width: 100%;
+    border-radius: 14px;
+    overflow: hidden;
+    margin: 1rem 0 1.5rem;
+    border: 2px solid #FFD700;
+    box-shadow: 0 10px 30px rgba(0, 63, 135, 0.15);
+  }
+
+  .hero-visual img {
+    display: block;
+    width: 100%;
+    height: clamp(180px, 25vw, 260px);
+    object-fit: cover;
+  }
+
+  .hero .btn-primary {
+    background: #003f87;
+    border-color: #003f87;
+  }
+
+  .hero .btn-primary:hover {
+    background: #002f67;
+    border-color: #002f67;
+  }
+</style>
 
 <!-- ============================================ -->
 <!-- HERO ULTRA-PREMIUM -->
@@ -13,11 +53,20 @@
       </p>
 
       <!-- HEADLINE H1 -->
-      <h1>Découvrez la vraie valeur de votre bien immobilier à Bordeaux</h1>
+      <h1>Estimez votre bien immobilier à <?= e($cityName) ?></h1>
 
       <!-- SUBHEADLINE -->
       <p class="lead">
-        En 60 secondes, obtenez une fourchette de prix précise basée sur les données réelles du marché bordelais. Aucun engagement, 100% gratuit.
+        Bienvenue en <?= e($regionName) ?>
+      </p>
+
+      <div class="hero-visual">
+        <img src="<?= e($heroImageUrl) ?>" alt="Vue côtière de <?= e($cityName) ?> et du Trégor">
+      </div>
+
+      <p class="lead">
+        Découvrez la vraie valeur de votre propriété à <?= e($cityName) ?> et sa région.
+        Depuis le port jusqu'aux hauteurs de Brélévenez, nos estimations couvrent toute la zone.
       </p>
 
       <!-- TRUST INDICATORS -->
@@ -45,7 +94,7 @@
           "L'estimation était très proche de l'offre reçue. Recommandé pour avoir un avis fiable avant de vendre !"
         </p>
         <p style="margin: 0.8rem 0 0; font-size: 0.85rem; color: var(--muted); font-weight: 600;">
-          — Marie D. • Bordeaux Chartrons
+          — Marie D. • <?= e($cityName) ?> Centre
         </p>
       </div>
 
@@ -78,7 +127,7 @@
               type="text" 
               id="city" 
               name="city" 
-              placeholder="Bordeaux, Talence, Floirac..." 
+              placeholder="<?= e($cityName) ?>, Trégor, Perros-Guirec..." 
               required
               autocomplete="off"
             >
@@ -362,7 +411,7 @@
           <p class="eyebrow">
             <i class="fas fa-check-circle"></i> Estimation pour
           </p>
-          <h2>T3 • Bordeaux Chartrons</h2>
+          <h2>T3 • <?= e($cityName) ?> Centre-Ville</h2>
           <p>85 m² • Année 2005 • État bon</p>
         </div>
 
@@ -385,8 +434,8 @@
 
         <div class="result-detail">
           <p class="detail-label"><i class="fas fa-coins"></i> Prix au m²</p>
-          <p class="detail-value">€3 700</p>
-          <p class="detail-info">Moyenne pour votre quartier : €3 500 - €4 100</p>
+          <p class="detail-value">€<?= number_format($prixM2Moyen, 0, ',', ' ') ?></p>
+          <p class="detail-info">Moyenne pour votre quartier : €3 000 - €3 450</p>
         </div>
       </div>
 
@@ -401,7 +450,7 @@
             <span style="color: #22c55e;">Marché haussier</span>
           </p>
           <p style="margin: 0.5rem 0 0; color: var(--muted); font-size: 0.9rem;">
-            Prix en hausse de +3.2% sur les 12 derniers mois dans ce secteur.
+            Marché actif sur <?= e($cityName) ?> et le <?= e($featuredDistricts[1] ?? 'Trégor') ?> ces 12 derniers mois.
           </p>
         </div>
 
@@ -411,13 +460,13 @@
           </h3>
           <ul style="margin: 0; padding-left: 1.5rem; list-style: none;">
             <li style="margin-bottom: 0.5rem; color: var(--text);">
-              <span style="color: var(--primary); font-weight: 700;">✓</span> Localisation prime (Chartrons)
+              <span style="color: var(--primary); font-weight: 700;">✓</span> Quartier recherché (<?= e($featuredDistricts[0] ?? 'Centre-Ville') ?>)
             </li>
             <li style="margin-bottom: 0.5rem; color: var(--text);">
               <span style="color: var(--primary); font-weight: 700;">✓</span> Bien entretenu (+5%)
             </li>
             <li style="color: var(--text);">
-              <span style="color: var(--primary); font-weight: 700;">•</span> Absence de parking (-3%)
+              <span style="color: var(--primary); font-weight: 700;">•</span> Proximité du <?= e($featuredDistricts[2] ?? 'Port') ?> (+2%)
             </li>
           </ul>
         </div>
@@ -491,7 +540,7 @@
         Estimez votre bien en 60 secondes
       </h2>
       <p class="lead" style="max-width: 600px; margin: 0 auto 2rem;">
-        Obtenez une fourchette de prix précise basée sur les données réelles du marché bordelais. 100% gratuit, sans engagement, confidentiel.
+        Obtenez une fourchette de prix précise basée sur les données réelles du marché de <?= e($cityName) ?> (<?= number_format($prixM2Moyen, 0, ',', ' ') ?> €/m² en moyenne). 100% gratuit, sans engagement, confidentiel.
       </p>
       <a href="#form-estimation" class="btn btn-primary" style="display: inline-flex; font-size: 1.1rem; padding: 1.2rem 2rem;">
         <i class="fas fa-calculator"></i> Lancer mon estimation gratuite

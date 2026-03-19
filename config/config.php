@@ -84,4 +84,11 @@ return [
             'neutral' => $_ENV['SITE_COLOR_NEUTRAL'] ?? '#000000',
         ],
     ],
+    'maintenance' => [
+        'enabled' => filter_var($_ENV['MAINTENANCE_MODE'] ?? false, FILTER_VALIDATE_BOOLEAN),
+        'retry_after' => (int) ($_ENV['MAINTENANCE_RETRY_AFTER'] ?? 3600),
+        'allowed_paths' => [
+            '/admin/leads',
+        ],
+    ],
 ];

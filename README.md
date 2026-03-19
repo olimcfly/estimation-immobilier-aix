@@ -41,6 +41,8 @@ export DB_NAME=immobilier_saas
 export DB_USER=root
 export DB_PASS=''
 export PERPLEXITY_API_KEY=''
+export MAINTENANCE_MODE=false
+export MAINTENANCE_RETRY_AFTER=3600
 ```
 
 5. Ouvrir `/estimation`
@@ -52,3 +54,12 @@ export PERPLEXITY_API_KEY=''
 - `POST /estimation` → calcul estimation
 - `POST /lead` → insertion lead
 - `GET /leads` → visualisation + filtres des leads
+
+## Mode maintenance
+
+Le site peut être basculé en maintenance avec des variables d'environnement :
+
+- `MAINTENANCE_MODE=true` : active une page maintenance (HTTP `503`)
+- `MAINTENANCE_RETRY_AFTER=3600` : indique aux clients quand réessayer (header `Retry-After`)
+
+Le chemin `/admin/leads` reste accessible pendant la maintenance pour supervision.

@@ -53,9 +53,44 @@ if (version_compare(PHP_VERSION, '8.0.0', '<')) {
     exit;
 }
 
+use App\Core\Config;
 use App\Core\Router;
 
 require_once dirname(__DIR__) . '/app/core/bootstrap.php';
+
+$isMaintenanceEnabled = (bool) Config::get('maintenance.enabled', false);
+$maintenanceAllowedPaths = Config::get('maintenance.allowed_paths', []);
+$requestPath = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/';
+$isAllowedPath = is_array($maintenanceAllowedPaths) && in_array($requestPath, $maintenanceAllowedPaths, true);
+
+if ($isMaintenanceEnabled && !$isAllowedPath) {
+    $retryAfter = max(60, (int) Config::get('maintenance.retry_after', 3600));
+    header('Retry-After: ' . $retryAfter);
+    http_response_code(503);
+    header('Content-Type: text/html; charset=utf-8');
+    echo '<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site en maintenance</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #faf9f7; color: #1a1410; margin: 0; display: grid; place-items: center; min-height: 100vh; }
+        .card { background: #fff; border: 1px solid #e8dfd7; border-radius: 12px; padding: 2rem; max-width: 560px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); text-align: center; }
+        h1 { margin-top: 0; color: #8B1538; }
+        p { line-height: 1.6; }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <h1>Maintenance en cours</h1>
+        <p>Le site est momentanément indisponible pour une intervention technique.</p>
+        <p>Merci de réessayer dans quelques instants.</p>
+    </main>
+</body>
+</html>';
+    exit;
+}
 
 $router = new Router();
 require dirname(__DIR__) . '/routes/web.php';

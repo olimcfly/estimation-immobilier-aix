@@ -1,433 +1,241 @@
-<?php $page_title = 'Contact - Estimation Immobilière Bordeaux | Nous Sommes Disponibles'; ?>
+<?php
+$page_title = 'Contact - Estimation Immobilière Lannion | Notre équipe locale';
 
-<!-- ============================================ -->
-<!-- HERO SECTION -->
-<!-- ============================================ -->
+$errors = [];
+$success_message = '';
+$form_data = [
+  'nom' => '',
+  'email' => '',
+  'telephone' => '',
+  'message' => '',
+  'website' => '',
+  'captcha' => '',
+];
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  $form_data['nom'] = trim((string) ($_POST['nom'] ?? ''));
+  $form_data['email'] = trim((string) ($_POST['email'] ?? ''));
+  $form_data['telephone'] = trim((string) ($_POST['telephone'] ?? ''));
+  $form_data['message'] = trim((string) ($_POST['message'] ?? ''));
+  $form_data['website'] = trim((string) ($_POST['website'] ?? ''));
+  $form_data['captcha'] = trim((string) ($_POST['captcha'] ?? ''));
+
+  // Honeypot anti-spam : ce champ doit rester vide.
+  if ($form_data['website'] !== '') {
+    $errors[] = 'Votre message a été identifié comme spam.';
+  }
+
+  if ($form_data['nom'] === '') {
+    $errors[] = 'Le nom est obligatoire.';
+  }
+
+  if ($form_data['email'] === '' || !filter_var($form_data['email'], FILTER_VALIDATE_EMAIL)) {
+    $errors[] = 'Veuillez renseigner une adresse email valide.';
+  }
+
+  if ($form_data['telephone'] !== '' && !preg_match('/^[0-9+().\-\s]{8,20}$/', $form_data['telephone'])) {
+    $errors[] = 'Le numéro de téléphone semble invalide.';
+  }
+
+  if ($form_data['message'] === '' || mb_strlen($form_data['message']) < 10) {
+    $errors[] = 'Le message doit contenir au moins 10 caractères.';
+  }
+
+  // Captcha simple (optionnel mais recommandé)
+  if ($form_data['captcha'] !== '' && $form_data['captcha'] !== '7') {
+    $errors[] = 'La vérification anti-robot est incorrecte.';
+  }
+
+  // Support optionnel reCAPTCHA v2/v3 si configuré côté serveur.
+  $recaptcha_secret = getenv('RECAPTCHA_SECRET');
+  $recaptcha_token = trim((string) ($_POST['g-recaptcha-response'] ?? ''));
+  if ($recaptcha_secret && $recaptcha_token !== '') {
+    $verify_context = stream_context_create([
+      'http' => [
+        'method'  => 'POST',
+        'header'  => 'Content-type: application/x-www-form-urlencoded',
+        'content' => http_build_query([
+          'secret' => $recaptcha_secret,
+          'response' => $recaptcha_token,
+          'remoteip' => $_SERVER['REMOTE_ADDR'] ?? null,
+        ]),
+        'timeout' => 6,
+      ],
+    ]);
+
+    $verify_response = @file_get_contents('https://www.google.com/recaptcha/api/siteverify', false, $verify_context);
+    $verify_data = $verify_response ? json_decode($verify_response, true) : null;
+    if (!is_array($verify_data) || empty($verify_data['success'])) {
+      $errors[] = 'La vérification reCAPTCHA a échoué. Merci de réessayer.';
+    }
+  }
+
+  if (!$errors) {
+    $to = getenv('CONTACT_OWNER_EMAIL') ?: 'contact@estimation-immobilier-lannion.fr';
+    $subject = 'Nouveau message de contact - Lannion';
+
+    $safe_nom = htmlspecialchars($form_data['nom'], ENT_QUOTES, 'UTF-8');
+    $safe_email = filter_var($form_data['email'], FILTER_SANITIZE_EMAIL);
+    $safe_telephone = htmlspecialchars($form_data['telephone'], ENT_QUOTES, 'UTF-8');
+    $safe_message = htmlspecialchars($form_data['message'], ENT_QUOTES, 'UTF-8');
+
+    $body = "Nouveau message depuis le formulaire contact Lannion\n\n"
+      . "Nom : {$safe_nom}\n"
+      . "Email : {$safe_email}\n"
+      . "Téléphone : {$safe_telephone}\n\n"
+      . "Message :\n{$safe_message}\n";
+
+    $headers = [
+      'From: no-reply@estimation-immobilier-lannion.fr',
+      'Reply-To: ' . $safe_email,
+      'Content-Type: text/plain; charset=UTF-8',
+    ];
+
+    $mail_sent = @mail($to, $subject, $body, implode("\r\n", $headers));
+
+    if ($mail_sent) {
+      $success_message = 'Merci, votre message a bien été envoyé. Nous vous répondrons rapidement.';
+      $form_data = [
+        'nom' => '',
+        'email' => '',
+        'telephone' => '',
+        'message' => '',
+        'website' => '',
+        'captcha' => '',
+      ];
+    } else {
+      $errors[] = 'Une erreur est survenue pendant l’envoi. Merci de réessayer plus tard.';
+    }
+  }
+}
+?>
+
 <section class="section page-hero">
   <div class="container">
     <div class="page-hero-inner card">
-      <p class="eyebrow">
-        <i class="fas fa-envelope"></i> Nous contacter
-      </p>
-      <h1>Parlons de votre projet immobilier</h1>
+      <p class="eyebrow"><i class="fas fa-envelope"></i> Contact Lannion</p>
+      <h1>Contactez-nous à Lannion</h1>
       <p class="lead">
-        Besoin d'un avis expert ? Des questions sur une estimation ? Notre équipe bordelaise est disponible pour vous accompagner.
+        Nous sommes à votre écoute pour répondre à toutes vos questions concernant l'estimation et la vente de votre bien immobilier à Lannion.
       </p>
     </div>
   </div>
 </section>
 
-<!-- ============================================ -->
-<!-- CONTACT INFO + FORMULAIRE -->
-<!-- ============================================ -->
 <section class="section">
   <div class="container">
     <div class="contact-layout">
-      
-      <!-- GAUCHE: INFOS CONTACT -->
       <article class="card contact-info">
-        <h2>
-          <i class="fas fa-map-marker-alt"></i> Nos coordonnées
-        </h2>
+        <h2><i class="fas fa-map-marker-alt"></i> Nos coordonnées</h2>
 
-        <!-- TÉLÉPHONE -->
         <div class="info-block">
-          <p class="info-label">
-            <i class="fas fa-phone"></i> Téléphone
-          </p>
-          <p class="info-value">
-            <a href="tel:+33556000000">+33 5 56 00 00 00</a>
-          </p>
-          <ul class="hours-list">
-            <li>
-              <span>Lundi - Vendredi :</span>
-              <strong>9h - 19h</strong>
-            </li>
-            <li>
-              <span>Samedi :</span>
-              <strong>10h - 17h</strong>
-            </li>
-            <li>
-              <span>Dimanche :</span>
-              <strong>Fermé</strong>
-            </li>
-          </ul>
+          <p class="info-label"><i class="fas fa-phone"></i> Téléphone direct</p>
+          <p class="info-value"><a href="tel:+33296000000">02 96 00 00 00</a></p>
         </div>
 
-        <!-- EMAIL -->
         <div class="info-block">
-          <p class="info-label">
-            <i class="fas fa-envelope"></i> Email
-          </p>
+          <p class="info-label"><i class="fas fa-envelope"></i> Email contact</p>
           <p class="info-value">
-            <a href="mailto:contact@estimation-immobilier-bordeaux.fr">
-              contact@estimation-immobilier-bordeaux.fr
-            </a>
-          </p>
-          <p class="info-desc">
-            Réponse garantie en moins de 24h
+            <a href="mailto:contact@estimation-immobilier-lannion.fr">contact@estimation-immobilier-lannion.fr</a>
           </p>
         </div>
 
-        <!-- ADRESSE -->
         <div class="info-block">
-          <p class="info-label">
-            <i class="fas fa-map-marker-alt"></i> Adresse
-          </p>
+          <p class="info-label"><i class="fas fa-map-marker-alt"></i> Adresse locale</p>
           <p class="info-value">
-            12 Quai des Chartrons<br>
-            33000 Bordeaux<br>
+            5 Rue des Chapeliers<br>
+            22300 Lannion<br>
             France
           </p>
-          <p class="info-desc">
-            Parking gratuit • Accès PMR
-          </p>
         </div>
 
-        <!-- RÉSEAUX SOCIAUX -->
         <div class="info-block">
-          <p class="info-label">
-            <i class="fas fa-share-alt"></i> Suivez-nous
-          </p>
-          <div style="display: flex; gap: 1rem; margin-top: 0.8rem;">
-            <a href="#facebook" style="width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; background: rgba(var(--primary-rgb), 0.08); border-radius: 10px; color: var(--primary); text-decoration: none; transition: all 0.2s; border: 1px solid rgba(var(--primary-rgb), 0.15);" title="Facebook">
-              <i class="fab fa-facebook-f" style="font-size: 1.2rem;"></i>
-            </a>
-            <a href="#instagram" style="width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; background: rgba(var(--primary-rgb), 0.08); border-radius: 10px; color: var(--primary); text-decoration: none; transition: all 0.2s; border: 1px solid rgba(var(--primary-rgb), 0.15);" title="Instagram">
-              <i class="fab fa-instagram" style="font-size: 1.2rem;"></i>
-            </a>
-            <a href="#linkedin" style="width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; background: rgba(var(--primary-rgb), 0.08); border-radius: 10px; color: var(--primary); text-decoration: none; transition: all 0.2s; border: 1px solid rgba(var(--primary-rgb), 0.15);" title="LinkedIn">
-              <i class="fab fa-linkedin-in" style="font-size: 1.2rem;"></i>
-            </a>
-          </div>
+          <p class="info-label"><i class="fas fa-clock"></i> Horaires d'ouverture</p>
+          <ul class="hours-list">
+            <li><span>Lundi - Vendredi :</span> <strong>9h - 18h</strong></li>
+            <li><span>Samedi :</span> <strong>10h - 12h</strong></li>
+            <li><span>Dimanche :</span> <strong>Fermé</strong></li>
+          </ul>
         </div>
       </article>
 
-      <!-- DROITE: FORMULAIRE CONTACT -->
-      <article class="card contact-form-card">
-        <h2>
-          <i class="fas fa-comment-dots"></i> Envoyez-nous un message
-        </h2>
-        <p class="form-intro">
-          Remplissez ce formulaire et nous vous recontacterons rapidement. Merci de votre intérêt !
-        </p>
+      <article class="card contact-form-card" id="form-contact">
+        <h2><i class="fas fa-comment-dots"></i> Envoyez-nous un message</h2>
 
-        <form class="form-grid form-contact" action="/contact" method="post">
-          <!-- NOM -->
+        <?php if ($success_message): ?>
+          <p class="form-intro" style="color: #1a7f37;"><i class="fas fa-check-circle"></i> <?= htmlspecialchars($success_message, ENT_QUOTES, 'UTF-8'); ?></p>
+        <?php endif; ?>
+
+        <?php if ($errors): ?>
+          <div class="card" style="background: #fff5f5; border: 1px solid #fecaca; margin-bottom: 1rem;">
+            <p style="margin: 0 0 0.5rem 0;"><strong>Merci de corriger les points suivants :</strong></p>
+            <ul style="margin: 0; padding-left: 1.2rem;">
+              <?php foreach ($errors as $error): ?>
+                <li><?= htmlspecialchars($error, ENT_QUOTES, 'UTF-8'); ?></li>
+              <?php endforeach; ?>
+            </ul>
+          </div>
+        <?php endif; ?>
+
+        <form class="form-grid form-contact" action="/contact" method="post" novalidate>
           <label for="nom" class="full-width">
-            <span><i class="fas fa-user"></i> Nom complet *</span>
-            <input 
-              type="text" 
-              id="nom" 
-              name="nom" 
-              placeholder="Jean Dupont" 
-              required
-            >
+            <span><i class="fas fa-user"></i> Nom *</span>
+            <input type="text" id="nom" name="nom" required value="<?= htmlspecialchars($form_data['nom'], ENT_QUOTES, 'UTF-8'); ?>">
           </label>
 
-          <!-- EMAIL -->
           <label for="email" class="full-width">
             <span><i class="fas fa-envelope"></i> Email *</span>
-            <input 
-              type="email" 
-              id="email" 
-              name="email" 
-              placeholder="jean@exemple.com" 
-              required
-            >
+            <input type="email" id="email" name="email" required value="<?= htmlspecialchars($form_data['email'], ENT_QUOTES, 'UTF-8'); ?>">
           </label>
 
-          <!-- TÉLÉPHONE -->
           <label for="telephone" class="full-width">
             <span><i class="fas fa-phone"></i> Téléphone</span>
-            <input 
-              type="tel" 
-              id="telephone" 
-              name="telephone" 
-              placeholder="+33 5 56 00 00 00"
-            >
+            <input type="tel" id="telephone" name="telephone" placeholder="02 96 XX XX XX" value="<?= htmlspecialchars($form_data['telephone'], ENT_QUOTES, 'UTF-8'); ?>">
           </label>
 
-          <!-- SUJET -->
-          <label for="sujet" class="full-width">
-            <span><i class="fas fa-list"></i> Sujet *</span>
-            <select id="sujet" name="sujet" required>
-              <option value="">-- Sélectionner un sujet --</option>
-              <option value="estimation">Question sur une estimation</option>
-              <option value="accompagnement">Demander un accompagnement</option>
-              <option value="conseil">Conseil immobilier</option>
-              <option value="partenariat">Partenariat / Collaboration</option>
-              <option value="probleme">Signaler un problème</option>
-              <option value="autre">Autre question</option>
-            </select>
-          </label>
-
-          <!-- QUARTIER/VILLE -->
-          <label for="quartier" class="full-width">
-            <span><i class="fas fa-map-marker-alt"></i> Quartier / Ville concerné(e)</span>
-            <input 
-              type="text" 
-              id="quartier" 
-              name="quartier" 
-              placeholder="Ex: Chartrons, Talence, Floirac..."
-            >
-          </label>
-
-          <!-- MESSAGE -->
           <label for="message" class="full-width">
-            <span><i class="fas fa-pen"></i> Votre message *</span>
-            <textarea 
-              id="message" 
-              name="message" 
-              placeholder="Décrivez votre situation, vos questions..." 
-              rows="6"
-              required
-            ></textarea>
+            <span><i class="fas fa-pen"></i> Message *</span>
+            <textarea id="message" name="message" rows="6" required><?= htmlspecialchars($form_data['message'], ENT_QUOTES, 'UTF-8'); ?></textarea>
           </label>
 
-          <!-- CHECKBOX RGPD -->
-          <div class="form-checkbox full-width">
-            <input 
-              type="checkbox" 
-              id="rgpd" 
-              name="rgpd" 
-              required
-            >
-            <label for="rgpd" style="margin: 0; font-weight: 500; font-size: 0.9rem; color: var(--text); cursor: pointer;">
-              J'accepte la 
-              <a href="/politique-confidentialite">politique de confidentialité</a> 
-              et je consens à recevoir des communications de la part d'Estimation Bordeaux *
-            </label>
-          </div>
+          <label for="captcha" class="full-width">
+            <span><i class="fas fa-shield-alt"></i> Vérification anti-robot (optionnel) : combien font 3 + 4 ?</span>
+            <input type="text" id="captcha" name="captcha" inputmode="numeric" value="<?= htmlspecialchars($form_data['captcha'], ENT_QUOTES, 'UTF-8'); ?>">
+          </label>
 
-          <!-- SUBMIT -->
-          <button 
-            type="submit" 
-            class="btn btn-primary full-width" 
-            style="display: flex; justify-content: center; align-items: center; gap: 0.5rem; font-size: 1rem; padding: 1rem;"
-          >
-            <i class="fas fa-paper-plane"></i> Envoyer mon message
+          <!-- Honeypot anti-spam -->
+          <label for="website" style="position:absolute; left:-10000px; width:1px; height:1px; overflow:hidden;">
+            Site web (laisser vide)
+          </label>
+          <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" value="<?= htmlspecialchars($form_data['website'], ENT_QUOTES, 'UTF-8'); ?>" style="position:absolute; left:-10000px; width:1px; height:1px; overflow:hidden;">
+
+          <button type="submit" class="btn btn-primary full-width" style="display: flex; justify-content: center; align-items: center; gap: 0.5rem;">
+            <i class="fas fa-paper-plane"></i> Envoyer
           </button>
-
-          <!-- LEGAL INFO -->
-          <p class="form-footer" style="text-align: center; margin-top: 1rem; font-size: 0.8rem; grid-column: 1 / -1;">
-            <i class="fas fa-lock"></i> Vos données sont sécurisées. 
-            <i class="fas fa-check-circle"></i> Nous vous répondrons rapidement.
-          </p>
         </form>
       </article>
-
     </div>
   </div>
 </section>
 
-<!-- ============================================ -->
-<!-- SERVICES / MOYENS DE CONTACT -->
-<!-- ============================================ -->
 <section class="section section-alt">
   <div class="container">
     <div class="section-heading">
-      <p class="eyebrow">
-        <i class="fas fa-headset"></i> Autres moyens de nous contacter
-      </p>
-      <h2>Choisissez le canal qui vous convient</h2>
+      <p class="eyebrow"><i class="fas fa-map-marked-alt"></i> Nous trouver</p>
+      <h2>Carte Google Maps</h2>
     </div>
 
-    <div class="service-grid">
-      <!-- MOYEN 1: TÉLÉPHONE -->
-      <article class="card service-additional">
-        <h3>
-          <i class="fas fa-phone"></i> Par téléphone
-        </h3>
-        <p>
-          Parlez directement à un expert. Réponses immédiates à vos questions. 
-          Disponible du lundi au samedi, 9h-19h.
-        </p>
-        <a href="tel:+33556000000" class="btn btn-small" style="margin-top: 1rem;">
-          <i class="fas fa-phone"></i> Appeler maintenant
-        </a>
-      </article>
-
-      <!-- MOYEN 2: EMAIL -->
-      <article class="card service-additional">
-        <h3>
-          <i class="fas fa-envelope"></i> Par email
-        </h3>
-        <p>
-          Envoyez-nous un email détaillé. Notre équipe vous répond en moins de 24h. 
-          Idéal pour les questions complexes.
-        </p>
-        <a href="mailto:contact@estimation-immobilier-bordeaux.fr" class="btn btn-small" style="margin-top: 1rem;">
-          <i class="fas fa-envelope"></i> Envoyer un email
-        </a>
-      </article>
-
-      <!-- MOYEN 3: FORMULAIRE -->
-      <article class="card service-additional">
-        <h3>
-          <i class="fas fa-comment-dots"></i> Via le formulaire
-        </h3>
-        <p>
-          Remplissez le formulaire ci-dessus. Nous traiterons votre demande 
-          en priorité et vous recontacterons rapidement.
-        </p>
-        <a href="#form-contact" class="btn btn-small" style="margin-top: 1rem;">
-          <i class="fas fa-arrow-down"></i> Aller au formulaire
-        </a>
-      </article>
-
-      <!-- MOYEN 4: CHAT DIRECT -->
-      <article class="card service-additional">
-        <h3>
-          <i class="fas fa-comments"></i> Chat en direct
-        </h3>
-        <p>
-          Discussions instantanées avec nos experts (disponible du lundi 
-          au vendredi, 9h-18h). Support immédiat pour vos questions.
-        </p>
-        <button class="btn btn-small" style="margin-top: 1rem; cursor: pointer;">
-          <i class="fas fa-comments"></i> Ouvrir le chat
-        </button>
-      </article>
-
-      <!-- MOYEN 5: RÉSEAUX SOCIAUX -->
-      <article class="card service-additional">
-        <h3>
-          <i class="fas fa-share-alt"></i> Sur les réseaux sociaux
-        </h3>
-        <p>
-          Suivez-nous sur Facebook, Instagram et LinkedIn. Actualités, 
-          conseils immobiliers et réponses à vos questions.
-        </p>
-        <div style="display: flex; gap: 0.5rem; margin-top: 1rem;">
-          <a href="#facebook" class="btn btn-small" style="flex: 1; justify-content: center;">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="#instagram" class="btn btn-small" style="flex: 1; justify-content: center;">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="#linkedin" class="btn btn-small" style="flex: 1; justify-content: center;">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-        </div>
-      </article>
-
-      <!-- MOYEN 6: RENDEZ-VOUS -->
-      <article class="card service-additional">
-        <h3>
-          <i class="fas fa-calendar"></i> Prendre rendez-vous
-        </h3>
-        <p>
-          Préférez une consultation en personne ? Prenez rendez-vous 
-          avec nos experts au siège à Bordeaux.
-        </p>
-        <button class="btn btn-small" style="margin-top: 1rem; cursor: pointer;">
-          <i class="fas fa-calendar"></i> Prendre RDV
-        </button>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================ -->
-<!-- FAQ CONTACT -->
-<!-- ============================================ -->
-<section class="section">
-  <div class="container">
-    <div class="section-heading">
-      <p class="eyebrow">
-        <i class="fas fa-question-circle"></i> Questions fréquentes
-      </p>
-      <h2>Réponses rapides</h2>
-    </div>
-
-    <div class="faq-grid">
-      <!-- FAQ 1 -->
-      <article class="card faq-card">
-        <h3>
-          <i class="fas fa-question-circle"></i> Quel est le meilleur moyen pour me contacter?
-        </h3>
-        <p>
-          Cela dépend de votre besoin. Pour une question rapide, appelez-nous. 
-          Pour une demande détaillée, utilisez le formulaire ou l'email. Le chat est parfait pour les urgences.
-        </p>
-      </article>
-
-      <!-- FAQ 2 -->
-      <article class="card faq-card">
-        <h3>
-          <i class="fas fa-question-circle"></i> Combien de temps pour obtenir une réponse?
-        </h3>
-        <p>
-          Par téléphone : immédiat. Par email/formulaire : moins de 24h. 
-          Par chat : réponse en quelques minutes (heures de bureau).
-        </p>
-      </article>
-
-      <!-- FAQ 3 -->
-      <article class="card faq-card">
-        <h3>
-          <i class="fas fa-question-circle"></i> Êtes-vous disponibles le week-end?
-        </h3>
-        <p>
-          Le samedi de 10h à 17h. Le dimanche fermé. Pour les urgences en dehors des heures, 
-          utilisez le formulaire et nous vous répondrons dès lundi.
-        </p>
-      </article>
-
-      <!-- FAQ 4 -->
-      <article class="card faq-card">
-        <h3>
-          <i class="fas fa-question-circle"></i> Puis-je visiter vos bureaux?
-        </h3>
-        <p>
-          Oui ! Sur rendez-vous. 12 Quai des Chartrons, Bordeaux. 
-          Parking gratuit et accès PMR disponibles.
-        </p>
-      </article>
-
-      <!-- FAQ 5 -->
-      <article class="card faq-card">
-        <h3>
-          <i class="fas fa-question-circle"></i> Mes données sont-elles sécurisées?
-        </h3>
-        <p>
-          Absolument. Chiffrement SSL/TLS, RGPD conforme. Vos données ne sont jamais vendues. 
-          Nous respectons votre confidentialité.
-        </p>
-      </article>
-
-      <!-- FAQ 6 -->
-      <article class="card faq-card">
-        <h3>
-          <i class="fas fa-question-circle"></i> Puis-je demander un rappel?
-        </h3>
-        <p>
-          Oui, indiquez-le dans le formulaire. Nous vous recontacterons au moment qui vous convient. 
-          Vous pouvez aussi nous appeler directement.
-        </p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================ -->
-<!-- CTA FINAL -->
-<!-- ============================================ -->
-<section class="section">
-  <div class="container">
-    <div class="cta-final card">
-      <p class="eyebrow">
-        <i class="fas fa-hands-helping"></i> Pas encore estimé?
-      </p>
-      <h2>Commencez par une estimation gratuite</h2>
-      <p class="lead">
-        Avant de nous contacter, découvrez la fourchette de prix de votre bien. 
-        100% gratuit, résultat en 1 minute.
-      </p>
-      <a href="/#form-estimation" class="btn btn-primary">
-        <i class="fas fa-calculator"></i> Estimer mon bien
-      </a>
-    </div>
+    <article class="card" style="padding: 0; overflow: hidden;">
+      <iframe
+        title="Localisation Estimation Immobilier Lannion"
+        src="https://www.google.com/maps?q=Lannion%2022300&output=embed"
+        width="100%"
+        height="420"
+        style="border: 0; display: block;"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        allowfullscreen>
+      </iframe>
+    </article>
   </div>
 </section>

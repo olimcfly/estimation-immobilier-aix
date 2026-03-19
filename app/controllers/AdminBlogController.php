@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Controllers;
 
+use App\Core\AdminAuth;
 use App\Core\Validator;
 use App\Core\View;
 use App\Models\Article;
@@ -11,6 +12,11 @@ use App\Services\AIService;
 
 final class AdminBlogController
 {
+    public function __construct()
+    {
+        AdminAuth::requireAuth();
+    }
+
     public function index(): void
     {
         $articleModel = new Article();

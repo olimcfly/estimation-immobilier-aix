@@ -60,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['newsletter_email'])) 
 
 <section class="section page-hero">
   <div class="container">
-    <div class="page-hero-inner card">
+    <div class="page-hero-inner">
       <p class="eyebrow">
         <i class="fas fa-envelope-open-text"></i> Newsletter
       </p>

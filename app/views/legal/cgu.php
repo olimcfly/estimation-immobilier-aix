@@ -1,6 +1,6 @@
 <section class="section page-hero">
   <div class="container">
-    <div class="page-hero-inner card">
+    <div class="page-hero-inner">
       <p class="eyebrow"><i class="fas fa-file-signature"></i> Cadre d’utilisation</p>
       <h1>Conditions générales d’utilisation</h1>
       <p class="lead">En utilisant estimation-immobilier-lannion.fr, vous acceptez les présentes CGU.</p>

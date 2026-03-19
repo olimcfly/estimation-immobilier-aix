@@ -2,22 +2,24 @@
 
 <!-- ============================================ -->
 <!-- HERO SECTION -->
-<section class="hero">
-  <div class="container hero-grid">
-    <div>
-      <p class="eyebrow">✓ Estimation immobilière à Lannion</p>
+<section class="section page-hero">
+  <div class="container">
+    <div class="page-hero-inner">
+      <p class="eyebrow">
+        <i class="fas fa-check-circle"></i> Estimation immobilière à Lannion
+      </p>
       <h1>Vendez au meilleur prix avec une évaluation fiable et professionnelle</h1>
       <p class="lead">Notre moteur analyse les données locales, les tendances du marché et les caractéristiques de votre bien pour fournir une fourchette de valeur précise en quelques secondes.</p>
-      
-      <ul class="trust-list">
-        <li><i class="fas fa-check-circle"></i> +2 000 estimations réalisées</li>
-        <li><i class="fas fa-check-circle"></i> Méthodologie marché local</li>
-        <li><i class="fas fa-check-circle"></i> Accompagnement personnalisé</li>
-      </ul>
 
-      <div class="hero-actions">
-        <a class="btn" href="#form-estimation">Lancer mon estimation</a>
+      <div style="display: flex; justify-content: center; gap: var(--space-8); margin-bottom: var(--space-8); color: rgba(255,255,255,0.85);">
+        <span><i class="fas fa-check-circle" style="color: var(--accent);"></i> +2 000 estimations</span>
+        <span><i class="fas fa-check-circle" style="color: var(--accent);"></i> Marché local</span>
+        <span><i class="fas fa-check-circle" style="color: var(--accent);"></i> Accompagnement</span>
       </div>
+
+      <a class="btn btn-primary" href="#form-estimation" style="font-size: var(--size-lg);">
+        <i class="fas fa-bolt"></i> Lancer mon estimation
+      </a>
     </div>
   </div>
 </section>

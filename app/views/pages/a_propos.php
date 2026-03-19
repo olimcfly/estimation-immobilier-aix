@@ -5,7 +5,7 @@
 <!-- ================================================ -->
 <section class="section page-hero">
   <div class="container">
-    <div class="page-hero-inner card">
+    <div class="page-hero-inner">
       <p class="eyebrow">
         <i class="fas fa-info-circle"></i> À propos de nous
       </p>

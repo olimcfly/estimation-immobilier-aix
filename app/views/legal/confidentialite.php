@@ -1,6 +1,6 @@
 <section class="section page-hero">
   <div class="container">
-    <div class="page-hero-inner card">
+    <div class="page-hero-inner">
       <p class="eyebrow"><i class="fas fa-user-shield"></i> Données personnelles</p>
       <h1>Politique de confidentialité</h1>
       <p class="lead">Cette page explique quelles données sont collectées, pourquoi et pendant combien de temps.</p>

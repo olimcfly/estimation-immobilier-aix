@@ -1,6 +1,6 @@
 <section class="section page-hero">
   <div class="container">
-    <div class="page-hero-inner card">
+    <div class="page-hero-inner">
       <p class="eyebrow"><i class="fas fa-gavel"></i> Informations légales</p>
       <h1>Mentions légales</h1>
       <p class="lead">Informations éditoriales et juridiques relatives au site estimation-immobilier-lannion.fr.</p>

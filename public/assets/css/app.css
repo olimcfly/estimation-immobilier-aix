@@ -240,24 +240,62 @@ em {
   justify-content: center;
 }
 
-/* Hero section - extra space */
+/* Hero section - FULL WIDTH PREMIUM */
 .page-hero {
-  padding: var(--space-24) 0;
-  background: linear-gradient(135deg, rgba(0, 63, 135, 0.02) 0%, rgba(255, 215, 0, 0.01) 100%);
+  padding: 0;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 60%, #001a3a 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.page-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 70% 40%, rgba(255, 215, 0, 0.08) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 80% at 20% 80%, rgba(0, 63, 135, 0.15) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.page-hero .container {
+  position: relative;
+  z-index: 1;
+  padding-top: var(--space-20);
+  padding-bottom: var(--space-20);
 }
 
 .page-hero-inner {
-  max-width: 900px;
+  max-width: 860px;
   margin: 0 auto;
+  text-align: center;
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+.page-hero-inner .eyebrow {
+  color: var(--accent);
+  font-weight: 600;
+  letter-spacing: 0.08em;
 }
 
 .page-hero-inner h1 {
   margin-bottom: var(--space-6);
+  color: #fff;
+  font-size: var(--size-5xl);
+  line-height: 1.1;
 }
 
-.page-hero-inner p {
+.page-hero-inner p,
+.page-hero-inner .lead {
   margin-bottom: var(--space-8);
-  max-width: 800px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: var(--size-lg);
 }
 
 /* ================================================================ */
@@ -511,6 +549,45 @@ em {
   background: var(--bg-alt);
   border-color: var(--primary);
   color: var(--primary);
+}
+
+/* Outline on dark backgrounds */
+.page-hero .btn.btn-outline {
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #fff;
+}
+
+.page-hero .btn.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+/* Primary button boost on hero */
+.page-hero .btn-primary {
+  background: linear-gradient(135deg, var(--accent), #f0c000);
+  color: var(--primary-dark);
+  font-weight: 700;
+}
+
+.page-hero .btn-primary:hover {
+  background: linear-gradient(135deg, #ffe766, var(--accent));
+  color: var(--primary-dark);
+}
+
+/* Cards inside hero stay white */
+.page-hero .card {
+  background: #fff;
+  color: var(--text);
+}
+
+.page-hero .card h2,
+.page-hero .card h3,
+.page-hero .card h4,
+.page-hero .card p,
+.page-hero .card span,
+.page-hero .card label {
+  color: var(--text);
 }
 
 /* ================================================================ */
@@ -1992,8 +2069,9 @@ select.invalid {
     padding: var(--space-16) 0;
   }
 
-  .page-hero {
-    padding: var(--space-16) 0;
+  .page-hero .container {
+    padding-top: var(--space-16);
+    padding-bottom: var(--space-16);
   }
 
   .page-hero-inner h1 {
@@ -2044,8 +2122,13 @@ select.invalid {
     padding: var(--space-12) 0;
   }
 
-  .page-hero {
-    padding: var(--space-12) 0;
+  .page-hero .container {
+    padding-top: var(--space-12);
+    padding-bottom: var(--space-12);
+  }
+
+  .page-hero-inner h1 {
+    font-size: var(--size-3xl);
   }
 
   .container {

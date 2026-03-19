@@ -30,12 +30,12 @@ $page_title = sprintf('Estimation Immobilière %s | Évaluez Votre Bien en 1 Min
         </p>
 
         <!-- H1 Principal -->
-        <h1 style="background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+        <h1>
           Estimez votre bien immobilier à <?= htmlspecialchars($cityName); ?>
         </h1>
 
         <!-- Subheadline -->
-        <p class="lead" style="margin-bottom: var(--space-6);">
+        <p class="lead" style="margin-bottom: var(--space-6); color: rgba(255,255,255,0.85);">
           Découvrez la vraie valeur de votre propriété en moins d'une minute. Analyse précise basée sur 5000+ transactions réelles de votre région.
         </p>
 
@@ -51,36 +51,36 @@ $page_title = sprintf('Estimation Immobilière %s | Évaluez Votre Bien en 1 Min
         </figure>
 
         <!-- Description -->
-        <p style="margin-bottom: var(--space-6); line-height: var(--line-lg);">
+        <p style="margin-bottom: var(--space-6); line-height: var(--line-lg); color: rgba(255,255,255,0.85);">
           De <?= htmlspecialchars($featuredDistricts[0] ?? ''); ?> au cœur de la ville jusqu'aux hauteurs de <?= htmlspecialchars($featuredDistricts[2] ?? ''); ?>, nos estimations couvrent toute la zone de <?= htmlspecialchars($cityName); ?> et région.
         </p>
 
         <!-- Stat clé -->
-        <div style="background: linear-gradient(135deg, rgba(0, 63, 135, 0.1), rgba(255, 215, 0, 0.08)); border-radius: var(--radius-lg); padding: var(--space-4); margin-bottom: var(--space-6);">
-          <p style="font-size: var(--size-xs); color: var(--text-muted); text-transform: uppercase; font-weight: 600; margin-bottom: var(--space-2);">
+        <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.15); border-radius: var(--radius-lg); padding: var(--space-4); margin-bottom: var(--space-6);">
+          <p style="font-size: var(--size-xs); color: var(--accent); text-transform: uppercase; font-weight: 600; margin-bottom: var(--space-2);">
             <i class="fas fa-chart-line"></i> Prix moyen constaté
           </p>
-          <p style="font-family: var(--font-primary); font-size: var(--size-3xl); font-weight: 800; color: var(--primary); margin-bottom: 0;">
+          <p style="font-family: var(--font-primary); font-size: var(--size-3xl); font-weight: 800; color: #fff; margin-bottom: 0;">
             <?= number_format((int) $prixM2Moyen, 0, ',', ' '); ?>€ / m²
           </p>
         </div>
 
         <!-- Trust Indicators -->
-        <div style="display: flex; flex-direction: column; gap: var(--space-3); margin-bottom: var(--space-6);">
+        <div style="display: flex; flex-direction: column; gap: var(--space-3); margin-bottom: var(--space-6); color: rgba(255,255,255,0.9);">
           <div style="display: flex; align-items: center; gap: var(--space-2);">
-            <i class="fas fa-check-circle" style="color: var(--success); font-weight: 700;"></i>
+            <i class="fas fa-check-circle" style="color: var(--accent);"></i>
             <span>
               <strong><?= htmlspecialchars($featuredDistricts[0] ?? ''); ?></strong> • Quartier central très prisé
             </span>
           </div>
           <div style="display: flex; align-items: center; gap: var(--space-2);">
-            <i class="fas fa-check-circle" style="color: var(--success); font-weight: 700;"></i>
+            <i class="fas fa-check-circle" style="color: var(--accent);"></i>
             <span>
               <strong><?= htmlspecialchars($featuredDistricts[1] ?? ''); ?></strong> • Ambiance littorale recherchée
             </span>
           </div>
           <div style="display: flex; align-items: center; gap: var(--space-2);">
-            <i class="fas fa-check-circle" style="color: var(--success); font-weight: 700;"></i>
+            <i class="fas fa-check-circle" style="color: var(--accent);"></i>
             <span>
               <strong><?= htmlspecialchars($featuredDistricts[2] ?? ''); ?></strong> • Secteur patrimoine en hausse
             </span>
@@ -88,14 +88,14 @@ $page_title = sprintf('Estimation Immobilière %s | Évaluez Votre Bien en 1 Min
         </div>
 
         <!-- Social Proof -->
-        <div style="background: rgba(0, 63, 135, 0.04); border-left: 4px solid var(--primary); border-radius: var(--radius-lg); padding: var(--space-4); margin-bottom: var(--space-6);">
-          <p style="margin-bottom: var(--space-2); font-size: var(--size-xs); color: var(--primary); text-transform: uppercase; font-weight: 600; letter-spacing: 0.05em;">
+        <div style="background: rgba(255,255,255,0.08); border-left: 4px solid var(--accent); border-radius: var(--radius-lg); padding: var(--space-4); margin-bottom: var(--space-6);">
+          <p style="margin-bottom: var(--space-2); font-size: var(--size-xs); color: var(--accent); text-transform: uppercase; font-weight: 600; letter-spacing: 0.05em;">
             <i class="fas fa-quote-left"></i> Témoignage client
           </p>
-          <p style="margin-bottom: var(--space-3); font-style: italic; line-height: var(--line-lg);">
+          <p style="margin-bottom: var(--space-3); font-style: italic; line-height: var(--line-lg); color: rgba(255,255,255,0.9);">
             "L'estimation était très proche de l'offre reçue. Super rapide et fiable. Je recommande !"
           </p>
-          <p style="margin-bottom: 0; font-size: var(--size-sm); color: var(--text-muted); font-weight: 600;">
+          <p style="margin-bottom: 0; font-size: var(--size-sm); color: rgba(255,255,255,0.6); font-weight: 600;">
             — Propriétaire • <?= htmlspecialchars($cityName); ?>
           </p>
         </div>

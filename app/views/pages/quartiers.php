@@ -79,7 +79,7 @@ $quartiers = [
 
 <section class="section page-hero">
   <div class="container">
-    <div class="page-hero-inner card">
+    <div class="page-hero-inner">
       <p class="eyebrow">
         <i class="fas fa-map-marked-alt"></i> Quartiers de Lannion
       </p>

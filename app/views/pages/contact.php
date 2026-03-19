@@ -132,6 +132,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           <p class="info-label"><i class="fas fa-phone"></i> Téléphone direct</p>
           <p class="info-value"><a href="tel:+33296000000">02 96 00 00 00</a></p>
         </div>
+      </article>
 
         <div class="info-block">
           <p class="info-label"><i class="fas fa-envelope"></i> Email contact</p>

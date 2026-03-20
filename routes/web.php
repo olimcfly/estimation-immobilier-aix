@@ -6,6 +6,7 @@ use App\Controllers\AdminBlogController;
 use App\Controllers\BlogController;
 use App\Controllers\EstimationController;
 use App\Controllers\PageController;
+use App\Controllers\SitemapController;
 use App\Controllers\ToolController;
 
 $router->get('/', [PageController::class, 'home']);
@@ -39,6 +40,8 @@ $router->get('/blog/{slug}', [BlogController::class, 'show']);
 $router->get('/calculatrice', [ToolController::class, 'calculatrice']);
 
 $router->get('/podcast', [PageController::class, 'podcast']);
+
+$router->get('/sitemap.xml', [SitemapController::class, 'index']);
 
 // Admin routes (require authentication via AdminAuth)
 $router->get('/admin/blog', [AdminBlogController::class, 'index']);

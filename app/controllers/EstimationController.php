@@ -40,7 +40,12 @@ final class EstimationController
             $surface = Validator::float($_POST, 'surface', 5, 10000);
             $rooms = Validator::int($_POST, 'pieces', 1, 50);
 
-            $estimate = $this->estimationService->estimate($city, $propertyType, $surface, $rooms);
+            $quartier = trim((string) ($_POST['quartier'] ?? ''));
+            $etat = trim((string) ($_POST['etat'] ?? ''));
+            $etage = isset($_POST['etage']) && $_POST['etage'] !== '' ? (int) $_POST['etage'] : -1;
+            $annee = isset($_POST['annee_construction']) && $_POST['annee_construction'] !== '' ? (int) $_POST['annee_construction'] : 0;
+
+            $estimate = $this->estimationService->estimate($city, $propertyType, $surface, $rooms, $quartier, $etat, $etage, $annee);
             $now = time();
             $_SESSION['lead_form_context'] = [
                 'ip' => $this->getClientIp(),
@@ -75,7 +80,12 @@ final class EstimationController
             $surface = Validator::float($sanitized, 'surface', 5, 10000);
             $rooms = Validator::int($sanitized, 'pieces', 1, 50);
 
-            $estimate = $this->estimationService->estimate($city, $propertyType, $surface, $rooms);
+            $quartier = trim((string) ($sanitized['quartier'] ?? ''));
+            $etat = trim((string) ($sanitized['etat'] ?? ''));
+            $etage = isset($sanitized['etage']) && $sanitized['etage'] !== '' ? (int) $sanitized['etage'] : -1;
+            $annee = isset($sanitized['annee_construction']) && $sanitized['annee_construction'] !== '' ? (int) $sanitized['annee_construction'] : 0;
+
+            $estimate = $this->estimationService->estimate($city, $propertyType, $surface, $rooms, $quartier, $etat, $etage, $annee);
 
             http_response_code(200);
             echo json_encode([

@@ -4,11 +4,31 @@ declare(strict_types=1);
 
 namespace App\Services;
 
+use App\Core\Cache;
 use App\Core\Config;
 
 final class PerplexityService
 {
+    private const CACHE_TTL = 86400; // 24 hours
+
     public function fetchMarketRange(string $city, string $propertyType): array
+    {
+        $cacheKey = 'perplexity_market_' . md5($city . '|' . $propertyType);
+
+        $cached = Cache::get($cacheKey);
+        if (is_array($cached) && isset($cached['low'], $cached['mid'], $cached['high'])) {
+            return $cached;
+        }
+
+        $result = $this->fetchFromApi($city, $propertyType);
+        if (isset($result['low'], $result['mid'], $result['high']) && $result['mid'] > 0) {
+            Cache::put($cacheKey, $result, self::CACHE_TTL);
+        }
+
+        return $result;
+    }
+
+    private function fetchFromApi(string $city, string $propertyType): array
     {
         $apiKey = (string) Config::get('perplexity.api_key', '');
         if ($apiKey === '') {

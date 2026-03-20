@@ -30,20 +30,8 @@ if (PHP_SAPI !== 'cli') {
     header('Referrer-Policy: strict-origin-when-cross-origin');
     header('Permissions-Policy: geolocation=(), microphone=(), camera=()');
 
-    $csp = implode('; ', [
-        "default-src 'self'",
-        "base-uri 'self'",
-        "frame-ancestors 'none'",
-        "form-action 'self'",
-        "script-src 'self' 'unsafe-inline'",
-        "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com",
-        "font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com data:",
-        "img-src 'self' data: https:",
-        "connect-src 'self'",
-        "upgrade-insecure-requests",
-    ]);
-
-    header('Content-Security-Policy: ' . $csp);
+    // CSP nonce is generated after bootstrap (below) so we defer CSP header.
+    // See CSP header emission after bootstrap.
 }
 
 if (version_compare(PHP_VERSION, '8.0.0', '<')) {
@@ -54,9 +42,29 @@ if (version_compare(PHP_VERSION, '8.0.0', '<')) {
 }
 
 use App\Core\Config;
+use App\Core\CspNonce;
 use App\Core\Router;
 
 require_once dirname(__DIR__) . '/app/core/bootstrap.php';
+
+// Emit CSP header with per-request nonce (replaces unsafe-inline)
+if (PHP_SAPI !== 'cli') {
+    $nonce = CspNonce::get();
+    $csp = implode('; ', [
+        "default-src 'self'",
+        "base-uri 'self'",
+        "frame-ancestors 'none'",
+        "form-action 'self'",
+        "script-src 'self' 'nonce-{$nonce}'",
+        "style-src 'self' 'nonce-{$nonce}' https://fonts.googleapis.com https://cdnjs.cloudflare.com",
+        "style-src-attr 'unsafe-inline'",
+        "font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com data:",
+        "img-src 'self' data: https:",
+        "connect-src 'self'",
+        "upgrade-insecure-requests",
+    ]);
+    header('Content-Security-Policy: ' . $csp);
+}
 
 $isMaintenanceEnabled = (bool) Config::get('maintenance.enabled', false);
 $maintenanceAllowedPaths = Config::get('maintenance.allowed_paths', []);

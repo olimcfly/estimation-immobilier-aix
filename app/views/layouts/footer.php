@@ -177,6 +177,6 @@
 </main>
 
 <!-- JS Principal -->
-<script src="/assets/js/main.js"></script>
+<script src="/assets/js/main.js" <?= \App\Core\CspNonce::attribute() ?>></script>
 </body>
 </html>

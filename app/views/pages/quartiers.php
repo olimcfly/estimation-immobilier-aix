@@ -1,78 +1,78 @@
 <?php
-$page_title = 'Quartiers de Aix-en-Provence - Estimation Immobilière Aix-en-Provence | Guide Détaillé';
+$page_title = 'Quartiers d'Angers - Estimation Immobilière Angers | Guide Détaillé';
 
 $quartiers = [
     [
-        'nom' => 'Centre Historique / Cours Mirabeau',
-        'description' => "Coeur vibrant d'Aix-en-Provence avec le célèbre Cours Mirabeau, ses fontaines, hôtels particuliers XVIIe-XVIIIe et terrasses de cafés. Architecture provençale remarquable, commerces haut de gamme.",
-        'prix_m2' => 6200,
-        'prix_moyen' => 520000,
-        'caracteristiques' => ['Historique', 'Cours Mirabeau', 'Fontaines', 'Patrimoine'],
-        'population' => '~12000 habitants',
-        'transports' => 'Bus Aix en Bus, Centre piéton, Navettes',
-        'attractivite' => 'Très haute',
-        'coords' => '43.5263,5.4481',
-        'tendance' => '+3.8%',
-    ],
-    [
-        'nom' => 'Mazarin',
-        'description' => "Quartier aristocratique au sud du Cours Mirabeau. Hôtels particuliers, rues calmes et élégantes, musée Granet. L'un des quartiers les plus prestigieux d'Aix.",
-        'prix_m2' => 6500,
-        'prix_moyen' => 580000,
-        'caracteristiques' => ['Prestige', 'Hôtels particuliers', 'Musée Granet', 'Élégant'],
-        'population' => '~6000 habitants',
-        'transports' => 'Bus, Piéton, Parking Mignet',
-        'attractivite' => 'Très haute',
-        'coords' => '43.5240,5.4500',
-        'tendance' => '+3.2%',
-    ],
-    [
-        'nom' => 'Jas de Bouffan',
-        'description' => "Quartier résidentiel à l'ouest d'Aix, lié à l'histoire de Cézanne. Centre commercial, logements variés et accès rapide à l'autoroute. Bon rapport qualité-prix.",
-        'prix_m2' => 4200,
-        'prix_moyen' => 380000,
-        'caracteristiques' => ['Résidentiel', 'Cézanne', 'Commerces', 'Accessible'],
+        'nom' => 'Centre-ville / La Cité',
+        'description' => "Coeur historique d'Angers avec le célèbre Château des ducs d'Anjou, la cathédrale Saint-Maurice et la Tapisserie de l'Apocalypse. Rues médiévales, commerces, restaurants et vie culturelle intense.",
+        'prix_m2' => 3200,
+        'prix_moyen' => 280000,
+        'caracteristiques' => ['Historique', 'Château', 'Cathédrale', 'Commerces'],
         'population' => '~15000 habitants',
-        'transports' => 'Bus Aix en Bus, Accès A8/A51',
+        'transports' => 'Tramway A/B, Bus Irigo, Centre piéton',
+        'attractivite' => 'Très haute',
+        'coords' => '47.4712,-0.5518',
+        'tendance' => '+4.2%',
+    ],
+    [
+        'nom' => 'La Doutre',
+        'description' => "Quartier médiéval sur la rive droite de la Maine. Maisons à colombages, abbaye du Ronceray, ambiance bohème et artistique. En plein renouveau avec de nouveaux commerces et restaurants.",
+        'prix_m2' => 2900,
+        'prix_moyen' => 245000,
+        'caracteristiques' => ['Médiéval', 'Colombages', 'Artistique', 'Abbaye'],
+        'population' => '~8000 habitants',
+        'transports' => 'Tramway A, Bus Irigo, Piéton',
         'attractivite' => 'Haute',
-        'coords' => '43.5250,5.4200',
+        'coords' => '47.4735,-0.5620',
+        'tendance' => '+5.8%',
+    ],
+    [
+        'nom' => 'Saint-Serge',
+        'description' => "Quartier moderne au nord du centre, entre campus universitaire et quartier d'affaires. Résidences récentes, étudiants et jeunes actifs. Proximité de la gare TGV Saint-Laud.",
+        'prix_m2' => 3000,
+        'prix_moyen' => 260000,
+        'caracteristiques' => ['Moderne', 'Université', 'Gare TGV', 'Dynamique'],
+        'population' => '~12000 habitants',
+        'transports' => 'Tramway A, Gare TGV Saint-Laud, Bus',
+        'attractivite' => 'Très haute',
+        'coords' => '47.4780,-0.5500',
         'tendance' => '+4.5%',
     ],
     [
-        'nom' => 'Pont de l\'Arc / Les Milles',
-        'description' => "Secteur sud dynamique entre Aix et la zone d'activités des Milles. Résidences récentes, familles et actifs. Proximité du technopôle de l'Arbois et de la gare TGV.",
-        'prix_m2' => 4600,
-        'prix_moyen' => 420000,
-        'caracteristiques' => ['Dynamique', 'Technopôle', 'Gare TGV', 'Familles'],
+        'nom' => 'Belle-Beille',
+        'description' => "Grand quartier résidentiel à l'ouest d'Angers avec le campus universitaire. Parc de loisirs, logements variés et bon rapport qualité-prix. En pleine transformation urbaine.",
+        'prix_m2' => 2200,
+        'prix_moyen' => 185000,
+        'caracteristiques' => ['Résidentiel', 'Campus', 'Parc', 'Accessible'],
         'population' => '~18000 habitants',
-        'transports' => 'Bus, Gare TGV Aix, Accès autoroute',
+        'transports' => 'Tramway B, Bus Irigo, Pistes cyclables',
         'attractivite' => 'Haute',
-        'coords' => '43.5050,5.4300',
-        'tendance' => '+5.1%',
+        'coords' => '47.4680,-0.5850',
+        'tendance' => '+6.1%',
     ],
     [
-        'nom' => 'Puyricard',
-        'description' => "Village provençal au nord d'Aix, réputé pour ses calissons et son cadre champêtre. Bastides, mas et villas avec piscine dans un écrin de verdure. Très prisé des familles aisées.",
-        'prix_m2' => 5800,
-        'prix_moyen' => 750000,
-        'caracteristiques' => ['Village', 'Bastides', 'Calissons', 'Nature'],
-        'population' => '~8000 habitants',
-        'transports' => 'Voiture, Bus scolaire',
-        'attractivite' => 'Très haute',
-        'coords' => '43.5650,5.4250',
-        'tendance' => '+3.5%',
+        'nom' => 'Monplaisir',
+        'description' => "Quartier populaire en plein renouvellement urbain au sud d'Angers. Nouveaux programmes immobiliers, parc Balzac, accès rapide au centre. Fort potentiel de plus-value.",
+        'prix_m2' => 2400,
+        'prix_moyen' => 195000,
+        'caracteristiques' => ['Renouveau', 'Parc Balzac', 'Programmes neufs', 'Potentiel'],
+        'population' => '~14000 habitants',
+        'transports' => 'Tramway A, Bus Irigo, Accès rocade',
+        'attractivite' => 'Haute',
+        'coords' => '47.4580,-0.5450',
+        'tendance' => '+7.2%',
     ],
     [
-        'nom' => 'La Torse / Saint-Jérôme',
-        'description' => "Quartier résidentiel prisé à l'est d'Aix. Proximité du parc de la Torse, villas avec vue sur la Sainte-Victoire. Cadre de vie exceptionnel entre ville et campagne.",
-        'prix_m2' => 5400,
-        'prix_moyen' => 620000,
-        'caracteristiques' => ['Résidentiel', 'Sainte-Victoire', 'Parc', 'Villas'],
+        'nom' => 'Lac de Maine',
+        'description' => "Quartier résidentiel prisé au sud-ouest d'Angers, autour du plan d'eau. Base de loisirs, activités nautiques, espaces verts. Cadre de vie exceptionnel recherché par les familles.",
+        'prix_m2' => 3100,
+        'prix_moyen' => 320000,
+        'caracteristiques' => ['Nature', 'Lac', 'Loisirs', 'Familles'],
         'population' => '~10000 habitants',
-        'transports' => 'Bus, Pistes cyclables',
+        'transports' => 'Bus Irigo, Pistes cyclables, Voiture',
         'attractivite' => 'Très haute',
-        'coords' => '43.5300,5.4700',
-        'tendance' => '+4.2%',
+        'coords' => '47.4550,-0.5750',
+        'tendance' => '+3.8%',
     ],
 ];
 ?>
@@ -81,9 +81,9 @@ $quartiers = [
   <div class="container">
     <div class="page-hero-inner">
       <p class="eyebrow">
-        <i class="fas fa-map-marked-alt"></i> Quartiers de Aix-en-Provence
+        <i class="fas fa-map-marked-alt"></i> Quartiers d'Angers
       </p>
-      <h1>Explorez les quartiers de Aix-en-Provence</h1>
+      <h1>Explorez les quartiers d'Angers</h1>
       <p class="lead">
         Comparez les prix au m², les tendances de marché et les points forts de chaque quartier pour affiner votre estimation immobilière.
       </p>
@@ -125,8 +125,8 @@ $quartiers = [
 
       <iframe
         id="google-map-quartiers"
-        title="Carte des quartiers de Aix-en-Provence"
-        src="https://maps.google.com/maps?q=44.8378,-0.5792&z=13&output=embed"
+        title="Carte des quartiers d'Angers"
+        src="https://maps.google.com/maps?q=47.4712,-0.5518&z=13&output=embed"
         width="100%"
         height="480"
         style="border: 0; border-radius: var(--radius-xl); display: block;"
@@ -161,7 +161,7 @@ $quartiers = [
               </p>
             </div>
             <div style="text-align: right;">
-              <div style="background: linear-gradient(135deg, rgba(139, 21, 56, 0.1), rgba(212, 175, 55, 0.08)); border-radius: var(--radius-lg); padding: var(--space-3) var(--space-4);">
+              <div style="background: linear-gradient(135deg, rgba(var(--primary-rgb), 0.1), rgba(var(--accent-rgb), 0.08)); border-radius: var(--radius-lg); padding: var(--space-3) var(--space-4);">
                 <p style="margin: 0; font-weight: 700; font-size: var(--size-lg); color: var(--primary);">
                   <?= number_format((int) $quartier['prix_m2'], 0, ',', ' '); ?> €/m²
                 </p>
@@ -309,16 +309,16 @@ $quartiers = [
       <p class="eyebrow">
         <i class="fas fa-image"></i> Galerie Visuelle
       </p>
-      <h2>Ambiances et paysages de Aix-en-Provence</h2>
+      <h2>Ambiances et paysages d'Angers</h2>
     </div>
 
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--space-4);">
-      <!-- Chartrons -->
+      <!-- Centre-ville -->
       <figure style="margin: 0;">
         <div style="position: relative; overflow: hidden; border-radius: var(--radius-xl); height: 240px; background: var(--bg-alt);">
           <img
             src="https://images.unsplash.com/photo-1560969184-10fe8719e047?auto=format&fit=crop&w=500&q=80"
-            alt="Quartier des Chartrons à Aix-en-Provence"
+            alt="Centre-ville d'Angers et Château"
             style="width: 100%; height: 100%; object-fit: cover; transition: transform var(--trans-base);"
             onmouseover="this.style.transform='scale(1.08)'"
             onmouseout="this.style.transform='scale(1)'"
@@ -326,16 +326,16 @@ $quartiers = [
           <div style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.4)); border-radius: var(--radius-xl);"></div>
         </div>
         <figcaption style="font-weight: 600; color: var(--text); margin-top: var(--space-2); font-size: var(--size-sm);">
-          <i class="fas fa-wine-glass-alt"></i> Chartrons
+          <i class="fas fa-chess-rook"></i> Centre-ville / La Cité
         </figcaption>
       </figure>
 
-      <!-- Saint-Pierre -->
+      <!-- La Doutre -->
       <figure style="margin: 0;">
         <div style="position: relative; overflow: hidden; border-radius: var(--radius-xl); height: 240px; background: var(--bg-alt);">
           <img
             src="https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?auto=format&fit=crop&w=500&q=80"
-            alt="Quartier Saint-Pierre Aix-en-Provence"
+            alt="Quartier La Doutre Angers"
             style="width: 100%; height: 100%; object-fit: cover; transition: transform var(--trans-base);"
             onmouseover="this.style.transform='scale(1.08)'"
             onmouseout="this.style.transform='scale(1)'"
@@ -343,16 +343,16 @@ $quartiers = [
           <div style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.4)); border-radius: var(--radius-xl);"></div>
         </div>
         <figcaption style="font-weight: 600; color: var(--text); margin-top: var(--space-2); font-size: var(--size-sm);">
-          <i class="fas fa-landmark"></i> Saint-Pierre
+          <i class="fas fa-landmark"></i> La Doutre
         </figcaption>
       </figure>
 
-      <!-- Saint-Michel -->
+      <!-- Saint-Serge -->
       <figure style="margin: 0;">
         <div style="position: relative; overflow: hidden; border-radius: var(--radius-xl); height: 240px; background: var(--bg-alt);">
           <img
             src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=500&q=80"
-            alt="Quartier Saint-Michel Aix-en-Provence"
+            alt="Quartier Saint-Serge Angers"
             style="width: 100%; height: 100%; object-fit: cover; transition: transform var(--trans-base);"
             onmouseover="this.style.transform='scale(1.08)'"
             onmouseout="this.style.transform='scale(1)'"
@@ -360,16 +360,16 @@ $quartiers = [
           <div style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.4)); border-radius: var(--radius-xl);"></div>
         </div>
         <figcaption style="font-weight: 600; color: var(--text); margin-top: var(--space-2); font-size: var(--size-sm);">
-          <i class="fas fa-church"></i> Saint-Michel
+          <i class="fas fa-graduation-cap"></i> Saint-Serge
         </figcaption>
       </figure>
 
-      <!-- Caudéran -->
+      <!-- Belle-Beille -->
       <figure style="margin: 0;">
         <div style="position: relative; overflow: hidden; border-radius: var(--radius-xl); height: 240px; background: var(--bg-alt);">
           <img
             src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=500&q=80"
-            alt="Quartier résidentiel Caudéran"
+            alt="Quartier Belle-Beille Angers"
             style="width: 100%; height: 100%; object-fit: cover; transition: transform var(--trans-base);"
             onmouseover="this.style.transform='scale(1.08)'"
             onmouseout="this.style.transform='scale(1)'"
@@ -377,16 +377,16 @@ $quartiers = [
           <div style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.4)); border-radius: var(--radius-xl);"></div>
         </div>
         <figcaption style="font-weight: 600; color: var(--text); margin-top: var(--space-2); font-size: var(--size-sm);">
-          <i class="fas fa-home"></i> Caudéran
+          <i class="fas fa-home"></i> Belle-Beille
         </figcaption>
       </figure>
 
-      <!-- Bastide -->
+      <!-- Monplaisir -->
       <figure style="margin: 0;">
         <div style="position: relative; overflow: hidden; border-radius: var(--radius-xl); height: 240px; background: var(--bg-alt);">
           <img
             src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=500&q=80"
-            alt="Quartier Bastide - rive droite"
+            alt="Quartier Monplaisir Angers"
             style="width: 100%; height: 100%; object-fit: cover; transition: transform var(--trans-base);"
             onmouseover="this.style.transform='scale(1.08)'"
             onmouseout="this.style.transform='scale(1)'"
@@ -394,16 +394,16 @@ $quartiers = [
           <div style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.4)); border-radius: var(--radius-xl);"></div>
         </div>
         <figcaption style="font-weight: 600; color: var(--text); margin-top: var(--space-2); font-size: var(--size-sm);">
-          <i class="fas fa-water"></i> Bastide
+          <i class="fas fa-seedling"></i> Monplaisir
         </figcaption>
       </figure>
 
-      <!-- Mériadeck -->
+      <!-- Lac de Maine -->
       <figure style="margin: 0;">
         <div style="position: relative; overflow: hidden; border-radius: var(--radius-xl); height: 240px; background: var(--bg-alt);">
           <img
             src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=500&q=80"
-            alt="Quartier Mériadeck"
+            alt="Lac de Maine Angers"
             style="width: 100%; height: 100%; object-fit: cover; transition: transform var(--trans-base);"
             onmouseover="this.style.transform='scale(1.08)'"
             onmouseout="this.style.transform='scale(1)'"
@@ -411,7 +411,7 @@ $quartiers = [
           <div style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.4)); border-radius: var(--radius-xl);"></div>
         </div>
         <figcaption style="font-weight: 600; color: var(--text); margin-top: var(--space-2); font-size: var(--size-sm);">
-          <i class="fas fa-building"></i> Mériadeck
+          <i class="fas fa-water"></i> Lac de Maine
         </figcaption>
       </figure>
     </div>
@@ -436,7 +436,7 @@ $quartiers = [
           <i class="fas fa-question-circle"></i> Quel est le quartier le plus dynamique ?
         </h3>
         <p>
-          La Bastide affiche la tendance la plus forte (+7.3%) grâce aux projets urbains majeurs (Darwin, Euratlantique). Saint-Michel suit avec +6.2% porté par la rénovation du quartier.
+          Monplaisir affiche la tendance la plus forte (+7.2%) grâce aux projets de renouvellement urbain et au parc Balzac. Belle-Beille suit avec +6.1% porté par la transformation du campus.
         </p>
       </article>
 
@@ -445,7 +445,7 @@ $quartiers = [
           <i class="fas fa-question-circle"></i> Quel quartier pour une famille ?
         </h3>
         <p>
-          Caudéran est le quartier familial par excellence avec ses maisons avec jardin, ses écoles réputées et son ambiance résidentielle calme. Les Chartrons offrent aussi un excellent cadre de vie.
+          Le Lac de Maine est le quartier familial par excellence avec son plan d'eau, ses espaces verts et son cadre résidentiel calme. Saint-Serge offre aussi un excellent cadre de vie avec la proximité du centre.
         </p>
       </article>
 
@@ -454,7 +454,7 @@ $quartiers = [
           <i class="fas fa-question-circle"></i> Où trouver le meilleur investissement ?
         </h3>
         <p>
-          La Bastide et Saint-Michel combinent des prix encore accessibles avec de fortes perspectives de plus-value grâce aux projets de rénovation urbaine en cours.
+          Monplaisir et Belle-Beille combinent des prix encore accessibles avec de fortes perspectives de plus-value grâce aux projets de rénovation urbaine et à l'arrivée du tramway.
         </p>
       </article>
 
@@ -463,7 +463,7 @@ $quartiers = [
           <i class="fas fa-question-circle"></i> Quel quartier offre le meilleur rapport qualité/prix ?
         </h3>
         <p>
-          Mériadeck et Saint-Michel proposent des prix au m² plus abordables tout en restant très centraux. Idéal pour les primo-accédants souhaitant rester intra-rocade.
+          Belle-Beille et Monplaisir proposent des prix au m² plus abordables tout en offrant un bon accès au centre via le tramway. Idéal pour les primo-accédants.
         </p>
       </article>
 
@@ -472,7 +472,7 @@ $quartiers = [
           <i class="fas fa-question-circle"></i> Les prix varient-ils beaucoup d'un quartier à l'autre ?
         </h3>
         <p>
-          Oui, de 4 100 €/m² (Bastide) à 5 800 €/m² (Saint-Pierre). L'écart reflète la centralité, le patrimoine architectural et la demande. Aix-en-Provence reste attractif comparé aux métropoles similaires.
+          Oui, de 2 200 €/m² (Belle-Beille) à 3 200 €/m² (Centre-ville). L'écart reflète la centralité, le patrimoine architectural et la demande. Angers reste très attractif comparé aux autres métropoles françaises.
         </p>
       </article>
 

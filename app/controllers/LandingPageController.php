@@ -26,25 +26,25 @@ final class LandingPageController
 
     // ─── Landing Pages ───────────────────────────────────────
 
-    public function estimationAix-en-Provence(): void
+    public function estimationAngers(): void
     {
         UtmTrackingService::capture();
 
         View::renderBare('landing/layout', [
-            'page_title'       => 'Estimation Immobilière Aix-en-Provence | Gratuite en 60 secondes',
-            'meta_description' => 'Obtenez une estimation immobilière gratuite à Aix-en-Provence en 60 secondes. Résultat instantané basé sur les données réelles du marché de aix-en-provence.',
-            'landing_view'     => 'landing/pages/estimation-aix',
-            'landing_slug'     => 'estimation-aix',
+            'page_title'       => 'Estimation Immobilière Angers | Gratuite en 60 secondes',
+            'meta_description' => 'Obtenez une estimation immobilière gratuite à Angers en 60 secondes. Résultat instantané basé sur les données réelles du marché d'Angers.',
+            'landing_view'     => 'landing/pages/estimation-angers',
+            'landing_slug'     => 'estimation-angers',
         ]);
     }
 
-    public function vendreMaisonAix-en-Provence(): void
+    public function vendreMaisonAngers(): void
     {
         UtmTrackingService::capture();
 
         View::renderBare('landing/layout', [
-            'page_title'       => 'Vendre sa Maison à Aix-en-Provence | Estimation Gratuite',
-            'meta_description' => 'Vous vendez votre maison à Aix-en-Provence ? Obtenez une estimation gratuite et découvrez le prix de vente optimal. Sans engagement.',
+            'page_title'       => 'Vendre sa Maison à Angers | Estimation Gratuite',
+            'meta_description' => 'Vous vendez votre maison à Angers ? Obtenez une estimation gratuite et découvrez le prix de vente optimal. Sans engagement.',
             'landing_view'     => 'landing/pages/vendre-maison-aix',
             'landing_slug'     => 'vendre-maison-aix',
         ]);
@@ -55,8 +55,8 @@ final class LandingPageController
         UtmTrackingService::capture();
 
         View::renderBare('landing/layout', [
-            'page_title'       => 'Avis de Valeur Gratuit Aix-en-Provence | Sans Engagement',
-            'meta_description' => 'Recevez un avis de valeur gratuit pour votre bien immobilier à Aix-en-Provence. Analyse basée sur le marché actuel. Résultat immédiat.',
+            'page_title'       => 'Avis de Valeur Gratuit Angers | Sans Engagement',
+            'meta_description' => 'Recevez un avis de valeur gratuit pour votre bien immobilier à Angers. Analyse basée sur le marché actuel. Résultat immédiat.',
             'landing_view'     => 'landing/pages/avis-valeur-gratuit',
             'landing_slug'     => 'avis-valeur-gratuit',
         ]);
@@ -74,9 +74,9 @@ final class LandingPageController
             $nom       = Validator::string($_POST, 'nom', 2, 120);
             $email     = Validator::email($_POST, 'email');
             $telephone = Validator::string($_POST, 'telephone', 6, 30);
-            $ville     = trim((string) ($_POST['ville'] ?? 'Aix-en-Provence'));
+            $ville     = trim((string) ($_POST['ville'] ?? 'Angers'));
             if ($ville === '') {
-                $ville = 'Aix-en-Provence';
+                $ville = 'Angers';
             }
             $typeBien  = trim((string) ($_POST['type_bien'] ?? ''));
             $surface   = trim((string) ($_POST['surface'] ?? ''));
@@ -168,18 +168,18 @@ final class LandingPageController
                 'estimation'       => $estimation,
             ]);
         } catch (\Throwable $e) {
-            $landingSlug = trim((string) ($_POST['landing_slug'] ?? 'estimation-aix'));
+            $landingSlug = trim((string) ($_POST['landing_slug'] ?? 'estimation-angers'));
             $landingView = 'landing/pages/' . preg_replace('/[^a-z0-9\-]/', '', $landingSlug);
 
-            // Check view exists, fallback to estimation-aix
+            // Check view exists, fallback to estimation-angers
             $viewPath = __DIR__ . '/../views/' . $landingView . '.php';
             if (!is_file($viewPath)) {
-                $landingView = 'landing/pages/estimation-aix';
+                $landingView = 'landing/pages/estimation-angers';
             }
 
             View::renderBare('landing/layout', [
-                'page_title'       => 'Estimation Immobilière Aix-en-Provence',
-                'meta_description' => 'Estimation immobilière gratuite à Aix-en-Provence.',
+                'page_title'       => 'Estimation Immobilière Angers',
+                'meta_description' => 'Estimation immobilière gratuite à Angers.',
                 'landing_view'     => $landingView,
                 'landing_slug'     => $landingSlug,
                 'form_error'       => $e->getMessage(),

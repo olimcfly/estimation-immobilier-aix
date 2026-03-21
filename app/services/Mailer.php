@@ -52,8 +52,8 @@ final class Mailer
 
         try {
             $smtpHost = (string) Config::get('mail.smtp_host');
-            $fromAddress = (string) Config::get('mail.from', 'no-reply@estimation-immobilier-aix.fr');
-            $fromName = (string) Config::get('mail.from_name', 'Estimation Immobilier Aix-en-Provence');
+            $fromAddress = (string) Config::get('mail.from', 'no-reply@estimation-immobilier-angers.fr');
+            $fromName = (string) Config::get('mail.from_name', 'Estimation Immobilier Angers');
             $smtpUser = (string) Config::get('mail.smtp_user');
 
             if ($smtpHost !== '') {
@@ -79,7 +79,7 @@ final class Mailer
             }
 
             $mail->CharSet = 'UTF-8';
-            $mail->XMailer = 'Estimation Immobilier Aix-en-Provence';
+            $mail->XMailer = 'Estimation Immobilier Angers';
 
             $mail->setFrom($fromAddress, $fromName);
 

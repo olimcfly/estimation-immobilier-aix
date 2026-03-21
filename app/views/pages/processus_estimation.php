@@ -36,7 +36,7 @@
       <article class="card">
         <div style="display: grid; grid-template-columns: 120px 1fr; gap: 2rem; align-items: start;">
           <div style="text-align: center;">
-            <div style="width: 100px; height: 100px; background: linear-gradient(135deg, var(--primary), #C41E3A); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 2.5rem; font-weight: 700; margin: 0 auto;">1</div>
+            <div style="width: 100px; height: 100px; background: linear-gradient(135deg, var(--primary), #2A4F7F); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 2.5rem; font-weight: 700; margin: 0 auto;">1</div>
           </div>
           <div>
             <h3 style="margin: 0 0 0.5rem; font-size: 1.3rem;">
@@ -77,14 +77,14 @@
       <article class="card" style="background: rgba(var(--accent-rgb), 0.03);">
         <div style="display: grid; grid-template-columns: 120px 1fr; gap: 2rem; align-items: start;">
           <div style="text-align: center;">
-            <div style="width: 100px; height: 100px; background: linear-gradient(135deg, var(--accent), #E8C547); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 2.5rem; font-weight: 700; margin: 0 auto;">2</div>
+            <div style="width: 100px; height: 100px; background: linear-gradient(135deg, var(--accent), #D9BE6A); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 2.5rem; font-weight: 700; margin: 0 auto;">2</div>
           </div>
           <div>
             <h3 style="margin: 0 0 0.5rem; font-size: 1.3rem;">
               <i class="fas fa-database"></i> Recherche comparative
             </h3>
             <p style="margin: 0 0 1rem; color: var(--muted);">
-              Notre moteur recherche les biens similaires vendus récemment à Aix-en-Provence et région.
+              Notre moteur recherche les biens similaires vendus récemment à Angers et région.
             </p>
 
             <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem;">
@@ -158,7 +158,7 @@
               <i class="fas fa-sliders-h"></i> Ajustements locaux
             </h3>
             <p style="margin: 0 0 1rem; color: var(--muted);">
-              Application des ajustements spécifiques à Aix-en-Provence et région. Expertise locale.
+              Application des ajustements spécifiques à Angers et région. Expertise locale.
             </p>
 
             <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem;">
@@ -245,7 +245,7 @@
       <article class="card feature-card">
         <h3><i class="fas fa-brain"></i> Machine Learning</h3>
         <p>
-          Algorithme IA entrainé sur 5000+ transactions. Apprentissage continu des tendances marché Aix-en-Provence.
+          Algorithme IA entrainé sur 5000+ transactions. Apprentissage continu des tendances marché Angers.
         </p>
       </article>
 
@@ -343,7 +343,7 @@
         <div style="display: grid; gap: 1rem;">
           <div style="padding: 0.8rem; background: var(--surface); border-left: 3px solid var(--accent); border-radius: 4px;">
             <p style="margin: 0 0 0.3rem; font-weight: 600; font-size: 0.95rem;">Quartier exact</p>
-            <p style="margin: 0; font-size: 0.85rem; color: var(--muted);">Chartrons vs Saint-Michel → prix différents.</p>
+            <p style="margin: 0; font-size: 0.85rem; color: var(--muted);">Centre-ville vs La Doutre → prix différents.</p>
           </div>
           <div style="padding: 0.8rem; background: var(--surface); border-left: 3px solid var(--accent); border-radius: 4px;">
             <p style="margin: 0 0 0.3rem; font-weight: 600; font-size: 0.95rem;">Proximité transports</p>
@@ -376,7 +376,7 @@
           </div>
           <div style="padding: 0.8rem; background: var(--surface); border-left: 3px solid #22c55e; border-radius: 4px;">
             <p style="margin: 0 0 0.3rem; font-weight: 600; font-size: 0.95rem;">Prix au m²</p>
-            <p style="margin: 0; font-size: 0.85rem; color: var(--muted);">Comparatif Aix-en-Provence/banlieue/région.</p>
+            <p style="margin: 0; font-size: 0.85rem; color: var(--muted);">Comparatif Angers/banlieue/région.</p>
           </div>
           <div style="padding: 0.8rem; background: var(--surface); border-left: 3px solid #22c55e; border-radius: 4px;">
             <p style="margin: 0 0 0.3rem; font-weight: 600; font-size: 0.95rem;">Offre & demande</p>
@@ -465,7 +465,7 @@
           <i class="fas fa-database"></i> 5000+ transactions
         </h3>
         <p>
-          Biens analysés dans notre base de données. Couverture complète du marché de aix-en-provence & région.
+          Biens analysés dans notre base de données. Couverture complète du marché d'Angers & région.
         </p>
       </article>
 

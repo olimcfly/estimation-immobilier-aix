@@ -1,4 +1,4 @@
-<?php $page_title = 'Exemple Estimation - Cas Réels Aix-en-Provence | Nos Résultats'; ?>
+<?php $page_title = 'Exemple Estimation - Cas Réels Angers | Nos Résultats'; ?>
 
 <!-- ============================================ -->
 <!-- HERO SECTION -->
@@ -11,7 +11,7 @@
       </p>
       <h1>Exemples d'estimations complètes</h1>
       <p class="lead">
-        Découvrez comment nos estimations fonctionnent sur des biens réels de Aix-en-Provence. 
+        Découvrez comment nos estimations fonctionnent sur des biens réels d'Angers. 
         Fourchettes de prix, analyses détaillées, facteurs d'ajustement.
       </p>
     </div>
@@ -31,7 +31,7 @@
           <p class="eyebrow" style="margin: 0 0 0.5rem;">
             <i class="fas fa-home"></i> Cas #1
           </p>
-          <h2 style="margin: 0 0 1.5rem;">Appartement Chartrons, Aix-en-Provence</h2>
+          <h2 style="margin: 0 0 1.5rem;">Appartement Centre-ville, Angers</h2>
           
           <!-- CARACTÉRISTIQUES -->
           <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem;">
@@ -40,11 +40,11 @@
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
               <div>
                 <p style="margin: 0 0 0.3rem; font-size: 0.85rem; text-transform: uppercase; color: var(--muted); font-weight: 700;">Localisation</p>
-                <p style="margin: 0; font-weight: 600;">Quai des Chartrons</p>
+                <p style="margin: 0; font-weight: 600;">Place du Ralliement</p>
               </div>
               <div>
                 <p style="margin: 0 0 0.3rem; font-size: 0.85rem; text-transform: uppercase; color: var(--muted); font-weight: 700;">Code postal</p>
-                <p style="margin: 0; font-weight: 600;">13100</p>
+                <p style="margin: 0; font-weight: 600;">49000</p>
               </div>
               <div>
                 <p style="margin: 0 0 0.3rem; font-size: 0.85rem; text-transform: uppercase; color: var(--muted); font-weight: 700;">Type</p>
@@ -140,7 +140,7 @@
           <!-- ANALYSE -->
           <div style="background: rgba(var(--success-rgb), 0.05); border-left: 4px solid #22c55e; border-radius: 8px; padding: 1rem;">
             <p style="margin: 0 0 0.5rem; font-weight: 600; color: #22c55e;">✓ Analyse très positive</p>
-            <p style="margin: 0; color: var(--muted); font-size: 0.9rem;">Quartier Chartrons très demandé. Prix au m² 12% au-dessus de la moyenne de aix-en-provencee. Potentiel de vente excellent. Surface et type adaptés au marché.</p>
+            <p style="margin: 0; color: var(--muted); font-size: 0.9rem;">Quartier Centre-ville très demandé. Prix au m² 12% au-dessus de la moyenne d'Angers. Potentiel de vente excellent. Surface et type adaptés au marché.</p>
           </div>
         </div>
 
@@ -162,7 +162,7 @@
           <p class="eyebrow" style="margin: 0 0 0.5rem;">
             <i class="fas fa-house"></i> Cas #2
           </p>
-          <h2 style="margin: 0 0 1.5rem;">Maison Talence, Banlieue Aix-en-Provence</h2>
+          <h2 style="margin: 0 0 1.5rem;">Maison Trélazé, Banlieue Angers</h2>
           
           <!-- CARACTÉRISTIQUES -->
           <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem;">
@@ -171,7 +171,7 @@
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
               <div>
                 <p style="margin: 0 0 0.3rem; font-size: 0.85rem; text-transform: uppercase; color: var(--muted); font-weight: 700;">Localisation</p>
-                <p style="margin: 0; font-weight: 600;">Talence</p>
+                <p style="margin: 0; font-weight: 600;">Trélazé</p>
               </div>
               <div>
                 <p style="margin: 0 0 0.3rem; font-size: 0.85rem; text-transform: uppercase; color: var(--muted); font-weight: 700;">Code postal</p>
@@ -294,7 +294,7 @@
           <p class="eyebrow" style="margin: 0 0 0.5rem;">
             <i class="fas fa-apartment"></i> Cas #3
           </p>
-          <h2 style="margin: 0 0 1.5rem;">T2 Rénové Bacalan, Aix-en-Provence</h2>
+          <h2 style="margin: 0 0 1.5rem;">T2 Rénové Monplaisir, Angers</h2>
           
           <!-- CARACTÉRISTIQUES -->
           <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem;">
@@ -303,7 +303,7 @@
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
               <div>
                 <p style="margin: 0 0 0.3rem; font-size: 0.85rem; text-transform: uppercase; color: var(--muted); font-weight: 700;">Localisation</p>
-                <p style="margin: 0; font-weight: 600;">Bacalan</p>
+                <p style="margin: 0; font-weight: 600;">Monplaisir</p>
               </div>
               <div>
                 <p style="margin: 0 0 0.3rem; font-size: 0.85rem; text-transform: uppercase; color: var(--muted); font-weight: 700;">Code postal</p>
@@ -430,9 +430,9 @@
         <thead style="background: var(--surface); border-bottom: 2px solid var(--border);">
           <tr>
             <th style="padding: 1rem; text-align: left; font-weight: 700;">Caractéristique</th>
-            <th style="padding: 1rem; text-align: center; font-weight: 700;">Cas #1 - Chartrons</th>
-            <th style="padding: 1rem; text-align: center; font-weight: 700;">Cas #2 - Talence</th>
-            <th style="padding: 1rem; text-align: center; font-weight: 700;">Cas #3 - Bacalan</th>
+            <th style="padding: 1rem; text-align: center; font-weight: 700;">Cas #1 - Centre-ville</th>
+            <th style="padding: 1rem; text-align: center; font-weight: 700;">Cas #2 - Trélazé</th>
+            <th style="padding: 1rem; text-align: center; font-weight: 700;">Cas #3 - Monplaisir</th>
           </tr>
         </thead>
         <tbody>

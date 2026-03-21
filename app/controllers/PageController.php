@@ -14,21 +14,21 @@ final class PageController
     public function home(): void
     {
         View::render('pages/home', [
-            'page_title' => 'Accueil - Estimation Immobilier Aix-en-Provence',
+            'page_title' => 'Accueil - Estimation Immobilier Angers',
         ]);
     }
 
     public function services(): void
     {
         View::render('pages/services', [
-            'page_title' => 'Nos Services - Estimation Immobilier Aix-en-Provence',
+            'page_title' => 'Nos Services - Estimation Immobilier Angers',
         ]);
     }
 
     public function about(): void
     {
         View::render('pages/a_propos', [
-            'page_title' => 'À Propos - Estimation Immobilier Aix-en-Provence',
+            'page_title' => 'À Propos - Estimation Immobilier Angers',
         ]);
     }
 
@@ -40,21 +40,21 @@ final class PageController
     public function processusEstimation(): void
     {
         View::render('pages/processus_estimation', [
-            'page_title' => 'Processus d\'Estimation - Estimation Immobilier Aix-en-Provence',
+            'page_title' => 'Processus d\'Estimation - Estimation Immobilier Angers',
         ]);
     }
 
     public function newsletter(): void
     {
         View::render('pages/newsletter', [
-            'page_title' => 'Newsletter - Estimation Immobilier Aix-en-Provence',
+            'page_title' => 'Newsletter - Estimation Immobilier Angers',
         ]);
     }
 
     public function guides(): void
     {
         View::render('pages/guides', [
-            'page_title' => 'Guides Immobiliers Aix-en-Provence - Conseils & Astuces',
+            'page_title' => 'Guides Immobiliers Angers - Conseils & Astuces',
         ]);
     }
 
@@ -62,7 +62,7 @@ final class PageController
     public function exemplesEstimation(): void
     {
         View::render('pages/exemples_estimation', [
-            'page_title' => "Exemple Estimation - Cas Réels Aix-en-Provence | Nos Résultats",
+            'page_title' => "Exemple Estimation - Cas Réels Angers | Nos Résultats",
         ]);
     }
 
@@ -70,14 +70,14 @@ final class PageController
     public function quartiers(): void
     {
         View::render('pages/quartiers', [
-            'page_title' => 'Quartiers de Aix-en-Provence - Estimation Immobilier Aix-en-Provence',
+            'page_title' => 'Quartiers d'Angers - Estimation Immobilier Angers',
         ]);
     }
 
     public function contact(): void
     {
         View::render('pages/contact', [
-            'page_title' => 'Contact - Estimation Immobilier Aix-en-Provence',
+            'page_title' => 'Contact - Estimation Immobilier Angers',
         ]);
     }
 
@@ -90,7 +90,7 @@ final class PageController
             $email = mb_strtolower(Validator::email($_POST, 'newsletter_email'));
         } catch (\InvalidArgumentException) {
             View::render('pages/newsletter', [
-                'page_title' => 'Newsletter - Estimation Immobilier Aix-en-Provence',
+                'page_title' => 'Newsletter - Estimation Immobilier Angers',
                 'error_message' => 'Adresse email invalide. Merci de vérifier votre saisie.',
             ]);
             return;
@@ -98,7 +98,7 @@ final class PageController
 
         if (!$hasConsent) {
             View::render('pages/newsletter', [
-                'page_title' => 'Newsletter - Estimation Immobilier Aix-en-Provence',
+                'page_title' => 'Newsletter - Estimation Immobilier Angers',
                 'error_message' => 'Le consentement RGPD est requis pour finaliser votre inscription.',
             ]);
             return;
@@ -109,14 +109,14 @@ final class PageController
 
         if (!$this->sendNewsletterConfirmationEmail($email, $confirmLink)) {
             View::render('pages/newsletter', [
-                'page_title' => 'Newsletter - Estimation Immobilier Aix-en-Provence',
+                'page_title' => 'Newsletter - Estimation Immobilier Angers',
                 'error_message' => 'Impossible d\'envoyer l\'email de confirmation pour le moment. Réessayez dans quelques minutes.',
             ]);
             return;
         }
 
         View::render('pages/newsletter', [
-            'page_title' => 'Newsletter - Estimation Immobilier Aix-en-Provence',
+            'page_title' => 'Newsletter - Estimation Immobilier Angers',
             'success_message' => 'Un email de confirmation vient d\'être envoyé. Cliquez sur le lien reçu pour activer votre abonnement.',
         ]);
     }
@@ -127,7 +127,7 @@ final class PageController
 
         if ($token === '') {
             View::render('pages/newsletter', [
-                'page_title' => 'Newsletter - Estimation Immobilier Aix-en-Provence',
+                'page_title' => 'Newsletter - Estimation Immobilier Angers',
                 'error_message' => 'Lien de confirmation invalide.',
             ]);
             return;
@@ -136,7 +136,7 @@ final class PageController
         $email = $this->validateNewsletterToken($token);
         if ($email === null) {
             View::render('pages/newsletter', [
-                'page_title' => 'Newsletter - Estimation Immobilier Aix-en-Provence',
+                'page_title' => 'Newsletter - Estimation Immobilier Angers',
                 'error_message' => 'Le lien de confirmation est invalide ou expiré.',
             ]);
             return;
@@ -146,7 +146,7 @@ final class PageController
         $subscriberModel->confirmByEmail($email);
 
         View::render('pages/newsletter', [
-            'page_title' => 'Newsletter - Estimation Immobilier Aix-en-Provence',
+            'page_title' => 'Newsletter - Estimation Immobilier Angers',
             'success_message' => 'Inscription confirmée ✅ Vous recevrez désormais notre newsletter.',
         ]);
     }
@@ -154,7 +154,7 @@ final class PageController
     public function contactSubmit(): void
     {
         View::render('pages/contact', [
-            'page_title' => 'Contact - Estimation Immobilier Aix-en-Provence',
+            'page_title' => 'Contact - Estimation Immobilier Angers',
             'success_message' => 'Merci ! Votre message a bien été reçu. Nous vous répondrons sous 24h.',
         ]);
     }
@@ -163,28 +163,28 @@ final class PageController
     public function mentionsLegales(): void
     {
         View::render('legal/mentions', [
-            'page_title' => 'Mentions légales - Estimation Immobilier Aix-en-Provence',
+            'page_title' => 'Mentions légales - Estimation Immobilier Angers',
         ]);
     }
 
     public function politiqueConfidentialite(): void
     {
         View::render('legal/confidentialite', [
-            'page_title' => 'Politique de confidentialité - Estimation Immobilier Aix-en-Provence',
+            'page_title' => 'Politique de confidentialité - Estimation Immobilier Angers',
         ]);
     }
 
     public function conditionsUtilisation(): void
     {
         View::render('legal/cgu', [
-            'page_title' => 'Conditions d\'utilisation - Estimation Immobilier Aix-en-Provence',
+            'page_title' => 'Conditions d\'utilisation - Estimation Immobilier Angers',
         ]);
     }
 
     public function rgpd(): void
     {
         View::render('legal/rgpd', [
-            'page_title' => 'RGPD - Estimation Immobilier Aix-en-Provence',
+            'page_title' => 'RGPD - Estimation Immobilier Angers',
         ]);
     }
 

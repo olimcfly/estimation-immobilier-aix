@@ -13,7 +13,7 @@
 <div class="admin-card ai-panel">
   <div class="admin-card-header">
     <h2><i class="fas fa-robot"></i> Generation automatique IA</h2>
-    <span class="admin-badge" style="background: rgba(139,21,56,0.1); color: var(--admin-primary);">Pipeline complet</span>
+    <span class="admin-badge" style="background: rgba(30,58,95,0.1); color: var(--admin-primary);">Pipeline complet</span>
   </div>
   <div class="admin-card-body">
     <div class="ai-pipeline-steps">
@@ -28,7 +28,7 @@
 
     <form method="post" action="/admin/actualites/generate" class="admin-form-inline" id="form-generate">
       <div class="admin-form-group" style="flex:1;">
-        <input type="text" name="query" class="admin-input" placeholder="Theme de recherche (optionnel, ex: prix immobilier Aix-en-Provence 2026)" value="">
+        <input type="text" name="query" class="admin-input" placeholder="Theme de recherche (optionnel, ex: prix immobilier Angers 2026)" value="">
       </div>
       <button type="submit" class="admin-btn admin-btn-primary" id="btn-generate">
         <i class="fas fa-magic"></i> Generer un article complet
@@ -238,14 +238,14 @@
   .admin-btn-secondary { background: var(--admin-bg); color: var(--admin-text); border: 1px solid var(--admin-border); }
   .admin-btn-secondary:hover { background: var(--admin-border); }
   .admin-btn-ghost { background: transparent; color: var(--admin-muted); padding: 0.4rem 0.6rem; }
-  .admin-btn-ghost:hover { color: var(--admin-primary); background: rgba(139,21,56,0.06); }
+  .admin-btn-ghost:hover { color: var(--admin-primary); background: rgba(30,58,95,0.06); }
   .admin-btn-danger { background: transparent; color: #dc2626; padding: 0.4rem 0.6rem; }
   .admin-btn-danger:hover { background: rgba(239, 68, 68, 0.1); }
   .admin-btn-sm { padding: 0.35rem 0.5rem; font-size: 0.8rem; }
   .admin-btn:disabled { opacity: 0.6; cursor: not-allowed; }
   .admin-form-inline { display: flex; gap: 0.75rem; align-items: flex-end; }
   .admin-input { width: 100%; padding: 0.6rem 0.75rem; border: 1px solid var(--admin-border); border-radius: 6px; font-size: 0.9rem; font-family: inherit; background: #fff; }
-  .admin-input:focus { outline: none; border-color: var(--admin-primary); box-shadow: 0 0 0 3px rgba(139,21,56,0.1); }
+  .admin-input:focus { outline: none; border-color: var(--admin-primary); box-shadow: 0 0 0 3px rgba(30,58,95,0.1); }
   .admin-table-responsive { overflow-x: auto; }
   .admin-table { width: 100%; border-collapse: collapse; }
   .admin-table th { padding: 0.75rem 1rem; text-align: left; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--admin-muted); border-bottom: 1px solid var(--admin-border); background: var(--admin-bg); }

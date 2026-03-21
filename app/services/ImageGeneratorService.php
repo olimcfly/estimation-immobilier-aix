@@ -67,15 +67,15 @@ final class ImageGeneratorService
 
     public function generateSeoPrompt(string $type, string $quartier = '', string $style = ''): string
     {
-        $quartier = $quartier !== '' ? $quartier : 'Aix-en-Provence centre';
+        $quartier = $quartier !== '' ? $quartier : 'Angers centre';
         $style = $style !== '' ? $style : 'moderne et lumineux';
 
         $prompts = [
-            'estimation' => "Photo professionnelle immobilière d'une belle propriété {$style} dans le quartier {$quartier} à Aix-en-Provence. Vue extérieure avec façade en pierre de aix-en-provencee typique, lumière naturelle dorée du soleil couchant, végétation soignée. Style éditorial haut de gamme pour agence immobilière.",
-            'interieur' => "Photo d'intérieur immobilier professionnel, salon {$style} dans un appartement de aix-en-provence haussmannien, parquet en point de Hongrie, hauts plafonds avec moulures, grandes fenêtres lumineuses. Décoration épurée et chaleureuse. Photographie immobilière éditoriale.",
-            'quartier' => "Vue panoramique du quartier {$quartier} à Aix-en-Provence, architecture typique en pierre blonde, rues piétonnes animées, terrasses de cafés. Ambiance chaleureuse et authentique du Sud-Ouest. Photographie urbaine professionnelle.",
-            'blog' => "Illustration éditoriale pour blog immobilier, concept de l'estimation immobilière à Aix-en-Provence. Maison de aix-en-provencee en pierre avec une loupe ou des éléments graphiques subtils représentant l'analyse de marché. Style professionnel et moderne.",
-            'cta' => "Image d'appel à l'action pour site immobilier, couple souriant devant une belle maison de aix-en-provencee {$style}, ambiance positive et professionnelle. Espace pour superposition de texte. Photographie lifestyle immobilier.",
+            'estimation' => "Photo professionnelle immobilière d'une belle propriété {$style} dans le quartier {$quartier} à Angers. Vue extérieure avec façade en pierre d'Angers typique, lumière naturelle dorée du soleil couchant, végétation soignée. Style éditorial haut de gamme pour agence immobilière.",
+            'interieur' => "Photo d'intérieur immobilier professionnel, salon {$style} dans un appartement d'Angers haussmannien, parquet en point de Hongrie, hauts plafonds avec moulures, grandes fenêtres lumineuses. Décoration épurée et chaleureuse. Photographie immobilière éditoriale.",
+            'quartier' => "Vue panoramique du quartier {$quartier} à Angers, architecture typique en pierre blonde, rues piétonnes animées, terrasses de cafés. Ambiance chaleureuse et authentique du Sud-Ouest. Photographie urbaine professionnelle.",
+            'blog' => "Illustration éditoriale pour blog immobilier, concept de l'estimation immobilière à Angers. Maison d'Angers en pierre avec une loupe ou des éléments graphiques subtils représentant l'analyse de marché. Style professionnel et moderne.",
+            'cta' => "Image d'appel à l'action pour site immobilier, couple souriant devant une belle maison d'Angers {$style}, ambiance positive et professionnelle. Espace pour superposition de texte. Photographie lifestyle immobilier.",
         ];
 
         return $prompts[$type] ?? $prompts['blog'];

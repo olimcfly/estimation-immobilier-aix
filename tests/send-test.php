@@ -51,8 +51,8 @@ $smtpPort       = (int) ($_ENV['MAIL_SMTP_PORT'] ?? $_ENV['MAIL_PORT']      ?? 5
 $smtpUser       = $_ENV['MAIL_SMTP_USER']        ?? $_ENV['MAIL_USERNAME']  ?? '';
 $smtpPass       = $_ENV['MAIL_SMTP_PASS']        ?? $_ENV['MAIL_PASSWORD']  ?? '';
 $smtpEncryption = $_ENV['MAIL_SMTP_ENCRYPTION']  ?? $_ENV['MAIL_ENCRYPTION'] ?? 'tls';
-$fromAddress    = $_ENV['MAIL_FROM_ADDRESS']      ?? $_ENV['MAIL_FROM']      ?? 'no-reply@estimation-immobilier-aix.fr';
-$fromName       = $_ENV['MAIL_FROM_NAME']         ?? 'Estimation Immobilier Aix-en-Provence';
+$fromAddress    = $_ENV['MAIL_FROM_ADDRESS']      ?? $_ENV['MAIL_FROM']      ?? 'no-reply@estimation-immobilier-angers.fr';
+$fromName       = $_ENV['MAIL_FROM_NAME']         ?? 'Estimation Immobilier Angers';
 
 // Destinataire = argument CLI ou SMTP user par défaut (envoi à soi-même)
 $recipient = $argv[1] ?? $smtpUser;
@@ -120,10 +120,10 @@ try {
     $now = date('Y-m-d H:i:s');
 
     $mail->isHTML(true);
-    $mail->Subject = "Test SMTP — Estimation Immobilier Aix-en-Provence ($now)";
+    $mail->Subject = "Test SMTP — Estimation Immobilier Angers ($now)";
     $mail->Body    = <<<HTML
     <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
-        <h2 style="color: #8B1538;">Test d'envoi SMTP réussi</h2>
+        <h2 style="color: #1E3A5F;">Test d'envoi SMTP réussi</h2>
         <p>Cet email confirme que la configuration SMTP fonctionne correctement.</p>
         <table style="border-collapse: collapse; width: 100%; margin-top: 15px;">
             <tr><td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">Date</td>
@@ -135,12 +135,12 @@ try {
             <tr><td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">Expéditeur</td>
                 <td style="padding: 8px; border: 1px solid #ddd;">{$fromAddress}</td></tr>
         </table>
-        <p style="margin-top: 20px; color: #6b6459; font-size: 12px;">
-            Envoyé depuis le script de test — Estimation Immobilier Aix-en-Provence
+        <p style="margin-top: 20px; color: #5a6275; font-size: 12px;">
+            Envoyé depuis le script de test — Estimation Immobilier Angers
         </p>
     </div>
     HTML;
-    $mail->AltBody = "Test SMTP réussi — Estimation Immobilier Aix-en-Provence\n"
+    $mail->AltBody = "Test SMTP réussi — Estimation Immobilier Angers\n"
         . "Serveur: $smtpHost:$smtpPort | Chiffrement: $smtpEncryption\n"
         . "Date: " . date('Y-m-d H:i:s');
 

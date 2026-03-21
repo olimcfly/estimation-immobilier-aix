@@ -10,9 +10,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="<?= e((string) ($meta_description ?? '')) ?>">
   <meta name="robots" content="noindex, nofollow">
-  <meta name="theme-color" content="<?= e((string) ($colors['primary'] ?? '#8B1538')) ?>">
+  <meta name="theme-color" content="<?= e((string) ($colors['primary'] ?? '#1E3A5F')) ?>">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <title><?= e((string) ($page_title ?? 'Estimation Immobilier Aix-en-Provence')) ?></title>
+  <title><?= e((string) ($page_title ?? 'Estimation Immobilier Angers')) ?></title>
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
@@ -31,15 +31,15 @@
 
   <style>
     :root {
-      --bg: <?= e((string) ($colors['bg'] ?? '#faf9f7')) ?>;
+      --bg: <?= e((string) ($colors['bg'] ?? '#f7f8fa')) ?>;
       --surface: <?= e((string) ($colors['surface'] ?? '#ffffff')) ?>;
-      --text: <?= e((string) ($colors['text'] ?? '#1a1410')) ?>;
-      --muted: <?= e((string) ($colors['muted'] ?? '#6b6459')) ?>;
-      --primary: <?= e((string) ($colors['primary'] ?? '#8B1538')) ?>;
-      --primary-dark: <?= e((string) ($colors['primary_dark'] ?? '#6b0f2d')) ?>;
-      --accent: <?= e((string) ($colors['accent'] ?? '#D4AF37')) ?>;
-      --accent-light: <?= e((string) ($colors['accent_light'] ?? '#E8C547')) ?>;
-      --border: <?= e((string) ($colors['border'] ?? '#e8dfd7')) ?>;
+      --text: <?= e((string) ($colors['text'] ?? '#1a1a2e')) ?>;
+      --muted: <?= e((string) ($colors['muted'] ?? '#5a6275')) ?>;
+      --primary: <?= e((string) ($colors['primary'] ?? '#1E3A5F')) ?>;
+      --primary-dark: <?= e((string) ($colors['primary_dark'] ?? '#152C48')) ?>;
+      --accent: <?= e((string) ($colors['accent'] ?? '#C7A94E')) ?>;
+      --accent-light: <?= e((string) ($colors['accent_light'] ?? '#D9BE6A')) ?>;
+      --border: <?= e((string) ($colors['border'] ?? '#dde1e8')) ?>;
       --success: <?= e((string) ($colors['success'] ?? '#22c55e')) ?>;
       --warning: <?= e((string) ($colors['warning'] ?? '#f97316')) ?>;
       --danger: <?= e((string) ($colors['danger'] ?? '#e24b4a')) ?>;
@@ -67,7 +67,7 @@
 
   <?php
     // Include the specific landing page content
-    $landingViewPath = __DIR__ . '/../' . ($landing_view ?? 'landing/pages/estimation-aix') . '.php';
+    $landingViewPath = __DIR__ . '/../' . ($landing_view ?? 'landing/pages/estimation-angers') . '.php';
     if (is_file($landingViewPath)) {
         include $landingViewPath;
     }
@@ -79,14 +79,14 @@
       <div class="lp-footer-inner">
         <div class="lp-footer-brand">
           <span class="lp-logo-icon"><i class="fas fa-home"></i></span>
-          <span class="lp-logo-text">Estimation Immobilier <strong>Aix-en-Provence</strong></span>
+          <span class="lp-logo-text">Estimation Immobilier <strong>Angers</strong></span>
         </div>
         <div class="lp-footer-links">
           <a href="/mentions-legales" target="_blank" rel="noopener">Mentions légales</a>
           <a href="/politique-confidentialite" target="_blank" rel="noopener">Confidentialité</a>
           <a href="/rgpd" target="_blank" rel="noopener">RGPD</a>
         </div>
-        <p class="lp-footer-copy">&copy; <?= date('Y') ?> Estimation Immobilier Aix-en-Provence. Tous droits réservés.</p>
+        <p class="lp-footer-copy">&copy; <?= date('Y') ?> Estimation Immobilier Angers. Tous droits réservés.</p>
       </div>
     </div>
   </footer>

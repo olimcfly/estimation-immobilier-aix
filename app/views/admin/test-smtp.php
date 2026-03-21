@@ -88,7 +88,7 @@
   .form-group select:focus {
     outline: none;
     border-color: var(--admin-primary);
-    box-shadow: 0 0 0 3px rgba(139,21,56,0.1);
+    box-shadow: 0 0 0 3px rgba(30,58,95,0.1);
   }
 
   .form-row {
@@ -123,7 +123,7 @@
     transition: background 0.15s;
   }
 
-  .btn-primary:hover { background: #6b0f2d; }
+  .btn-primary:hover { background: #152C48; }
   .btn-primary:disabled { opacity: 0.6; cursor: not-allowed; }
 
   .btn-secondary {
@@ -482,7 +482,7 @@
         <label for="mail_from_name">Nom expediteur <span class="env-hint"><i class="fas fa-file-alt"></i> MAIL_FROM_NAME</span></label>
         <input type="text" id="mail_from_name" name="mail_from_name"
                value="<?= htmlspecialchars($mail_from_name, ENT_QUOTES, 'UTF-8') ?>"
-               placeholder="Estimation Immobilier Aix-en-Provence" />
+               placeholder="Estimation Immobilier Angers" />
       </div>
 
       <div style="margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid var(--admin-border);">

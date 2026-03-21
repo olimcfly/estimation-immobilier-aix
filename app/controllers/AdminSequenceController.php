@@ -58,7 +58,7 @@ final class AdminSequenceController
             'email_tone' => 'Pr&eacute;cis, factuel, avec des chiffres et des comparaisons.',
             'article_topics' => [
                 '&Eacute;volution des prix au m&sup2; par quartier',
-                'Analyse comparative du march&eacute; immobilier de aix-en-provence',
+                'Analyse comparative du march&eacute; immobilier d'Angers',
                 'Rendement locatif : les chiffres cl&eacute;s',
                 'Statistiques des transactions immobili&egrave;res',
             ],
@@ -70,10 +70,10 @@ final class AdminSequenceController
             'description' => 'D&eacute;cision bas&eacute;e sur les &eacute;motions, le ressenti et l\'enthousiasme.',
             'email_tone' => 'Chaleureux, enthousiaste, avec des images et des t&eacute;moignages.',
             'article_topics' => [
-                'Coup de coeur : les plus beaux quartiers de Aix-en-Provence',
+                'Coup de coeur : les plus beaux quartiers d'Angers',
                 'T&eacute;moignages de nos clients satisfaits',
-                'Vivre &agrave; Aix-en-Provence : un art de vivre unique',
-                'Les p&eacute;pites cach&eacute;es du march&eacute; de aix-en-provence',
+                'Vivre &agrave; Angers : un art de vivre unique',
+                'Les p&eacute;pites cach&eacute;es du march&eacute; d'Angers',
             ],
         ],
         'directif' => [
@@ -83,10 +83,10 @@ final class AdminSequenceController
             'description' => 'D&eacute;cision rapide, orient&eacute;e r&eacute;sultats et efficacit&eacute;.',
             'email_tone' => 'Direct, concis, avec des actions cl&eacute;s et des d&eacute;lais.',
             'article_topics' => [
-                'Guide express : acheter &agrave; Aix-en-Provence en 30 jours',
+                'Guide express : acheter &agrave; Angers en 30 jours',
                 'Les 5 erreurs &agrave; &eacute;viter lors d\'un achat immobilier',
                 'Checklist : les &eacute;tapes cl&eacute;s de votre projet',
-                'Investir &agrave; Aix-en-Provence : les opportunit&eacute;s &agrave; saisir maintenant',
+                'Investir &agrave; Angers : les opportunit&eacute;s &agrave; saisir maintenant',
             ],
         ],
         'aimable' => [

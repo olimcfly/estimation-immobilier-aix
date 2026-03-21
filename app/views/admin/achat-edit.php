@@ -240,12 +240,12 @@
 
       <div class="form-group">
         <label for="ville">Ville</label>
-        <input type="text" id="ville" name="ville" value="<?= htmlspecialchars((string)($a['ville'] ?? 'Aix-en-Provence'), ENT_QUOTES, 'UTF-8') ?>">
+        <input type="text" id="ville" name="ville" value="<?= htmlspecialchars((string)($a['ville'] ?? 'Angers'), ENT_QUOTES, 'UTF-8') ?>">
       </div>
 
       <div class="form-group">
         <label for="quartier">Quartier</label>
-        <input type="text" id="quartier" name="quartier" value="<?= htmlspecialchars((string)($a['quartier'] ?? ''), ENT_QUOTES, 'UTF-8') ?>" placeholder="Ex: Chartrons, Saint-Pierre...">
+        <input type="text" id="quartier" name="quartier" value="<?= htmlspecialchars((string)($a['quartier'] ?? ''), ENT_QUOTES, 'UTF-8') ?>" placeholder="Ex: Centre-ville, Saint-Serge...">
       </div>
     </div>
 

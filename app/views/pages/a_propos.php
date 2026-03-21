@@ -1,4 +1,4 @@
-<?php $page_title = 'À Propos - Estimation Immobilière Aix-en-Provence | Notre Histoire & Équipe'; ?>
+<?php $page_title = 'À Propos - Estimation Immobilière Angers | Notre Histoire & Équipe'; ?>
 
 <!-- ============================================ -->
 <!-- HERO SECTION -->
@@ -9,9 +9,9 @@
       <p class="eyebrow">
         <i class="fas fa-info-circle"></i> À propos de nous
       </p>
-      <h1>L'expertise immobilière de aix-en-provencee à votre service</h1>
+      <h1>L'expertise immobilière d'Angers à votre service</h1>
       <p class="lead">
-        Depuis 2023, nous accompagnons les vendeurs de Aix-en-Provence et région à valoriser leur bien immobilier avec fiabilité et professionnalisme.
+        Depuis 2023, nous accompagnons les vendeurs d'Angers et région à valoriser leur bien immobilier avec fiabilité et professionnalisme.
       </p>
     </div>
   </div>
@@ -30,7 +30,7 @@
         </div>
         <h2>Notre Mission</h2>
         <p>
-          Rendre l'estimation immobilière accessible, rapide et fiable pour tous les vendeurs de la région Aix-en-Provence-Métropole. 
+          Rendre l'estimation immobilière accessible, rapide et fiable pour tous les vendeurs de la région Angers-Métropole. 
           Nous croyons qu'une bonne évaluation est la première étape d'une vente réussie.
         </p>
       </article>
@@ -42,8 +42,8 @@
         </div>
         <h2>Notre Vision</h2>
         <p>
-          Devenir la plateforme de référence pour l'estimation immobilière en Bouches-du-Rhône, 
-          en combinant technologie intelligente et expertise locale du marché de aix-en-provence.
+          Devenir la plateforme de référence pour l'estimation immobilière en Maine-et-Loire, 
+          en combinant technologie intelligente et expertise locale du marché d'Angers.
         </p>
       </article>
     </div>
@@ -67,7 +67,7 @@
       <div class="card stat-box">
         <p class="stat-number">3 847</p>
         <p class="stat-label">Estimations réalisées</p>
-        <p class="stat-desc">Dans la région Aix-en-Provence depuis 2023</p>
+        <p class="stat-desc">Dans la région Angers depuis 2023</p>
       </div>
 
       <!-- STAT 2 -->
@@ -88,7 +88,7 @@
       <div class="card stat-box">
         <p class="stat-number">12</p>
         <p class="stat-label">Quartiers couverts</p>
-        <p class="stat-desc">Aix-en-Provence intra-muros + banlieue</p>
+        <p class="stat-desc">Angers intra-muros + banlieue</p>
       </div>
     </div>
   </div>
@@ -115,7 +115,7 @@
         <h3>Olivier Colas</h3>
         <p class="team-role">Fondateur & Expert Immobilier</p>
         <p class="team-bio">
-          25 ans d'expérience immobilière. Ancien directeur d'agence, spécialiste du marché de aix-en-provence. 
+          25 ans d'expérience immobilière. Ancien directeur d'agence, spécialiste du marché d'Angers. 
           Passionné par l'innovation et la transparence.
         </p>
       </article>
@@ -128,7 +128,7 @@
         <h3>Sophie Dupont</h3>
         <p class="team-role">Analyste Marché Immobilier</p>
         <p class="team-bio">
-          Données & analyse. Suit en temps réel les tendances du marché de aix-en-provence. 
+          Données & analyse. Suit en temps réel les tendances du marché d'Angers. 
           Garantit la précision de chaque estimation grâce à l'algorithme propriétaire.
         </p>
       </article>
@@ -180,7 +180,7 @@
         </div>
         <h3>Données Locales</h3>
         <p>
-          Analyse basée sur 5000+ transactions réelles à Aix-en-Provence et région. Marché temps réel, pas de statistiques obsolètes.
+          Analyse basée sur 5000+ transactions réelles à Angers et région. Marché temps réel, pas de statistiques obsolètes.
         </p>
       </article>
 
@@ -241,7 +241,7 @@
         <div class="timeline-content">
           <h3>Analyse comparative</h3>
           <p>
-            Notre moteur compare avec 5000+ biens similaires vendus récemment à Aix-en-Provence et région.
+            Notre moteur compare avec 5000+ biens similaires vendus récemment à Angers et région.
           </p>
         </div>
       </div>
@@ -297,7 +297,7 @@
       <p class="eyebrow">
         <i class="fas fa-map-marker-alt"></i> Nos quartiers couverts
       </p>
-      <h2>Présents partout à Aix-en-Provence et région</h2>
+      <h2>Présents partout à Angers et région</h2>
     </div>
 
     <div class="features-grid">
@@ -306,9 +306,9 @@
         <div class="feature-icon">
           <i class="fas fa-building"></i>
         </div>
-        <h3>Aix-en-Provence Centre</h3>
+        <h3>Angers Centre</h3>
         <p>
-          Chartrons, Vieux Aix-en-Provence, Pey Berland. Marché premium, quartiers historiques avec forte demande.
+          Centre-ville, Centre historique, Château d'Angers. Marché premium, quartiers historiques avec forte demande.
         </p>
       </article>
 
@@ -319,7 +319,7 @@
         </div>
         <h3>Rive Gauche</h3>
         <p>
-          Saint-Michel, Sainte-Croix, Bacalan. Quartiers dynamiques, rénovation urbaine en cours.
+          La Doutre, Saint-Serge, Monplaisir. Quartiers dynamiques, rénovation urbaine en cours.
         </p>
       </article>
 
@@ -330,7 +330,7 @@
         </div>
         <h3>Banlieue Proche</h3>
         <p>
-          Talence, Floirac, Villenave. Familles, maisons, proximité avec centre-ville.
+          Trélazé, Écouflant, Villenave. Familles, maisons, proximité avec centre-ville.
         </p>
       </article>
 
@@ -339,7 +339,7 @@
         <div class="feature-icon">
           <i class="fas fa-map"></i>
         </div>
-        <h3>Région Bouches-du-Rhône</h3>
+        <h3>Région Maine-et-Loire</h3>
         <p>
           Saint-Émilion, Pauillac, Libourne. Extension progressive vers les communes girondines.
         </p>
@@ -352,7 +352,7 @@
         </div>
         <h3>Secteur Nord</h3>
         <p>
-          Bruges, Caudéran. Zones résidentielles, familles, petits commerces.
+          Lac de Maine, Belle-Beille. Zones résidentielles, familles, petits commerces.
         </p>
       </article>
 
@@ -363,7 +363,7 @@
         </div>
         <h3>Secteur Merignac</h3>
         <p>
-          Mérignac, Pessac. Proximité aéroport, commerces, zone dynamique.
+          Mérignac, Avrillé. Proximité aéroport, commerces, zone dynamique.
         </p>
       </article>
     </div>
@@ -389,7 +389,7 @@
           <i class="fas fa-question-circle"></i> Qui êtes-vous exactement?
         </h3>
         <p>
-          Nous sommes une équipe d'experts immobiliers basée à Aix-en-Provence. Notre mission : 
+          Nous sommes une équipe d'experts immobiliers basée à Angers. Notre mission : 
           rendre l'estimation fiable, rapide et accessible pour tous les vendeurs de la région.
         </p>
       </article>
@@ -401,7 +401,7 @@
         </h3>
         <p>
           Depuis 2023. Nous avons déjà réalisé plus de 3 800 estimations avec une satisfaction client de 4.8/5. 
-          Une équipe jeune mais expérimentée du marché de aix-en-provence.
+          Une équipe jeune mais expérimentée du marché d'Angers.
         </p>
       </article>
 
@@ -411,7 +411,7 @@
           <i class="fas fa-question-circle"></i> Pourquoi faire confiance à votre estimation?
         </h3>
         <p>
-          Notre algorithme analyse 5000+ transactions réelles à Aix-en-Provence. Pas de théorie, 
+          Notre algorithme analyse 5000+ transactions réelles à Angers. Pas de théorie, 
           des chiffres vérifiés. Précision moyenne ±3% avec le prix de vente final.
         </p>
       </article>
@@ -422,7 +422,7 @@
           <i class="fas fa-question-circle"></i> Couvrez-vous tous les quartiers?
         </h3>
         <p>
-          Oui, Aix-en-Provence intra-muros + banlieue proche. Extension progressive vers la Bouches-du-Rhône. 
+          Oui, Angers intra-muros + banlieue proche. Extension progressive vers la Maine-et-Loire. 
           Plus de 12 secteurs couverts avec données temps réel.
         </p>
       </article>
@@ -461,7 +461,7 @@
       <p class="eyebrow">
         <i class="fas fa-handshake"></i> Prêt à découvrir la valeur de votre bien?
       </p>
-      <h2>Faites confiance aux experts de Aix-en-Provence</h2>
+      <h2>Faites confiance aux experts d'Angers</h2>
       <p class="lead">
         Une équipe locale, une méthodologie éprouvée, une estimation fiable. 
         3 800+ vendeurs ont déjà été satisfaits.

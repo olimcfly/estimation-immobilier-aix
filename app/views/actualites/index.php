@@ -1,14 +1,14 @@
 <section class="section">
   <div class="container">
     <p class="eyebrow">Actualités immobilières</p>
-    <h1>L'actualité immobilière à Aix-en-Provence et en Bouches-du-Rhône</h1>
-    <p class="lead">Restez informé des dernières tendances du marché, des évolutions de prix et des projets qui transforment l'immobilier de aix-en-provence.</p>
+    <h1>L'actualité immobilière à Angers et en Maine-et-Loire</h1>
+    <p class="lead">Restez informé des dernières tendances du marché, des évolutions de prix et des projets qui transforment l'immobilier d'Angers.</p>
 
     <div class="blog-grid">
       <?php if (empty($actualites)): ?>
         <article class="card">
           <h2>Aucune actualité publiée pour le moment</h2>
-          <p class="muted">Revenez prochainement pour lire nos dernières analyses du marché immobilier de aix-en-provence.</p>
+          <p class="muted">Revenez prochainement pour lire nos dernières analyses du marché immobilier d'Angers.</p>
         </article>
       <?php else: ?>
         <?php foreach ($actualites as $actu): ?>

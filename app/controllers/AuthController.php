@@ -23,7 +23,7 @@ final class AuthController
         }
 
         View::renderBare('admin/login', [
-            'page_title' => 'Connexion Admin - Estimation Immobilier Aix-en-Provence',
+            'page_title' => 'Connexion Admin - Estimation Immobilier Angers',
             'step' => 'email',
             'success_message' => $loggedOut ? 'Vous avez été déconnecté avec succès.' : null,
         ]);
@@ -36,7 +36,7 @@ final class AuthController
 
         if (!$this->verifyCsrfToken($csrfToken)) {
             View::renderBare('admin/login', [
-                'page_title' => 'Connexion Admin - Estimation Immobilier Aix-en-Provence',
+                'page_title' => 'Connexion Admin - Estimation Immobilier Angers',
                 'step' => 'email',
                 'error_message' => 'Session expirée. Veuillez réessayer.',
             ]);
@@ -50,7 +50,7 @@ final class AuthController
                 $this->handleVerifyCode();
             } else {
                 View::renderBare('admin/login', [
-                    'page_title' => 'Connexion Admin - Estimation Immobilier Aix-en-Provence',
+                    'page_title' => 'Connexion Admin - Estimation Immobilier Angers',
                     'step' => 'email',
                     'error_message' => 'Requête invalide.',
                 ]);
@@ -69,7 +69,7 @@ final class AuthController
             }
 
             View::renderBare('admin/login', [
-                'page_title' => 'Connexion Admin - Estimation Immobilier Aix-en-Provence',
+                'page_title' => 'Connexion Admin - Estimation Immobilier Angers',
                 'step' => $action === 'verify_code' ? 'code' : 'email',
                 'login_email' => $action === 'verify_code' ? trim((string) ($_POST['email'] ?? '')) : '',
                 'error_message' => $message,
@@ -83,7 +83,7 @@ final class AuthController
 
         if ($email === '') {
             View::renderBare('admin/login', [
-                'page_title' => 'Connexion Admin - Estimation Immobilier Aix-en-Provence',
+                'page_title' => 'Connexion Admin - Estimation Immobilier Angers',
                 'step' => 'email',
                 'error_message' => 'Veuillez saisir votre adresse email.',
             ]);
@@ -94,7 +94,7 @@ final class AuthController
 
         if ($user === null) {
             View::renderBare('admin/login', [
-                'page_title' => 'Connexion Admin - Estimation Immobilier Aix-en-Provence',
+                'page_title' => 'Connexion Admin - Estimation Immobilier Angers',
                 'step' => 'email',
                 'error_message' => 'Aucun compte administrateur associé à cet email.',
             ]);
@@ -106,13 +106,13 @@ final class AuthController
 
         $sent = Mailer::send(
             $email,
-            'Votre code de connexion - Estimation Immobilier Aix-en-Provence',
+            'Votre code de connexion - Estimation Immobilier Angers',
             $this->buildCodeEmail($code, (string) ($user['name'] ?? 'Administrateur'))
         );
 
         if (!$sent) {
             View::renderBare('admin/login', [
-                'page_title' => 'Connexion Admin - Estimation Immobilier Aix-en-Provence',
+                'page_title' => 'Connexion Admin - Estimation Immobilier Angers',
                 'step' => 'email',
                 'error_message' => 'Impossible d\'envoyer l\'email. Vérifiez la configuration SMTP.',
             ]);
@@ -120,7 +120,7 @@ final class AuthController
         }
 
         View::renderBare('admin/login', [
-            'page_title' => 'Connexion Admin - Estimation Immobilier Aix-en-Provence',
+            'page_title' => 'Connexion Admin - Estimation Immobilier Angers',
             'step' => 'code',
             'login_email' => $email,
             'success_message' => 'Un code de connexion a été envoyé à votre adresse email.',
@@ -134,7 +134,7 @@ final class AuthController
 
         if ($email === '' || $code === '') {
             View::renderBare('admin/login', [
-                'page_title' => 'Connexion Admin - Estimation Immobilier Aix-en-Provence',
+                'page_title' => 'Connexion Admin - Estimation Immobilier Angers',
                 'step' => 'email',
                 'error_message' => 'Veuillez remplir tous les champs.',
             ]);
@@ -143,7 +143,7 @@ final class AuthController
 
         if (!AdminUser::verifyLoginCode($email, $code)) {
             View::renderBare('admin/login', [
-                'page_title' => 'Connexion Admin - Estimation Immobilier Aix-en-Provence',
+                'page_title' => 'Connexion Admin - Estimation Immobilier Angers',
                 'step' => 'code',
                 'login_email' => $email,
                 'error_message' => 'Code invalide ou expiré. Veuillez réessayer.',
@@ -170,16 +170,16 @@ final class AuthController
         return <<<HTML
         <div style="font-family: 'Helvetica Neue', Arial, sans-serif; max-width: 500px; margin: 0 auto; padding: 2rem;">
             <div style="text-align: center; margin-bottom: 2rem;">
-                <div style="display: inline-block; width: 50px; height: 50px; background: linear-gradient(135deg, #8B1538, #C41E3A); border-radius: 12px; line-height: 50px; color: #fff; font-size: 1.4rem;">&#128274;</div>
+                <div style="display: inline-block; width: 50px; height: 50px; background: linear-gradient(135deg, #1E3A5F, #2A4F7F); border-radius: 12px; line-height: 50px; color: #fff; font-size: 1.4rem;">&#128274;</div>
             </div>
-            <h2 style="text-align: center; color: #1a1410; margin-bottom: 0.5rem;">Votre code de connexion</h2>
-            <p style="text-align: center; color: #6b6459; margin-bottom: 2rem;">Bonjour {$name}, voici votre code pour accéder à l'espace administrateur :</p>
-            <div style="background: #f8f5f2; border: 2px solid #e8dfd7; border-radius: 12px; padding: 1.5rem; text-align: center; margin-bottom: 2rem;">
-                <span style="font-size: 2.2rem; font-weight: 700; letter-spacing: 0.5rem; color: #8B1538;">{$code}</span>
+            <h2 style="text-align: center; color: #1a1a2e; margin-bottom: 0.5rem;">Votre code de connexion</h2>
+            <p style="text-align: center; color: #5a6275; margin-bottom: 2rem;">Bonjour {$name}, voici votre code pour accéder à l'espace administrateur :</p>
+            <div style="background: #f8f5f2; border: 2px solid #dde1e8; border-radius: 12px; padding: 1.5rem; text-align: center; margin-bottom: 2rem;">
+                <span style="font-size: 2.2rem; font-weight: 700; letter-spacing: 0.5rem; color: #1E3A5F;">{$code}</span>
             </div>
-            <p style="text-align: center; color: #6b6459; font-size: 0.85rem;">Ce code est valable <strong>10 minutes</strong>.<br>Si vous n'avez pas demandé ce code, ignorez cet email.</p>
-            <hr style="border: none; border-top: 1px solid #e8dfd7; margin: 2rem 0;">
-            <p style="text-align: center; color: #999; font-size: 0.8rem;">Estimation Immobilier Aix-en-Provence</p>
+            <p style="text-align: center; color: #5a6275; font-size: 0.85rem;">Ce code est valable <strong>10 minutes</strong>.<br>Si vous n'avez pas demandé ce code, ignorez cet email.</p>
+            <hr style="border: none; border-top: 1px solid #dde1e8; margin: 2rem 0;">
+            <p style="text-align: center; color: #999; font-size: 0.8rem;">Estimation Immobilier Angers</p>
         </div>
         HTML;
     }
@@ -642,7 +642,7 @@ final class AuthController
             return;
         }
 
-        $subject = 'Test SMTP - Estimation Immobilier Aix-en-Provence';
+        $subject = 'Test SMTP - Estimation Immobilier Angers';
         $body = '<h2>Test SMTP</h2><p>Ce message confirme que la configuration SMTP fonctionne correctement.</p><p><small>Envoye depuis l\'interface d\'administration.</small></p>';
 
         $result = Mailer::send($to, $subject, $body);

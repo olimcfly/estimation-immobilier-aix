@@ -3,28 +3,28 @@
 declare(strict_types=1);
 
 if (!defined('CITY_NAME')) {
-    define('CITY_NAME', 'Aix-en-Provence');
+    define('CITY_NAME', 'Angers');
 }
 if (!defined('CITY_REGION')) {
-    define('CITY_REGION', 'Provence-Alpes-Côte d'Azur');
+    define('CITY_REGION', 'Pays de la Loire');
 }
 if (!defined('CITY_CODE_POSTAL')) {
-    define('CITY_CODE_POSTAL', '13100');
+    define('CITY_CODE_POSTAL', '49000');
 }
 if (!defined('QUARTIERS')) {
-    define('QUARTIERS', ['Chartrons', 'Saint-Pierre', 'Saint-Michel', 'Caudéran', 'Bastide', 'Mériadeck']);
+    define('QUARTIERS', ['Centre-ville', 'La Doutre', 'Saint-Serge', 'Belle-Beille', 'Monplaisir', 'Lac de Maine']);
 }
 if (!defined('PRIX_M2_MOYEN')) {
-    define('PRIX_M2_MOYEN', 5200);
+    define('PRIX_M2_MOYEN', 2800);
 }
 if (!defined('COLOR_PRIMARY')) {
-    define('COLOR_PRIMARY', '#C2185B');
+    define('COLOR_PRIMARY', '#1E3A5F');
 }
 if (!defined('COLOR_SECONDARY')) {
     define('COLOR_SECONDARY', '#FFFFFF');
 }
 if (!defined('COLOR_ACCENT')) {
-    define('COLOR_ACCENT', '#FFB300');
+    define('COLOR_ACCENT', '#C7A94E');
 }
 
 return [
@@ -36,7 +36,7 @@ return [
     'db' => [
         'host' => $_ENV['DB_HOST'] ?? '127.0.0.1',
         'port' => (int) ($_ENV['DB_PORT'] ?? 3306),
-        'name' => $_ENV['DB_NAME'] ?? 'immobilier_aix',
+        'name' => $_ENV['DB_NAME'] ?? 'immobilier_angers',
         'user' => $_ENV['DB_USER'] ?? 'root',
         'pass' => $_ENV['DB_PASS'] ?? '',
         'charset' => $_ENV['DB_CHARSET'] ?? 'utf8mb4',
@@ -47,9 +47,9 @@ return [
         'endpoint' => $_ENV['PERPLEXITY_ENDPOINT'] ?? 'https://api.perplexity.ai/chat/completions',
     ],
     'mail' => [
-        'from' => $_ENV['MAIL_FROM_ADDRESS'] ?? $_ENV['MAIL_FROM'] ?? 'contact@estimation-immobilier-aix.fr',
-        'from_name' => $_ENV['MAIL_FROM_NAME'] ?? 'Estimation Immobilier Aix-en-Provence',
-        'admin_email' => $_ENV['MAIL_ADMIN_EMAIL'] ?? $_ENV['MAIL_FROM_ADDRESS'] ?? $_ENV['MAIL_FROM'] ?? 'contact@estimation-immobilier-aix.fr',
+        'from' => $_ENV['MAIL_FROM_ADDRESS'] ?? $_ENV['MAIL_FROM'] ?? 'contact@estimation-immobilier-angers.fr',
+        'from_name' => $_ENV['MAIL_FROM_NAME'] ?? 'Estimation Immobilier Angers',
+        'admin_email' => $_ENV['MAIL_ADMIN_EMAIL'] ?? $_ENV['MAIL_FROM_ADDRESS'] ?? $_ENV['MAIL_FROM'] ?? 'contact@estimation-immobilier-angers.fr',
         'smtp_host' => $_ENV['MAIL_SMTP_HOST'] ?? $_ENV['MAIL_HOST'] ?? '',
         'smtp_port' => (int) ($_ENV['MAIL_SMTP_PORT'] ?? $_ENV['MAIL_PORT'] ?? 587),
         'smtp_user' => $_ENV['MAIL_SMTP_USER'] ?? $_ENV['MAIL_USERNAME'] ?? '',
@@ -90,15 +90,15 @@ return [
     ],
     'site' => [
         'colors' => [
-            'bg' => $_ENV['SITE_COLOR_BG'] ?? '#faf9f7',
+            'bg' => $_ENV['SITE_COLOR_BG'] ?? '#f7f8fa',
             'surface' => $_ENV['SITE_COLOR_SURFACE'] ?? '#ffffff',
-            'text' => $_ENV['SITE_COLOR_TEXT'] ?? '#1a1410',
-            'muted' => $_ENV['SITE_COLOR_MUTED'] ?? '#6b6459',
-            'primary' => $_ENV['SITE_COLOR_PRIMARY'] ?? '#8B1538',
-            'primary_dark' => $_ENV['SITE_COLOR_PRIMARY_DARK'] ?? '#6b0f2d',
-            'accent' => $_ENV['SITE_COLOR_ACCENT'] ?? '#D4AF37',
-            'accent_light' => $_ENV['SITE_COLOR_ACCENT_LIGHT'] ?? '#E8C547',
-            'border' => $_ENV['SITE_COLOR_BORDER'] ?? '#e8dfd7',
+            'text' => $_ENV['SITE_COLOR_TEXT'] ?? '#1a1a2e',
+            'muted' => $_ENV['SITE_COLOR_MUTED'] ?? '#5a6275',
+            'primary' => $_ENV['SITE_COLOR_PRIMARY'] ?? '#1E3A5F',
+            'primary_dark' => $_ENV['SITE_COLOR_PRIMARY_DARK'] ?? '#152C48',
+            'accent' => $_ENV['SITE_COLOR_ACCENT'] ?? '#C7A94E',
+            'accent_light' => $_ENV['SITE_COLOR_ACCENT_LIGHT'] ?? '#D9BE6A',
+            'border' => $_ENV['SITE_COLOR_BORDER'] ?? '#dde1e8',
             'success' => $_ENV['SITE_COLOR_SUCCESS'] ?? '#22c55e',
             'warning' => $_ENV['SITE_COLOR_WARNING'] ?? '#f97316',
             'danger' => $_ENV['SITE_COLOR_DANGER'] ?? '#e24b4a',

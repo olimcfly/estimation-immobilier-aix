@@ -42,8 +42,8 @@ final class EstimationService
     {
         $cityLower = mb_strtolower($city);
 
-        if (str_contains($cityLower, 'aix')) {
-            return 1.25;
+        if (str_contains($cityLower, 'angers')) {
+            return 0.67;
         }
 
         if (str_contains($cityLower, 'paris')) {
@@ -52,6 +52,10 @@ final class EstimationService
 
         if (str_contains($cityLower, 'lyon')) {
             return 1.35;
+        }
+
+        if (str_contains($cityLower, 'aix')) {
+            return 1.25;
         }
 
         return 1.0;

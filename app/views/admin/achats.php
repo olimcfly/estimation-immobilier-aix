@@ -83,7 +83,7 @@
     flex-shrink: 0;
   }
 
-  .stat-icon.total { background: rgba(139,21,56,0.1); color: var(--admin-primary); }
+  .stat-icon.total { background: rgba(30,58,95,0.1); color: var(--admin-primary); }
   .stat-icon.chaud { background: rgba(239,68,68,0.1); color: #ef4444; }
   .stat-icon.signe { background: rgba(34,197,94,0.1); color: #22c55e; }
   .stat-icon.volume { background: rgba(245,158,11,0.1); color: #f59e0b; }

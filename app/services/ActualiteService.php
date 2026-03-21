@@ -9,18 +9,18 @@ use App\Core\Config;
 final class ActualiteService
 {
     private const SEARCH_TOPICS = [
-        'marché immobilier Aix-en-Provence actualité prix',
-        'immobilier Aix-en-Provence Métropole tendances',
-        'vente immobilière Bouches-du-Rhône nouveautés',
-        'prix immobilier quartiers Aix-en-Provence évolution',
-        'investissement immobilier Aix-en-Provence CUB',
-        'immobilier neuf Aix-en-Provence programmes',
-        'taux crédit immobilier impact Aix-en-Provence',
-        'urbanisme Aix-en-Provence projets aménagement',
+        'marché immobilier Angers actualité prix',
+        'immobilier Angers Métropole tendances',
+        'vente immobilière Maine-et-Loire nouveautés',
+        'prix immobilier quartiers Angers évolution',
+        'investissement immobilier Angers CUB',
+        'immobilier neuf Angers programmes',
+        'taux crédit immobilier impact Angers',
+        'urbanisme Angers projets aménagement',
     ];
 
     /**
-     * Search Perplexity for real estate news around Aix-en-Provence.
+     * Search Perplexity for real estate news around Angers.
      */
     public function searchNews(?string $customQuery = null): array
     {
@@ -36,7 +36,7 @@ final class ActualiteService
         }
 
         $prompt = sprintf(
-            "Recherche les actualités immobilières récentes à Aix-en-Provence et ses alentours (Bouches-du-Rhône, Provence-Alpes-Côte d'Azur) sur le thème : \"%s\".\n"
+            "Recherche les actualités immobilières récentes à Angers et ses alentours (Maine-et-Loire, Pays de la Loire) sur le thème : \"%s\".\n"
             . "Retourne exactement 5 idées d'articles sous forme JSON avec les clés : title, summary, angle (l'angle éditorial unique).\n"
             . "Concentre-toi sur les données les plus récentes (dernière semaine/mois).\n"
             . "Réponds UNIQUEMENT en JSON valide : {\"articles\": [...]}",
@@ -50,7 +50,7 @@ final class ActualiteService
             'model' => $model,
             'temperature' => 0.3,
             'messages' => [
-                ['role' => 'system', 'content' => 'Tu es un expert en veille immobilière sur Aix-en-Provence et sa métropole. Tu fournis des actualités factuelles et récentes.'],
+                ['role' => 'system', 'content' => 'Tu es un expert en veille immobilière sur Angers et sa métropole. Tu fournis des actualités factuelles et récentes.'],
                 ['role' => 'user', 'content' => $prompt],
             ],
         ], [
@@ -99,7 +99,7 @@ final class ActualiteService
     {
         $apiKey = (string) Config::get('openai.api_key', '');
         if ($apiKey === '' || empty($ideas)) {
-            return $this->fallbackArticle($ideas[0] ?? ['title' => 'Actualité immobilière Aix-en-Provence']);
+            return $this->fallbackArticle($ideas[0] ?? ['title' => 'Actualité immobilière Angers']);
         }
 
         $ideasText = '';
@@ -109,9 +109,9 @@ final class ActualiteService
                 . " | Angle: " . ($idea['angle'] ?? '') . "\n";
         }
 
-        $prompt = "Tu es un rédacteur expert en immobilier à Aix-en-Provence. Voici 5 idées d'articles d'actualité immobilière :\n\n"
+        $prompt = "Tu es un rédacteur expert en immobilier à Angers. Voici 5 idées d'articles d'actualité immobilière :\n\n"
             . $ideasText . "\n"
-            . "1. Choisis la MEILLEURE idée (la plus intéressante, actuelle et utile pour des propriétaires/vendeurs de aix-en-provence).\n"
+            . "1. Choisis la MEILLEURE idée (la plus intéressante, actuelle et utile pour des propriétaires/vendeurs d'Angers).\n"
             . "2. Rédige un article complet en HTML (balises h2, h3, p, ul, li, strong) de 800-1200 mots.\n"
             . "3. L'article doit être factuel, informatif, avec des données chiffrées quand possible.\n"
             . "4. Inclus un CTA vers l'estimation immobilière à la fin.\n\n"
@@ -125,7 +125,7 @@ final class ActualiteService
             'temperature' => 0.7,
             'response_format' => ['type' => 'json_object'],
             'messages' => [
-                ['role' => 'system', 'content' => 'Tu es un journaliste immobilier spécialisé sur Aix-en-Provence et la Bouches-du-Rhône. Tu rédiges des articles professionnels et engageants.'],
+                ['role' => 'system', 'content' => 'Tu es un journaliste immobilier spécialisé sur Angers et la Maine-et-Loire. Tu rédiges des articles professionnels et engageants.'],
                 ['role' => 'user', 'content' => $prompt],
             ],
         ], [
@@ -134,14 +134,14 @@ final class ActualiteService
         ]);
 
         if (!is_array($response)) {
-            return $this->fallbackArticle($ideas[0] ?? ['title' => 'Actualité immobilière Aix-en-Provence']);
+            return $this->fallbackArticle($ideas[0] ?? ['title' => 'Actualité immobilière Angers']);
         }
 
         $content = $response['choices'][0]['message']['content'] ?? '';
         $decoded = json_decode((string) $content, true);
 
         if (!is_array($decoded) || !isset($decoded['title'], $decoded['content_html'])) {
-            return $this->fallbackArticle($ideas[0] ?? ['title' => 'Actualité immobilière Aix-en-Provence']);
+            return $this->fallbackArticle($ideas[0] ?? ['title' => 'Actualité immobilière Angers']);
         }
 
         return [
@@ -160,7 +160,7 @@ final class ActualiteService
     public function generateImage(string $imagePrompt): ?string
     {
         if (trim($imagePrompt) === '') {
-            $imagePrompt = 'Professional real estate photography of beautiful Aix-en-Provence architecture, stone buildings, sunny day, editorial style';
+            $imagePrompt = 'Professional real estate photography of beautiful Angers architecture, stone buildings, sunny day, editorial style';
         }
 
         $imageService = new ImageGeneratorService();
@@ -218,37 +218,37 @@ final class ActualiteService
     private function fallbackNewsResults(string $query): array
     {
         return [
-            ['title' => 'Évolution des prix immobiliers à Aix-en-Provence ce mois', 'summary' => 'Les prix au m² continuent leur ajustement dans les quartiers centraux.', 'angle' => 'Analyse quartier par quartier'],
-            ['title' => 'Nouveaux projets urbains en métropole de aix-en-provencee', 'summary' => 'Plusieurs projets d\'aménagement transforment le paysage immobilier.', 'angle' => 'Impact sur les valeurs immobilières'],
-            ['title' => 'Taux de crédit : impact sur le marché de aix-en-provence', 'summary' => 'L\'évolution des taux influence les décisions d\'achat et de vente.', 'angle' => 'Opportunités pour vendeurs'],
-            ['title' => 'Le marché locatif étudiant à Aix-en-Provence', 'summary' => 'La demande locative étudiante reste forte dans certains quartiers.', 'angle' => 'Investissement locatif'],
-            ['title' => 'Rénovation énergétique : les aides disponibles en Bouches-du-Rhône', 'summary' => 'Les nouvelles réglementations impactent la valeur des biens.', 'angle' => 'Valorisation du patrimoine'],
+            ['title' => 'Évolution des prix immobiliers à Angers ce mois', 'summary' => 'Les prix au m² continuent leur ajustement dans les quartiers centraux.', 'angle' => 'Analyse quartier par quartier'],
+            ['title' => 'Nouveaux projets urbains en agglomération angevine', 'summary' => 'Plusieurs projets d\'aménagement transforment le paysage immobilier.', 'angle' => 'Impact sur les valeurs immobilières'],
+            ['title' => 'Taux de crédit : impact sur le marché d'Angers', 'summary' => 'L\'évolution des taux influence les décisions d\'achat et de vente.', 'angle' => 'Opportunités pour vendeurs'],
+            ['title' => 'Le marché locatif étudiant à Angers', 'summary' => 'La demande locative étudiante reste forte dans certains quartiers.', 'angle' => 'Investissement locatif'],
+            ['title' => 'Rénovation énergétique : les aides disponibles en Maine-et-Loire', 'summary' => 'Les nouvelles réglementations impactent la valeur des biens.', 'angle' => 'Valorisation du patrimoine'],
         ];
     }
 
     private function fallbackArticle(array $idea): array
     {
-        $title = $idea['title'] ?? 'Actualité immobilière Aix-en-Provence';
-        $summary = $idea['summary'] ?? 'Les dernières nouvelles du marché immobilier de aix-en-provence.';
+        $title = $idea['title'] ?? 'Actualité immobilière Angers';
+        $summary = $idea['summary'] ?? 'Les dernières nouvelles du marché immobilier d'Angers.';
 
         return [
             'title' => $title,
-            'meta_title' => $title . ' | Actualités Immobilier Aix-en-Provence',
+            'meta_title' => $title . ' | Actualités Immobilier Angers',
             'meta_description' => $summary,
             'excerpt' => $summary,
             'content' => '<h2>' . htmlspecialchars($title, ENT_QUOTES, 'UTF-8') . '</h2>'
                 . '<p>' . htmlspecialchars($summary, ENT_QUOTES, 'UTF-8') . '</p>'
                 . '<h2>Ce que cela signifie pour vous</h2>'
-                . '<p>Le marché immobilier de aix-en-provence continue d\'évoluer. Que vous soyez propriétaire souhaitant vendre ou simplement curieux de la valeur de votre bien, il est important de rester informé des dernières tendances.</p>'
+                . '<p>Le marché immobilier d'Angers continue d\'évoluer. Que vous soyez propriétaire souhaitant vendre ou simplement curieux de la valeur de votre bien, il est important de rester informé des dernières tendances.</p>'
                 . '<h2>Les quartiers à surveiller</h2>'
-                . '<ul><li><strong>Chartrons</strong> : un quartier en constante valorisation</li>'
-                . '<li><strong>Bastide</strong> : le renouveau de la rive droite</li>'
-                . '<li><strong>Saint-Michel</strong> : authenticité et dynamisme</li>'
-                . '<li><strong>Caudéran</strong> : le calme résidentiel prisé des familles</li></ul>'
+                . '<ul><li><strong>Centre-ville</strong> : un quartier en constante valorisation</li>'
+                . '<li><strong>La Doutre</strong> : le renouveau de la rive droite</li>'
+                . '<li><strong>La Doutre</strong> : authenticité et dynamisme</li>'
+                . '<li><strong>Belle-Beille</strong> : le calme résidentiel prisé des familles</li></ul>'
                 . '<h2>Estimez votre bien gratuitement</h2>'
-                . '<p>Vous souhaitez connaître la valeur actuelle de votre bien immobilier à Aix-en-Provence ? '
+                . '<p>Vous souhaitez connaître la valeur actuelle de votre bien immobilier à Angers ? '
                 . '<strong><a href="/estimation">Lancez votre estimation gratuite</a></strong> et obtenez un résultat en moins de 2 minutes.</p>',
-            'image_prompt' => 'Professional editorial photo of Aix-en-Provence city skyline with stone architecture and Garonne river, warm lighting, real estate magazine style',
+            'image_prompt' => 'Professional editorial photo of Angers city skyline with stone architecture and Garonne river, warm lighting, real estate magazine style',
         ];
     }
 

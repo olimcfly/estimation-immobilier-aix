@@ -5,7 +5,7 @@
  * Automated weekly actualité generator.
  *
  * This script:
- * 1. Searches Perplexity for recent real estate news in Aix-en-Provence
+ * 1. Searches Perplexity for recent real estate news in Angers
  * 2. Selects the best article idea
  * 3. Generates a full article via OpenAI
  * 4. Generates an AI image

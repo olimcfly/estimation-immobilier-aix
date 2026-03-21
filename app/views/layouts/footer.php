@@ -29,16 +29,16 @@
       <div class="footer-column footer-col-brand">
         <a href="/" class="footer-logo-link">
           <span class="footer-logo-icon"><i class="fas fa-home"></i></span>
-          <span class="footer-logo-text">Estimation Immobilier <strong>Aix-en-Provence</strong></span>
+          <span class="footer-logo-text">Estimation Immobilier <strong>Angers</strong></span>
         </a>
         <p class="footer-desc">
-          Votre partenaire de confiance pour l'estimation immobilière sur Aix-en-Provence et la métropole de aix-en-provencee depuis 2020.
+          Votre partenaire de confiance pour l'estimation immobilière sur Angers et l'agglomération angevine depuis 2020.
         </p>
         <div class="footer-social">
-          <a href="https://facebook.com/estimation-aix" target="_blank" rel="noopener noreferrer" title="Facebook" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://instagram.com/estimation-aix" target="_blank" rel="noopener noreferrer" title="Instagram" class="social-icon"><i class="fab fa-instagram"></i></a>
-          <a href="https://linkedin.com/company/estimation-aix" target="_blank" rel="noopener noreferrer" title="LinkedIn" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://twitter.com/estimation_bdx" target="_blank" rel="noopener noreferrer" title="X (Twitter)" class="social-icon"><i class="fab fa-x-twitter"></i></a>
+          <a href="https://facebook.com/estimation-angers" target="_blank" rel="noopener noreferrer" title="Facebook" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://instagram.com/estimation-angers" target="_blank" rel="noopener noreferrer" title="Instagram" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="https://linkedin.com/company/estimation-angers" target="_blank" rel="noopener noreferrer" title="LinkedIn" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://twitter.com/estimation_angers" target="_blank" rel="noopener noreferrer" title="X (Twitter)" class="social-icon"><i class="fab fa-x-twitter"></i></a>
         </div>
       </div>
 
@@ -48,7 +48,7 @@
         <ul class="footer-links">
           <li><a href="/#form-estimation">Estimation en ligne</a></li>
           <li><a href="/processus-estimation">Notre processus</a></li>
-          <li><a href="/quartiers">Quartiers de Aix-en-Provence</a></li>
+          <li><a href="/quartiers">Quartiers d'Angers</a></li>
           <li><a href="/#how-it-works">Comment ça marche</a></li>
           <li><a href="/#example-result">Voir un exemple</a></li>
         </ul>
@@ -83,18 +83,18 @@
         <ul class="footer-contact">
           <li>
             <i class="fas fa-map-marker-alt"></i>
-            <span>Aix-en-Provence, 13100<br>Provence-Alpes-Côte d'Azur</span>
+            <span>Angers, 49000<br>Pays de la Loire</span>
           </li>
           <li>
-            <a href="tel:+33556000000">
+            <a href="tel:+33241000000">
               <i class="fas fa-phone"></i>
-              <span>05 56 00 00 00</span>
+              <span>02 41 00 00 00</span>
             </a>
           </li>
           <li>
-            <a href="mailto:contact@estimation-immobilier-aix.fr">
+            <a href="mailto:contact@estimation-immobilier-angers.fr">
               <i class="fas fa-envelope"></i>
-              <span>contact@estimation-immobilier-aix.fr</span>
+              <span>contact@estimation-immobilier-angers.fr</span>
             </a>
           </li>
         </ul>
@@ -108,7 +108,7 @@
         <i class="fas fa-envelope-open-text"></i>
         <div>
           <strong>Restez informé</strong>
-          <span>Recevez nos analyses du marché de aix-en-provence et nos conseils immobiliers.</span>
+          <span>Recevez nos analyses du marché d'Angers et nos conseils immobiliers.</span>
         </div>
       </div>
       <form class="footer-newsletter-form" method="POST" action="/api/newsletter">
@@ -120,7 +120,7 @@
     <!-- FOOTER BOTTOM -->
     <div class="footer-bottom">
       <div class="footer-bottom-left">
-        <p>&copy; 2026 Estimation Immobilier Aix-en-Provence &mdash; SAS OCDM Agency. Tous droits réservés.</p>
+        <p>&copy; 2026 Estimation Immobilier Angers &mdash; SAS OCDM Agency. Tous droits réservés.</p>
       </div>
       <div class="footer-bottom-right">
         <div class="footer-trust">

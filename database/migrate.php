@@ -313,7 +313,7 @@ foreach ($migrations as [$table, $sql]) {
 
 // Seed default admin if table was just created
 if (!in_array('admin_users', $existingTables, true)) {
-    $adminEmail = $_ENV['ADMIN_EMAIL'] ?? 'contact@estimation-immobilier-aix.fr';
+    $adminEmail = $_ENV['ADMIN_EMAIL'] ?? 'contact@estimation-immobilier-angers.fr';
     echo "\n  Ajout de l'admin par défaut ({$adminEmail})... ";
     $stmt = $pdo->prepare(
         'INSERT IGNORE INTO admin_users (email, name, created_at) VALUES (:email, :name, NOW())'

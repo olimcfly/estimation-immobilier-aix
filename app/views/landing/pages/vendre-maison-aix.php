@@ -11,13 +11,13 @@ $formError = $form_error ?? '';
 
     <div class="lp-hero-content">
       <p class="lp-eyebrow">
-        <i class="fas fa-home"></i> Vente immobilière à Aix-en-Provence
+        <i class="fas fa-home"></i> Vente immobilière à Angers
       </p>
 
-      <h1>Vendez votre maison à <span class="lp-highlight">Aix-en-Provence</span> au meilleur prix</h1>
+      <h1>Vendez votre maison à <span class="lp-highlight">Angers</span> au meilleur prix</h1>
 
       <p class="lp-lead">
-        Vous envisagez de <strong>vendre votre maison à Aix-en-Provence</strong> ?
+        Vous envisagez de <strong>vendre votre maison à Angers</strong> ?
         Commencez par connaître sa valeur réelle grâce à notre estimation gratuite.
         Un expert vous accompagne ensuite pour <strong>optimiser votre prix de vente</strong>.
       </p>
@@ -26,14 +26,14 @@ $formError = $form_error ?? '';
         <li><i class="fas fa-chart-line"></i> <strong>Prix de vente optimal</strong> — basé sur le marché actuel</li>
         <li><i class="fas fa-user-tie"></i> <strong>Accompagnement expert</strong> — rappel sous 24h</li>
         <li><i class="fas fa-hand-holding-usd"></i> <strong>Estimation gratuite</strong> — sans engagement</li>
-        <li><i class="fas fa-map-marked-alt"></i> <strong>Connaissance locale</strong> — Aix-en-Provence et Bouches-du-Rhône</li>
+        <li><i class="fas fa-map-marked-alt"></i> <strong>Connaissance locale</strong> — Angers et Maine-et-Loire</li>
       </ul>
 
       <div class="lp-social-proof-mini">
         <div class="lp-stars">
           <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
         </div>
-        <span>4.8/5 — Des centaines de propriétaires de aix-en-provence nous font confiance</span>
+        <span>4.8/5 — Des centaines de propriétaires d'Angers nous font confiance</span>
       </div>
     </div>
 
@@ -41,7 +41,7 @@ $formError = $form_error ?? '';
     <div class="lp-form-card">
       <div class="lp-form-header">
         <h2><i class="fas fa-home"></i> Estimez votre maison</h2>
-        <p>Recevez gratuitement la valeur de votre maison à Aix-en-Provence.</p>
+        <p>Recevez gratuitement la valeur de votre maison à Angers.</p>
       </div>
 
       <?php if ($formError !== ''): ?>
@@ -83,7 +83,7 @@ $formError = $form_error ?? '';
 
         <div class="lp-field">
           <label for="ville"><i class="fas fa-map-marker-alt"></i> Quartier / Ville</label>
-          <input type="text" id="ville" name="ville" value="Aix-en-Provence" placeholder="Caudéran, Talence, Pessac...">
+          <input type="text" id="ville" name="ville" value="Angers" placeholder="Belle-Beille, Trélazé, Avrillé...">
         </div>
 
         <button type="submit" class="lp-btn lp-btn-primary lp-btn-full">
@@ -124,8 +124,8 @@ $formError = $form_error ?? '';
       </div>
       <div class="lp-benefit-card">
         <div class="lp-benefit-icon"><i class="fas fa-map-pin"></i></div>
-        <h3>Expertise locale Aix-en-Provence</h3>
-        <p>Nous connaissons chaque quartier de Aix-en-Provence : Chartrons, Caudéran, Saint-Pierre, Bastide, Mériadeck...</p>
+        <h3>Expertise locale Angers</h3>
+        <p>Nous connaissons chaque quartier d'Angers : Centre-ville, Belle-Beille, Saint-Serge, La Doutre, Monplaisir...</p>
       </div>
     </div>
   </div>
@@ -166,7 +166,7 @@ $formError = $form_error ?? '';
   <div class="lp-container">
     <div class="lp-section-heading">
       <p class="lp-eyebrow"><i class="fas fa-users"></i> Témoignages</p>
-      <h2>Ils ont vendu leur maison à Aix-en-Provence avec nous</h2>
+      <h2>Ils ont vendu leur maison à Angers avec nous</h2>
     </div>
 
     <div class="lp-testimonials">
@@ -174,15 +174,15 @@ $formError = $form_error ?? '';
         <div class="lp-testimonial-stars">
           <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
         </div>
-        <p class="lp-testimonial-text">"Nous avons vendu notre maison à Caudéran en 3 semaines grâce à l'estimation qui nous a permis de fixer le bon prix dès le départ."</p>
-        <p class="lp-testimonial-author"><strong>François et Claire B.</strong> — Caudéran</p>
+        <p class="lp-testimonial-text">"Nous avons vendu notre maison à Belle-Beille en 3 semaines grâce à l'estimation qui nous a permis de fixer le bon prix dès le départ."</p>
+        <p class="lp-testimonial-author"><strong>François et Claire B.</strong> — Belle-Beille</p>
       </div>
       <div class="lp-testimonial">
         <div class="lp-testimonial-stars">
           <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
         </div>
         <p class="lp-testimonial-text">"Le conseiller a été très réactif. Il m'a rappelé dans l'heure et m'a accompagné tout au long de la vente. Je recommande vivement."</p>
-        <p class="lp-testimonial-author"><strong>Alain R.</strong> — Pessac</p>
+        <p class="lp-testimonial-author"><strong>Alain R.</strong> — Avrillé</p>
       </div>
     </div>
   </div>
@@ -198,12 +198,12 @@ $formError = $form_error ?? '';
 
     <div class="lp-faq">
       <details class="lp-faq-item" open>
-        <summary>Quel est le prix moyen d'une maison à Aix-en-Provence ?</summary>
-        <p>Le prix moyen d'une maison à Aix-en-Provence varie entre 3 500 et 6 000 €/m² selon le quartier. Caudéran et les Chartrons sont parmi les quartiers les plus prisés, tandis que la Bastide offre encore des opportunités intéressantes.</p>
+        <summary>Quel est le prix moyen d'une maison à Angers ?</summary>
+        <p>Le prix moyen d'une maison à Angers varie entre 3 500 et 6 000 €/m² selon le quartier. Belle-Beille et les Centre-ville sont parmi les quartiers les plus prisés, tandis que la La Doutre offre encore des opportunités intéressantes.</p>
       </details>
       <details class="lp-faq-item">
-        <summary>Combien de temps faut-il pour vendre une maison à Aix-en-Provence ?</summary>
-        <p>En moyenne, une maison correctement estimée se vend entre 1 et 3 mois à Aix-en-Provence. Un prix juste dès le départ est la clé pour une vente rapide.</p>
+        <summary>Combien de temps faut-il pour vendre une maison à Angers ?</summary>
+        <p>En moyenne, une maison correctement estimée se vend entre 1 et 3 mois à Angers. Un prix juste dès le départ est la clé pour une vente rapide.</p>
       </details>
       <details class="lp-faq-item">
         <summary>L'estimation engage-t-elle à vendre ?</summary>
@@ -221,7 +221,7 @@ $formError = $form_error ?? '';
 <section class="lp-section lp-cta-section">
   <div class="lp-container lp-cta-content">
     <h2>Vendez votre maison au meilleur prix</h2>
-    <p>Commencez par une estimation gratuite. Un expert de aix-en-provence vous accompagne ensuite.</p>
+    <p>Commencez par une estimation gratuite. Un expert d'Angers vous accompagne ensuite.</p>
     <a href="#lp-form" class="lp-btn lp-btn-primary lp-btn-large">
       <i class="fas fa-home"></i> Estimer ma maison gratuitement
     </a>

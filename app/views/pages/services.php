@@ -1,4 +1,4 @@
-<?php $page_title = 'Services - Estimation Immobilière Aix-en-Provence | Accompagnement Complet'; ?>
+<?php $page_title = 'Services - Estimation Immobilière Angers | Accompagnement Complet'; ?>
 
 <!-- ============================================ -->
 <!-- HERO SECTION -->
@@ -11,7 +11,7 @@
       </p>
       <h1>Un accompagnement immobilier complet, de l'estimation à la signature</h1>
       <p class="lead">
-        Nous combinons technologie intelligente, expertise locale et suivi humain pour sécuriser votre projet de vente à Aix-en-Provence.
+        Nous combinons technologie intelligente, expertise locale et suivi humain pour sécuriser votre projet de vente à Angers.
       </p>
     </div>
   </div>
@@ -43,7 +43,7 @@
         </div>
 
         <p>
-          Notre moteur analyse en temps réel les données du marché de aix-en-provence pour vous fournir une fourchette de prix fiable. 
+          Notre moteur analyse en temps réel les données du marché d'Angers pour vous fournir une fourchette de prix fiable. 
           Basée sur 5000+ transactions réelles, pas sur la théorie.
         </p>
 
@@ -376,7 +376,7 @@
         </div>
         <h3>Experts Locaux</h3>
         <p>
-          Équipe basée à Aix-en-Provence. Nous connaissons chaque quartier, chaque tendance du marché.
+          Équipe basée à Angers. Nous connaissons chaque quartier, chaque tendance du marché.
         </p>
       </article>
 
@@ -387,7 +387,7 @@
         </div>
         <h3>Fiable</h3>
         <p>
-          3 800+ estimations réalisées, 4.8/5 de satisfaction client. Référence du marché de aix-en-provence.
+          3 800+ estimations réalisées, 4.8/5 de satisfaction client. Référence du marché d'Angers.
         </p>
       </article>
     </div>
@@ -521,7 +521,7 @@
       <article class="card faq-card">
         <h3><i class="fas fa-question-circle"></i> À quelle précision m'attendre?</h3>
         <p>
-          Précision moyenne ±3% comparé au prix de vente final. Basée sur 5000+ transactions réelles à Aix-en-Provence.
+          Précision moyenne ±3% comparé au prix de vente final. Basée sur 5000+ transactions réelles à Angers.
         </p>
       </article>
 

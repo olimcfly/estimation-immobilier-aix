@@ -1,6 +1,6 @@
 {
-    "name": "olimcfly/estimation-immobilier-aix",
-    "description": "Plateforme d'estimation immobilière à Aix-en-Provence",
+    "name": "olimcfly/estimation-immobilier-angers",
+    "description": "Plateforme d'estimation immobilière à Angers",
     "type": "project",
     "license": "proprietary",
     "require": {

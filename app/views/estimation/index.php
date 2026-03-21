@@ -1,4 +1,4 @@
-<?php $page_title = 'Estimation Immobilière Aix-en-Provence - Avis de Valeur Indicatif Gratuit'; ?>
+<?php $page_title = 'Estimation Immobilière Angers - Avis de Valeur Indicatif Gratuit'; ?>
 
 <!-- ============================================ -->
 <!-- HERO + FORMULAIRE -->
@@ -7,7 +7,7 @@
   <div class="container hero-grid">
     <div>
       <p class="eyebrow"><i class="fas fa-chart-line"></i> Avis de valeur indicatif en ligne</p>
-      <h1>Estimez votre bien immobilier à Aix-en-Provence</h1>
+      <h1>Estimez votre bien immobilier à Angers</h1>
       <p class="lead">
         Obtenez une fourchette de prix indicative en quelques secondes.
         Seulement 3 informations nécessaires.
@@ -44,7 +44,7 @@
               type="text"
               id="ville"
               name="ville"
-              placeholder="Aix-en-Provence, Talence, Mérignac..."
+              placeholder="Angers, Trélazé, Mérignac..."
               required
               autocomplete="off"
             >

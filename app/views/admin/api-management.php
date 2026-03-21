@@ -60,10 +60,10 @@
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: #6b6459;
+    color: #5a6275;
     margin-bottom: 1rem;
     padding-bottom: 0.5rem;
-    border-bottom: 1px solid #e8dfd7;
+    border-bottom: 1px solid #dde1e8;
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -83,7 +83,7 @@
 
   .api-card {
     background: #fff;
-    border: 1px solid #e8dfd7;
+    border: 1px solid #dde1e8;
     border-radius: 10px;
     overflow: hidden;
     transition: box-shadow 0.2s, border-color 0.2s;
@@ -121,7 +121,7 @@
   .api-card-name {
     font-weight: 700;
     font-size: 0.95rem;
-    color: #1a1410;
+    color: #1a1a2e;
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -129,7 +129,7 @@
 
   .api-card-desc {
     font-size: 0.78rem;
-    color: #6b6459;
+    color: #5a6275;
     margin-top: 0.15rem;
   }
 
@@ -168,7 +168,7 @@
   }
 
   .api-config-label {
-    color: #6b6459;
+    color: #5a6275;
     font-weight: 500;
     font-family: 'DM Sans', monospace;
     font-size: 0.78rem;
@@ -193,10 +193,10 @@
     gap: 0.4rem;
     margin-top: 0.75rem;
     padding: 0.6rem 0.8rem;
-    background: #faf9f7;
+    background: #f7f8fa;
     border-radius: 6px;
     font-size: 0.78rem;
-    color: #6b6459;
+    color: #5a6275;
   }
 
   .api-pricing i {
@@ -242,7 +242,7 @@
   }
 
   .btn-test:hover {
-    background: #6b0f2d;
+    background: #152C48;
   }
 
   .btn-test:disabled {
@@ -251,7 +251,7 @@
   }
 
   .btn-test.testing {
-    background: #6b6459;
+    background: #5a6275;
   }
 
   .btn-configure {
@@ -260,8 +260,8 @@
     gap: 0.4rem;
     padding: 0.45rem 0.9rem;
     background: #fff;
-    color: #6b6459;
-    border: 1px solid #e8dfd7;
+    color: #5a6275;
+    border: 1px solid #dde1e8;
     border-radius: 6px;
     font-size: 0.8rem;
     font-weight: 600;
@@ -359,7 +359,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 1.25rem 1.5rem;
-    border-bottom: 1px solid #e8dfd7;
+    border-bottom: 1px solid #dde1e8;
   }
 
   .api-modal-header h3 {
@@ -375,12 +375,12 @@
     border: none;
     font-size: 1.2rem;
     cursor: pointer;
-    color: #6b6459;
+    color: #5a6275;
     padding: 0.25rem;
   }
 
   .api-modal-close:hover {
-    color: #1a1410;
+    color: #1a1a2e;
   }
 
   .api-modal-body {
@@ -395,14 +395,14 @@
     display: block;
     font-size: 0.82rem;
     font-weight: 600;
-    color: #1a1410;
+    color: #1a1a2e;
     margin-bottom: 0.35rem;
   }
 
   .api-modal-field input {
     width: 100%;
     padding: 0.6rem 0.85rem;
-    border: 1px solid #e8dfd7;
+    border: 1px solid #dde1e8;
     border-radius: 6px;
     font-size: 0.88rem;
     font-family: 'DM Sans', monospace;
@@ -413,14 +413,14 @@
   .api-modal-field input:focus {
     outline: none;
     border-color: var(--admin-primary);
-    box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.08);
+    box-shadow: 0 0 0 3px rgba(30, 58, 95, 0.08);
   }
 
   .api-modal-footer {
     display: flex;
     gap: 0.75rem;
     padding: 1rem 1.5rem;
-    border-top: 1px solid #e8dfd7;
+    border-top: 1px solid #dde1e8;
     background: #fafbfc;
     border-radius: 0 0 12px 12px;
   }
@@ -442,7 +442,7 @@
   }
 
   .btn-save:hover {
-    background: #6b0f2d;
+    background: #152C48;
   }
 
   .btn-cancel {
@@ -451,8 +451,8 @@
     gap: 0.4rem;
     padding: 0.55rem 1.2rem;
     background: #fff;
-    color: #6b6459;
-    border: 1px solid #e8dfd7;
+    color: #5a6275;
+    border: 1px solid #dde1e8;
     border-radius: 6px;
     font-size: 0.85rem;
     font-weight: 600;
@@ -462,8 +462,8 @@
   }
 
   .btn-cancel:hover {
-    border-color: #1a1410;
-    color: #1a1410;
+    border-color: #1a1a2e;
+    color: #1a1a2e;
   }
 
   .api-modal-msg {

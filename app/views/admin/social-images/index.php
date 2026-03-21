@@ -59,14 +59,14 @@ $error = (string) ($_GET['error'] ?? '');
   /* Template: Estimation Prix */
   .tpl-estimation {
     width: 1080px; height: 1080px;
-    background: linear-gradient(135deg, #8B1538 0%, #5a0e25 60%, #1a0510 100%);
+    background: linear-gradient(135deg, #1E3A5F 0%, #0f2540 60%, #0a1520 100%);
     display: flex; flex-direction: column; justify-content: center; align-items: center;
     color: #fff; text-align: center; padding: 80px;
   }
   .tpl-estimation .badge-top {
-    background: rgba(212, 175, 55, 0.2); border: 1px solid #D4AF37;
+    background: rgba(199, 169, 78, 0.2); border: 1px solid #C7A94E;
     padding: 10px 28px; border-radius: 30px; font-size: 22px; font-weight: 600;
-    color: #D4AF37; margin-bottom: 40px; letter-spacing: 0.05em;
+    color: #C7A94E; margin-bottom: 40px; letter-spacing: 0.05em;
   }
   .tpl-estimation .big-price {
     font-size: 96px; font-weight: 700; line-height: 1.1; margin-bottom: 20px;
@@ -75,7 +75,7 @@ $error = (string) ($_GET['error'] ?? '');
     font-size: 28px; color: rgba(255,255,255,0.7); margin-bottom: 50px;
   }
   .tpl-estimation .divider {
-    width: 80px; height: 3px; background: #D4AF37; margin-bottom: 50px;
+    width: 80px; height: 3px; background: #C7A94E; margin-bottom: 50px;
   }
   .tpl-estimation .quartier {
     font-size: 36px; font-weight: 600; margin-bottom: 15px;
@@ -91,17 +91,17 @@ $error = (string) ($_GET['error'] ?? '');
   /* Template: Conseil / Tips */
   .tpl-conseil {
     width: 1080px; height: 1080px;
-    background: #faf9f7;
+    background: #f7f8fa;
     display: flex; flex-direction: column;
     padding: 0;
   }
   .tpl-conseil .header-bar {
-    background: #8B1538; padding: 40px 60px;
+    background: #1E3A5F; padding: 40px 60px;
     display: flex; align-items: center; justify-content: space-between;
   }
   .tpl-conseil .header-bar .brand { color: #fff; font-size: 22px; font-weight: 700; }
   .tpl-conseil .header-bar .tag {
-    background: #D4AF37; color: #1a1410; padding: 8px 20px; border-radius: 20px;
+    background: #C7A94E; color: #1a1a2e; padding: 8px 20px; border-radius: 20px;
     font-size: 16px; font-weight: 600;
   }
   .tpl-conseil .content-area {
@@ -109,20 +109,20 @@ $error = (string) ($_GET['error'] ?? '');
     padding: 60px 80px;
   }
   .tpl-conseil .tip-number {
-    font-size: 72px; font-weight: 700; color: #D4AF37; margin-bottom: 20px; line-height: 1;
+    font-size: 72px; font-weight: 700; color: #C7A94E; margin-bottom: 20px; line-height: 1;
   }
   .tpl-conseil .tip-title {
-    font-size: 48px; font-weight: 700; color: #1a1410; line-height: 1.2; margin-bottom: 30px;
+    font-size: 48px; font-weight: 700; color: #1a1a2e; line-height: 1.2; margin-bottom: 30px;
   }
   .tpl-conseil .tip-text {
-    font-size: 26px; color: #6b6459; line-height: 1.5;
+    font-size: 26px; color: #5a6275; line-height: 1.5;
   }
   .tpl-conseil .footer-bar {
-    padding: 30px 60px; border-top: 2px solid #e8dfd7;
+    padding: 30px 60px; border-top: 2px solid #dde1e8;
     display: flex; align-items: center; justify-content: space-between;
   }
-  .tpl-conseil .footer-bar .url { font-size: 18px; color: #8B1538; font-weight: 600; }
-  .tpl-conseil .footer-bar .cta { font-size: 18px; color: #6b6459; }
+  .tpl-conseil .footer-bar .url { font-size: 18px; color: #1E3A5F; font-weight: 600; }
+  .tpl-conseil .footer-bar .cta { font-size: 18px; color: #5a6275; }
 
   /* Template: Statistique / Chiffre Clé */
   .tpl-stat {
@@ -136,10 +136,10 @@ $error = (string) ($_GET['error'] ?? '');
     letter-spacing: 0.15em; margin-bottom: 30px;
   }
   .tpl-stat .stat-value {
-    font-size: 120px; font-weight: 700; color: #D4AF37; line-height: 1; margin-bottom: 20px;
+    font-size: 120px; font-weight: 700; color: #C7A94E; line-height: 1; margin-bottom: 20px;
   }
   .tpl-stat .stat-unit {
-    font-size: 36px; color: #D4AF37; font-weight: 500; margin-bottom: 50px;
+    font-size: 36px; color: #C7A94E; font-weight: 500; margin-bottom: 50px;
   }
   .tpl-stat .stat-desc {
     font-size: 28px; color: rgba(255,255,255,0.7); line-height: 1.4; max-width: 700px;
@@ -152,7 +152,7 @@ $error = (string) ($_GET['error'] ?? '');
   /* Template: Story (9:16) */
   .tpl-story {
     width: 1080px; height: 1920px;
-    background: linear-gradient(180deg, #8B1538 0%, #5a0e25 40%, #1a0510 100%);
+    background: linear-gradient(180deg, #1E3A5F 0%, #0f2540 40%, #0a1520 100%);
     display: flex; flex-direction: column; justify-content: space-between;
     color: #fff; padding: 80px 60px;
   }
@@ -174,7 +174,7 @@ $error = (string) ($_GET['error'] ?? '');
   }
   .tpl-story .story-bottom { text-align: center; }
   .tpl-story .story-cta {
-    display: inline-block; background: #D4AF37; color: #1a0510; padding: 20px 50px;
+    display: inline-block; background: #C7A94E; color: #0a1520; padding: 20px 50px;
     border-radius: 40px; font-size: 24px; font-weight: 700;
   }
   .tpl-story .story-url {
@@ -184,7 +184,7 @@ $error = (string) ($_GET['error'] ?? '');
   /* Template: Paysage (16:9) */
   .tpl-paysage {
     width: 1200px; height: 628px;
-    background: linear-gradient(135deg, #8B1538 0%, #5a0e25 50%, #2d0a18 100%);
+    background: linear-gradient(135deg, #1E3A5F 0%, #0f2540 50%, #0a1a30 100%);
     display: flex; color: #fff;
   }
   .tpl-paysage .left-panel {
@@ -196,7 +196,7 @@ $error = (string) ($_GET['error'] ?? '');
     padding: 40px;
   }
   .tpl-paysage .tag-line {
-    font-size: 16px; color: #D4AF37; text-transform: uppercase;
+    font-size: 16px; color: #C7A94E; text-transform: uppercase;
     letter-spacing: 0.1em; font-weight: 600; margin-bottom: 20px;
   }
   .tpl-paysage .main-title {
@@ -206,7 +206,7 @@ $error = (string) ($_GET['error'] ?? '');
     font-size: 18px; color: rgba(255,255,255,0.7); line-height: 1.5;
   }
   .tpl-paysage .right-big {
-    font-size: 72px; font-weight: 700; color: #D4AF37; line-height: 1;
+    font-size: 72px; font-weight: 700; color: #C7A94E; line-height: 1;
   }
   .tpl-paysage .right-label {
     font-size: 18px; color: rgba(255,255,255,0.6); margin-top: 10px; text-align: center;
@@ -317,11 +317,11 @@ $error = (string) ($_GET['error'] ?? '');
       fields: [
         { id: 'prix', label: 'Prix affich\u00e9', type: 'text', value: '4 800 \u20ac/m\u00b2' },
         { id: 'label', label: 'Sous-titre prix', type: 'text', value: 'Prix moyen au m\u00b2' },
-        { id: 'quartier', label: 'Quartier', type: 'select', options: ['Aix-en-Provence Centre', <?php foreach ($quartiers as $q): ?>'<?= $q ?>',<?php endforeach; ?>], value: 'Aix-en-Provence Centre' },
+        { id: 'quartier', label: 'Quartier', type: 'select', options: ['Angers Centre', <?php foreach ($quartiers as $q): ?>'<?= $q ?>',<?php endforeach; ?>], value: 'Angers Centre' },
         { id: 'badge', label: 'Badge', type: 'text', value: 'ESTIMATION GRATUITE' },
-        { id: 'brand', label: 'Marque', type: 'text', value: 'estimation-immobilier-aix.fr' },
-        { id: 'bg1', label: 'Couleur d\u00e9but', type: 'color', value: '#8B1538' },
-        { id: 'bg2', label: 'Couleur fin', type: 'color', value: '#1a0510' },
+        { id: 'brand', label: 'Marque', type: 'text', value: 'estimation-immobilier-angers.fr' },
+        { id: 'bg1', label: 'Couleur d\u00e9but', type: 'color', value: '#1E3A5F' },
+        { id: 'bg2', label: 'Couleur fin', type: 'color', value: '#0a1520' },
       ],
       render: function(v) {
         return '<div class="social-card tpl-estimation" style="background:linear-gradient(135deg,' + v.bg1 + ' 0%,' + v.bg2 + ' 100%);">' +
@@ -330,7 +330,7 @@ $error = (string) ($_GET['error'] ?? '');
           '<div class="price-label">' + esc(v.label) + '</div>' +
           '<div class="divider"></div>' +
           '<div class="quartier">' + esc(v.quartier) + '</div>' +
-          '<div class="city">Aix-en-Provence &mdash; Provence-Alpes-Côte d'Azur</div>' +
+          '<div class="city">Angers &mdash; Pays de la Loire</div>' +
           '<div class="logo-bottom">' + esc(v.brand) + '</div>' +
         '</div>';
       }
@@ -341,8 +341,8 @@ $error = (string) ($_GET['error'] ?? '');
         { id: 'title', label: 'Titre', type: 'text', value: 'V\u00e9rifiez le DPE avant d\u2019acheter' },
         { id: 'text', label: 'Texte', type: 'textarea', value: 'Le Diagnostic de Performance \u00c9nerg\u00e9tique (DPE) impacte directement la valeur de votre bien. Un logement class\u00e9 F ou G peut perdre jusqu\u2019\u00e0 15% de sa valeur.' },
         { id: 'tag', label: 'Tag', type: 'text', value: 'CONSEIL IMMO' },
-        { id: 'brand', label: 'Marque', type: 'text', value: 'Estimation Immobilier Aix-en-Provence' },
-        { id: 'url', label: 'URL', type: 'text', value: 'estimation-immobilier-aix.fr' },
+        { id: 'brand', label: 'Marque', type: 'text', value: 'Estimation Immobilier Angers' },
+        { id: 'url', label: 'URL', type: 'text', value: 'estimation-immobilier-angers.fr' },
         { id: 'cta', label: 'CTA', type: 'text', value: 'Estimez votre bien gratuitement \u2192' },
       ],
       render: function(v) {
@@ -359,11 +359,11 @@ $error = (string) ($_GET['error'] ?? '');
     },
     stat: {
       fields: [
-        { id: 'label', label: 'Label', type: 'text', value: 'MARCH\u00c9 IMMOBILIER AIX-EN-PROVENCE' },
+        { id: 'label', label: 'Label', type: 'text', value: 'MARCH\u00c9 IMMOBILIER ANGERS' },
         { id: 'value', label: 'Chiffre', type: 'text', value: '+12%' },
         { id: 'unit', label: 'Unit\u00e9', type: 'text', value: 'en 2 ans' },
-        { id: 'desc', label: 'Description', type: 'textarea', value: 'Les prix de l\u2019immobilier \u00e0 Aix-en-Provence ont progress\u00e9 de 12% sur les deux derni\u00e8res ann\u00e9es.' },
-        { id: 'brand', label: 'Marque', type: 'text', value: 'estimation-immobilier-aix.fr' },
+        { id: 'desc', label: 'Description', type: 'textarea', value: 'Les prix de l\u2019immobilier \u00e0 Angers ont progress\u00e9 de 12% sur les deux derni\u00e8res ann\u00e9es.' },
+        { id: 'brand', label: 'Marque', type: 'text', value: 'estimation-immobilier-angers.fr' },
         { id: 'bg1', label: 'Couleur d\u00e9but', type: 'color', value: '#0f172a' },
         { id: 'bg2', label: 'Couleur fin', type: 'color', value: '#1e293b' },
       ],
@@ -379,14 +379,14 @@ $error = (string) ($_GET['error'] ?? '');
     },
     story: {
       fields: [
-        { id: 'brand', label: 'Marque', type: 'text', value: 'ESTIMATION IMMOBILIER AIX-EN-PROVENCE' },
+        { id: 'brand', label: 'Marque', type: 'text', value: 'ESTIMATION IMMOBILIER ANGERS' },
         { id: 'emoji', label: 'Emoji / Ic\u00f4ne', type: 'text', value: '\uD83C\uDFE0' },
-        { id: 'title', label: 'Titre', type: 'text', value: 'Combien vaut votre bien \u00e0 Aix-en-Provence ?' },
+        { id: 'title', label: 'Titre', type: 'text', value: 'Combien vaut votre bien \u00e0 Angers ?' },
         { id: 'text', label: 'Texte', type: 'textarea', value: 'Obtenez une estimation gratuite et pr\u00e9cise en quelques minutes.' },
         { id: 'cta', label: 'Bouton CTA', type: 'text', value: 'Estimer mon bien' },
-        { id: 'url', label: 'URL', type: 'text', value: 'estimation-immobilier-aix.fr' },
-        { id: 'bg1', label: 'Couleur d\u00e9but', type: 'color', value: '#8B1538' },
-        { id: 'bg2', label: 'Couleur fin', type: 'color', value: '#1a0510' },
+        { id: 'url', label: 'URL', type: 'text', value: 'estimation-immobilier-angers.fr' },
+        { id: 'bg1', label: 'Couleur d\u00e9but', type: 'color', value: '#1E3A5F' },
+        { id: 'bg2', label: 'Couleur fin', type: 'color', value: '#0a1520' },
       ],
       render: function(v) {
         return '<div class="social-card tpl-story" style="background:linear-gradient(180deg,' + v.bg1 + ' 0%,' + v.bg2 + ' 100%);">' +
@@ -406,13 +406,13 @@ $error = (string) ($_GET['error'] ?? '');
     paysage: {
       fields: [
         { id: 'tag', label: 'Tag line', type: 'text', value: 'ESTIMATION GRATUITE' },
-        { id: 'title', label: 'Titre', type: 'text', value: 'Estimez votre bien immobilier \u00e0 Aix-en-Provence' },
+        { id: 'title', label: 'Titre', type: 'text', value: 'Estimez votre bien immobilier \u00e0 Angers' },
         { id: 'text', label: 'Sous-texte', type: 'text', value: 'R\u00e9sultat imm\u00e9diat, sans engagement' },
         { id: 'bigValue', label: 'Chiffre droite', type: 'text', value: '4 800\u20ac' },
         { id: 'bigLabel', label: 'Label droite', type: 'text', value: 'Prix moyen / m\u00b2' },
-        { id: 'brand', label: 'Marque', type: 'text', value: 'estimation-immobilier-aix.fr' },
-        { id: 'bg1', label: 'Couleur d\u00e9but', type: 'color', value: '#8B1538' },
-        { id: 'bg2', label: 'Couleur fin', type: 'color', value: '#2d0a18' },
+        { id: 'brand', label: 'Marque', type: 'text', value: 'estimation-immobilier-angers.fr' },
+        { id: 'bg1', label: 'Couleur d\u00e9but', type: 'color', value: '#1E3A5F' },
+        { id: 'bg2', label: 'Couleur fin', type: 'color', value: '#0a1a30' },
       ],
       render: function(v) {
         return '<div class="social-card tpl-paysage" style="background:linear-gradient(135deg,' + v.bg1 + ' 0%,' + v.bg2 + ' 100%);">' +

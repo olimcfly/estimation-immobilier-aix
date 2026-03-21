@@ -128,7 +128,7 @@
     margin-top: 0.5rem;
   }
 
-  .btn-save:hover { background: #6b0f2d; }
+  .btn-save:hover { background: #152C48; }
 
   .btn-test-send {
     display: inline-flex;
@@ -300,7 +300,7 @@
           <i class="fas fa-robot"></i> AI
         </button>
       </label>
-      <textarea name="signature" id="field-signature" style="min-height:80px;" placeholder="Cordialement,&#10;Votre &eacute;quipe Estimation Immobilier Aix-en-Provence"><?= htmlspecialchars($template['signature'] ?? '', ENT_QUOTES, 'UTF-8') ?></textarea>
+      <textarea name="signature" id="field-signature" style="min-height:80px;" placeholder="Cordialement,&#10;Votre &eacute;quipe Estimation Immobilier Angers"><?= htmlspecialchars($template['signature'] ?? '', ENT_QUOTES, 'UTF-8') ?></textarea>
     </div>
 
     <div>

@@ -16,49 +16,49 @@
   ?>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="<?= htmlspecialchars((string) ($meta_description ?? 'Estimation immobilier Aix-en-Provence - Obtenez votre avis de valeur immobilier gratuit. Données réelles du marché de aix-en-provence, résultat en 60 secondes.'), ENT_QUOTES, 'UTF-8') ?>">
-  <meta name="theme-color" content="#8B1538">
+  <meta name="description" content="<?= htmlspecialchars((string) ($meta_description ?? 'Estimation immobilier Angers - Obtenez votre avis de valeur immobilier gratuit. Données réelles du marché d'Angers, résultat en 60 secondes.'), ENT_QUOTES, 'UTF-8') ?>">
+  <meta name="theme-color" content="#1E3A5F">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="canonical" href="<?= e($canonicalUrl) ?>">
-  <title><?= isset($page_title) ? $page_title : 'Estimation Immobilier Aix-en-Provence' ?></title>
+  <title><?= isset($page_title) ? $page_title : 'Estimation Immobilier Angers' ?></title>
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="<?= isset($page_title) ? htmlspecialchars($page_title, ENT_QUOTES, 'UTF-8') : 'Estimation Immobilier Aix-en-Provence' ?>">
-  <meta property="og:description" content="<?= htmlspecialchars((string) ($meta_description ?? 'Obtenez votre avis de valeur immobilier gratuit à Aix-en-Provence. Résultat en 60 secondes.'), ENT_QUOTES, 'UTF-8') ?>">
+  <meta property="og:title" content="<?= isset($page_title) ? htmlspecialchars($page_title, ENT_QUOTES, 'UTF-8') : 'Estimation Immobilier Angers' ?>">
+  <meta property="og:description" content="<?= htmlspecialchars((string) ($meta_description ?? 'Obtenez votre avis de valeur immobilier gratuit à Angers. Résultat en 60 secondes.'), ENT_QUOTES, 'UTF-8') ?>">
   <meta property="og:url" content="<?= e($canonicalUrl) ?>">
   <meta property="og:locale" content="fr_FR">
-  <meta property="og:site_name" content="Estimation Immobilier Aix-en-Provence">
-  <meta property="og:image" content="https://estimation-immobilier-aix.fr/assets/images/og-estimation-aix.png">
+  <meta property="og:site_name" content="Estimation Immobilier Angers">
+  <meta property="og:image" content="https://estimation-immobilier-angers.fr/assets/images/og-estimation-angers.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="<?= isset($page_title) ? htmlspecialchars($page_title, ENT_QUOTES, 'UTF-8') : 'Estimation Immobilier Aix-en-Provence' ?>">
-  <meta name="twitter:description" content="<?= htmlspecialchars((string) ($meta_description ?? 'Avis de valeur immobilier gratuit à Aix-en-Provence. Résultat en 60 secondes.'), ENT_QUOTES, 'UTF-8') ?>">
-  <meta name="twitter:image" content="https://estimation-immobilier-aix.fr/assets/images/og-estimation-aix.png">
+  <meta name="twitter:title" content="<?= isset($page_title) ? htmlspecialchars($page_title, ENT_QUOTES, 'UTF-8') : 'Estimation Immobilier Angers' ?>">
+  <meta name="twitter:description" content="<?= htmlspecialchars((string) ($meta_description ?? 'Avis de valeur immobilier gratuit à Angers. Résultat en 60 secondes.'), ENT_QUOTES, 'UTF-8') ?>">
+  <meta name="twitter:image" content="https://estimation-immobilier-angers.fr/assets/images/og-estimation-angers.png">
 
   <!-- Schema.org JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "RealEstateAgent",
-    "name": "Estimation Immobilier Aix-en-Provence",
-    "description": "Avis de valeur et estimation immobilière gratuite à Aix-en-Provence et en Bouches-du-Rhône.",
-    "url": "https://estimation-immobilier-aix.fr",
-    "telephone": "+33442000000",
-    "email": "contact@estimation-immobilier-aix.fr",
+    "name": "Estimation Immobilier Angers",
+    "description": "Avis de valeur et estimation immobilière gratuite à Angers et en Maine-et-Loire.",
+    "url": "https://estimation-immobilier-angers.fr",
+    "telephone": "+33241000000",
+    "email": "contact@estimation-immobilier-angers.fr",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Aix-en-Provence",
-      "addressRegion": "Provence-Alpes-Côte d'Azur",
-      "postalCode": "13100",
+      "addressLocality": "Angers",
+      "addressRegion": "Pays de la Loire",
+      "postalCode": "49000",
       "addressCountry": "FR"
     },
     "areaServed": {
       "@type": "City",
-      "name": "Aix-en-Provence"
+      "name": "Angers"
     },
     "priceRange": "Gratuit"
   }
@@ -77,24 +77,24 @@
   <style>
 
     :root {
-      --bg: <?= e((string) ($colors['bg'] ?? '#faf9f7')) ?>;
+      --bg: <?= e((string) ($colors['bg'] ?? '#f7f8fa')) ?>;
       --surface: <?= e((string) ($colors['surface'] ?? '#ffffff')) ?>;
-      --text: <?= e((string) ($colors['text'] ?? '#1a1410')) ?>;
-      --muted: <?= e((string) ($colors['muted'] ?? '#6b6459')) ?>;
-      --primary: <?= e((string) ($colors['primary'] ?? '#8B1538')) ?>;
-      --primary-dark: <?= e((string) ($colors['primary_dark'] ?? '#6b0f2d')) ?>;
-      --accent: <?= e((string) ($colors['accent'] ?? '#D4AF37')) ?>;
-      --accent-light: <?= e((string) ($colors['accent_light'] ?? '#E8C547')) ?>;
-      --border: <?= e((string) ($colors['border'] ?? '#e8dfd7')) ?>;
+      --text: <?= e((string) ($colors['text'] ?? '#1a1a2e')) ?>;
+      --muted: <?= e((string) ($colors['muted'] ?? '#5a6275')) ?>;
+      --primary: <?= e((string) ($colors['primary'] ?? '#1E3A5F')) ?>;
+      --primary-dark: <?= e((string) ($colors['primary_dark'] ?? '#152C48')) ?>;
+      --accent: <?= e((string) ($colors['accent'] ?? '#C7A94E')) ?>;
+      --accent-light: <?= e((string) ($colors['accent_light'] ?? '#D9BE6A')) ?>;
+      --border: <?= e((string) ($colors['border'] ?? '#dde1e8')) ?>;
       --success: <?= e((string) ($colors['success'] ?? '#22c55e')) ?>;
       --warning: <?= e((string) ($colors['warning'] ?? '#f97316')) ?>;
       --danger: <?= e((string) ($colors['danger'] ?? '#e24b4a')) ?>;
       --info: <?= e((string) ($colors['info'] ?? '#3b82f6')) ?>;
       --neutral: <?= e((string) ($colors['neutral'] ?? '#000000')) ?>;
-      --bg-rgb: <?= e((string) ($rgbColors['bg'] ?? '250, 249, 247')) ?>;
-      --border-rgb: <?= e((string) ($rgbColors['border'] ?? '232, 223, 215')) ?>;
-      --primary-rgb: <?= e((string) ($rgbColors['primary'] ?? '139, 21, 56')) ?>;
-      --accent-rgb: <?= e((string) ($rgbColors['accent'] ?? '212, 175, 55')) ?>;
+      --bg-rgb: <?= e((string) ($rgbColors['bg'] ?? '247, 248, 250')) ?>;
+      --border-rgb: <?= e((string) ($rgbColors['border'] ?? '221, 225, 232')) ?>;
+      --primary-rgb: <?= e((string) ($rgbColors['primary'] ?? '30, 58, 95')) ?>;
+      --accent-rgb: <?= e((string) ($rgbColors['accent'] ?? '199, 169, 78')) ?>;
       --success-rgb: <?= e((string) ($rgbColors['success'] ?? '34, 197, 94')) ?>;
       --warning-rgb: <?= e((string) ($rgbColors['warning'] ?? '249, 115, 22')) ?>;
       --neutral-rgb: <?= e((string) ($rgbColors['neutral'] ?? '0, 0, 0')) ?>;
@@ -145,7 +145,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(135deg, var(--primary), #C41E3A);
+      background: linear-gradient(135deg, var(--primary), #2A4F7F);
       border-radius: 10px;
       color: #fff;
       font-size: 1.2rem;
@@ -315,7 +315,7 @@
       align-items: center;
       gap: 0.5rem;
       padding: 0.8rem 1.6rem;
-      background: linear-gradient(135deg, var(--primary), #C41E3A);
+      background: linear-gradient(135deg, var(--primary), #2A4F7F);
       color: #fff;
       text-decoration: none;
       border: none;
@@ -548,7 +548,7 @@
         justify-content: center;
         gap: 0.5rem;
         padding: 1rem;
-        background: linear-gradient(135deg, var(--primary), #C41E3A);
+        background: linear-gradient(135deg, var(--primary), #2A4F7F);
         color: #fff;
         text-decoration: none;
         border-radius: 10px;
@@ -566,7 +566,7 @@
 <!-- ============================= -->
 <header class="site-header">
   <div class="container nav-wrapper">
-    <a href="/" class="brand">Estimation Immobilier <span>Aix-en-Provence</span></a>
+    <a href="/" class="brand">Estimation Immobilier <span>Angers</span></a>
 
     <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -620,7 +620,7 @@
         <ul class="dropdown-menu" aria-label="Sous-menu ressources">
           <li><a href="/guides">Guides complets</a></li>
           <li><a href="/tools/calculatrice">Calculatrice prix</a></li>
-          <li><a href="/quartiers">Quartiers Aix-en-Provence</a></li>
+          <li><a href="/quartiers">Quartiers Angers</a></li>
           <li><a href="/newsletter">Newsletter</a></li>
         </ul>
       </div>

@@ -1,10 +1,10 @@
-<?php $page_title = 'Guides - Estimation Immobilier Aix-en-Provence'; ?>
+<?php $page_title = 'Guides - Estimation Immobilier Angers'; ?>
 
 <section class="section page-hero">
   <div class="container">
     <div class="page-hero-inner card">
       <p class="eyebrow"><i class="fas fa-book-open"></i> Guides immobiliers</p>
-      <h1>Nos guides pour vendre votre bien à Aix-en-Provence</h1>
+      <h1>Nos guides pour vendre votre bien à Angers</h1>
       <p class="lead">
         Retrouvez des conseils pratiques, des méthodes d'estimation et des bonnes pratiques
         pour préparer une vente immobilière efficace.

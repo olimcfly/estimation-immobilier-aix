@@ -6,7 +6,7 @@
  * Usage : php tests/imap-test.php
  *
  * Variables d'environnement requises :
- *   IMAP_USER - Adresse email (ex: contact@estimation-immobilier-aix.fr)
+ *   IMAP_USER - Adresse email (ex: contact@estimation-immobilier-angers.fr)
  *   IMAP_PASS - Mot de passe du compte email
  */
 

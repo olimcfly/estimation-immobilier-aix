@@ -1,5 +1,5 @@
-<?php $page_title = 'Estimation Immobilier Aix-en-Provence | Avis de Valeur Gratuit'; ?>
-<?php $meta_description = 'Obtenez une fourchette de prix indicative gratuite pour votre bien immobilier à Aix-en-Provence en 60 secondes. 3 informations suffisent. 100% gratuit, sans engagement.'; ?>
+<?php $page_title = 'Estimation Immobilier Angers | Avis de Valeur Gratuit'; ?>
+<?php $meta_description = 'Obtenez une fourchette de prix indicative gratuite pour votre bien immobilier à Angers en 60 secondes. 3 informations suffisent. 100% gratuit, sans engagement.'; ?>
 
 <!-- ============================================ -->
 <!-- HERO + FORMULAIRE SIMPLE -->
@@ -12,7 +12,7 @@
         <i class="fas fa-chart-line"></i> Avis de valeur indicatif en ligne
       </p>
 
-      <h1>Estimez la valeur de votre bien immobilier à Aix-en-Provence</h1>
+      <h1>Estimez la valeur de votre bien immobilier à Angers</h1>
 
       <p class="lead">
         Obtenez une fourchette de prix indicative en quelques secondes.
@@ -40,10 +40,10 @@
           <i class="fas fa-quote-left"></i> Témoignage client
         </p>
         <p style="margin: 0; font-style: italic; color: var(--text); line-height: 1.6;">
-          "L'avis de valeur était très proche de l'offre reçue. Recommandé pour avoir une estimation fiable avant de vendre à Aix-en-Provence !"
+          "L'avis de valeur était très proche de l'offre reçue. Recommandé pour avoir une estimation fiable avant de vendre à Angers !"
         </p>
         <p style="margin: 0.8rem 0 0; font-size: 0.85rem; color: var(--muted); font-weight: 600;">
-          — Marie D. • Aix-en-Provence Chartrons
+          — Marie D. • Angers Centre-ville
         </p>
       </div>
 
@@ -103,7 +103,7 @@
             type="text"
             id="ville"
             name="ville"
-            placeholder="Aix-en-Provence, Talence, Mérignac..."
+            placeholder="Angers, Trélazé, Mérignac..."
             required
             autocomplete="off"
           >
@@ -131,7 +131,7 @@
           </li>
           <li style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem;">
             <i class="fas fa-check-circle" style="color: var(--primary); font-size: 1.2rem;"></i>
-            <span><strong>Données réelles</strong> — 5000+ transactions en Bouches-du-Rhône</span>
+            <span><strong>Données réelles</strong> — 5000+ transactions en Maine-et-Loire</span>
           </li>
           <li style="display: flex; align-items: center; gap: 0.75rem;">
             <i class="fas fa-check-circle" style="color: var(--primary); font-size: 1.2rem;"></i>

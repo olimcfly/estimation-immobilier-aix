@@ -835,8 +835,8 @@ final class AdminDiagnosticController
 
             // ===== LANDING PAGES =====
             'lp_estimation' => [
-                'label' => 'LP Estimation Aix-en-Provence',
-                'route' => '/lp/estimation-aix',
+                'label' => 'LP Estimation Angers',
+                'route' => '/lp/estimation-angers',
                 'icon' => 'fa-bullseye',
                 'category' => 'Landing Pages',
                 'tables' => [

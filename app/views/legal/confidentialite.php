@@ -20,6 +20,6 @@
     <p>Les données sont conservées pour la durée strictement nécessaire aux finalités poursuivies, puis archivées ou supprimées.</p>
 
     <h2>Vos droits</h2>
-    <p>Vous disposez d’un droit d’accès, de rectification, d’opposition, d’effacement et de portabilité. Contact : <a href="mailto:contact@estimation-immobilier-aix.fr">contact@estimation-immobilier-aix.fr</a>.</p>
+    <p>Vous disposez d’un droit d’accès, de rectification, d’opposition, d’effacement et de portabilité. Contact : <a href="mailto:contact@estimation-immobilier-angers.fr">contact@estimation-immobilier-angers.fr</a>.</p>
   </div>
 </section>

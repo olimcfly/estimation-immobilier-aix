@@ -28,31 +28,31 @@ $websiteId = (int) Config::get('website.id', 1);
 
 $articles = [
     [
-        'title' => 'Estimation immobilière à Aix-en-Provence : comment obtenir le prix juste en 2026',
+        'title' => 'Estimation immobilière à Angers : comment obtenir le prix juste en 2026',
         'slug' => 'estimation-immobiliere-aix-prix-juste-2026',
-        'meta_title' => 'Estimation immobilière Aix-en-Provence 2026 : obtenir le prix juste',
-        'meta_description' => 'Découvrez les méthodes fiables pour estimer votre bien immobilier à Aix-en-Provence en 2026. Prix au m², facteurs de valorisation et erreurs à éviter.',
+        'meta_title' => 'Estimation immobilière Angers 2026 : obtenir le prix juste',
+        'meta_description' => 'Découvrez les méthodes fiables pour estimer votre bien immobilier à Angers en 2026. Prix au m², facteurs de valorisation et erreurs à éviter.',
         'persona' => 'Propriétaire hésitant',
         'awareness_level' => 'solution',
         'status' => 'published',
         'content' => <<<'HTML'
-<h2>Pourquoi une estimation précise est essentielle à Aix-en-Provence</h2>
-<p>Le marché immobilier de aix-en-provence reste l'un des plus dynamiques de France, mais aussi l'un des plus exigeants. En 2026, le prix moyen au m² à Aix-en-Provence se situe autour de <strong>4 800 €</strong>, avec des écarts considérables selon les quartiers. Une estimation trop haute fait fuir les acheteurs ; trop basse, vous perdez de l'argent.</p>
+<h2>Pourquoi une estimation précise est essentielle à Angers</h2>
+<p>Le marché immobilier d'Angers reste l'un des plus dynamiques de France, mais aussi l'un des plus exigeants. En 2026, le prix moyen au m² à Angers se situe autour de <strong>4 800 €</strong>, avec des écarts considérables selon les quartiers. Une estimation trop haute fait fuir les acheteurs ; trop basse, vous perdez de l'argent.</p>
 
 <h2>Les 3 méthodes d'estimation utilisées par les professionnels</h2>
 
 <h3>1. La méthode comparative</h3>
-<p>C'est la méthode la plus courante. Elle consiste à comparer votre bien avec des ventes récentes similaires dans le même quartier. À Aix-en-Provence, les données DVF (Demandes de Valeurs Foncières) permettent d'accéder aux transactions réelles des 5 dernières années.</p>
+<p>C'est la méthode la plus courante. Elle consiste à comparer votre bien avec des ventes récentes similaires dans le même quartier. À Angers, les données DVF (Demandes de Valeurs Foncières) permettent d'accéder aux transactions réelles des 5 dernières années.</p>
 
 <h3>2. La méthode par capitalisation</h3>
-<p>Utilisée principalement pour les biens locatifs, elle évalue la valeur du bien en fonction des revenus locatifs qu'il génère. Un appartement T2 aux Chartrons loué 850 €/mois avec un rendement attendu de 4 % sera valorisé autour de 255 000 €.</p>
+<p>Utilisée principalement pour les biens locatifs, elle évalue la valeur du bien en fonction des revenus locatifs qu'il génère. Un appartement T2 aux Centre-ville loué 850 €/mois avec un rendement attendu de 4 % sera valorisé autour de 255 000 €.</p>
 
 <h3>3. La méthode par le coût de remplacement</h3>
-<p>Plus rare, elle calcule combien coûterait la reconstruction du bien à neuf, moins la vétusté. Elle est pertinente pour les maisons atypiques ou les biens de caractère dans des quartiers comme Saint-Pierre.</p>
+<p>Plus rare, elle calcule combien coûterait la reconstruction du bien à neuf, moins la vétusté. Elle est pertinente pour les maisons atypiques ou les biens de caractère dans des quartiers comme Saint-Serge.</p>
 
-<h2>Les facteurs qui font varier le prix à Aix-en-Provence</h2>
+<h2>Les facteurs qui font varier le prix à Angers</h2>
 <ul>
-<li><strong>Le quartier</strong> : les Chartrons, le Triangle d'Or et Saint-Pierre affichent les prix les plus élevés (6 000-8 000 €/m²)</li>
+<li><strong>Le quartier</strong> : les Centre-ville, le Triangle d'Or et Saint-Serge affichent les prix les plus élevés (6 000-8 000 €/m²)</li>
 <li><strong>L'étage et la luminosité</strong> : un dernier étage avec ascenseur gagne 10-15 % par rapport au rez-de-chaussée</li>
 <li><strong>Le DPE</strong> : un bien classé F ou G subit une décote de 10 à 20 % depuis les nouvelles réglementations</li>
 <li><strong>L'extérieur</strong> : terrasse, balcon ou jardin ajoutent 5 à 15 % de valeur selon la surface</li>
@@ -60,76 +60,76 @@ $articles = [
 </ul>
 
 <h2>Les erreurs classiques à éviter</h2>
-<p>La première erreur est de se fier uniquement aux estimations en ligne sans les croiser. La seconde est de surévaluer les travaux réalisés : une cuisine refaite il y a 10 ans n'apporte plus de plus-value significative. Enfin, ne confondez pas prix affiché et prix de vente réel — à Aix-en-Provence, la marge de négociation tourne autour de 3 à 5 %.</p>
+<p>La première erreur est de se fier uniquement aux estimations en ligne sans les croiser. La seconde est de surévaluer les travaux réalisés : une cuisine refaite il y a 10 ans n'apporte plus de plus-value significative. Enfin, ne confondez pas prix affiché et prix de vente réel — à Angers, la marge de négociation tourne autour de 3 à 5 %.</p>
 
 <h2>FAQ</h2>
-<h3>Combien coûte une estimation immobilière à Aix-en-Provence ?</h3>
+<h3>Combien coûte une estimation immobilière à Angers ?</h3>
 <p>Une estimation en ligne est gratuite. Un avis de valeur par un agent immobilier est également gratuit et sans engagement. Seule l'expertise par un expert agréé (obligatoire dans certains cas juridiques) est payante, entre 250 et 500 €.</p>
 
-<h3>En combien de temps peut-on vendre à Aix-en-Provence ?</h3>
-<p>Le délai moyen de vente à Aix-en-Provence est de 60 à 90 jours pour un bien correctement estimé. Un bien surévalué peut rester plus de 6 mois sur le marché.</p>
+<h3>En combien de temps peut-on vendre à Angers ?</h3>
+<p>Le délai moyen de vente à Angers est de 60 à 90 jours pour un bien correctement estimé. Un bien surévalué peut rester plus de 6 mois sur le marché.</p>
 
-<p><strong>Estimez votre bien gratuitement</strong> : notre outil utilise les données réelles du marché de aix-en-provence pour vous fournir une fourchette fiable en moins de 2 minutes. <a href="/estimation">Lancer mon estimation →</a></p>
+<p><strong>Estimez votre bien gratuitement</strong> : notre outil utilise les données réelles du marché d'Angers pour vous fournir une fourchette fiable en moins de 2 minutes. <a href="/estimation">Lancer mon estimation →</a></p>
 HTML,
     ],
     [
-        'title' => 'Vendre dans les Chartrons : guide complet du quartier le plus prisé de Aix-en-Provence',
+        'title' => 'Vendre dans les Centre-ville : guide complet du quartier le plus prisé d'Angers',
         'slug' => 'vendre-chartrons-guide-quartier-aix',
-        'meta_title' => 'Vendre aux Chartrons Aix-en-Provence : prix, conseils et stratégie 2026',
-        'meta_description' => 'Guide complet pour vendre votre bien dans le quartier des Chartrons à Aix-en-Provence. Prix au m², profil des acheteurs, délais de vente et conseils de mise en valeur.',
+        'meta_title' => 'Vendre aux Centre-ville Angers : prix, conseils et stratégie 2026',
+        'meta_description' => 'Guide complet pour vendre votre bien dans le quartier des Centre-ville à Angers. Prix au m², profil des acheteurs, délais de vente et conseils de mise en valeur.',
         'persona' => 'Propriétaire pressé',
         'awareness_level' => 'produit',
         'status' => 'published',
         'content' => <<<'HTML'
-<h2>Les Chartrons : un quartier en or pour les vendeurs</h2>
-<p>Ancien quartier des négociants en vin, les Chartrons sont devenus l'adresse la plus recherchée de Aix-en-Provence. Avec ses rues pavées, ses boutiques indépendantes et sa proximité avec les quais, le quartier attire familles aisées, jeunes cadres et investisseurs. Le prix moyen au m² y atteint <strong>5 500 à 7 000 €</strong> selon l'emplacement exact.</p>
+<h2>Les Centre-ville : un quartier en or pour les vendeurs</h2>
+<p>Ancien quartier des négociants en vin, les Centre-ville sont devenus l'adresse la plus recherchée d'Angers. Avec ses rues pavées, ses boutiques indépendantes et sa proximité avec les quais, le quartier attire familles aisées, jeunes cadres et investisseurs. Le prix moyen au m² y atteint <strong>5 500 à 7 000 €</strong> selon l'emplacement exact.</p>
 
-<h2>Qui sont les acheteurs aux Chartrons ?</h2>
+<h2>Qui sont les acheteurs aux Centre-ville ?</h2>
 <ul>
 <li><strong>Jeunes couples CSP+</strong> (30-40 ans) cherchant un T3/T4 avec cachet, budget 400 000 – 550 000 €</li>
 <li><strong>Familles</strong> en quête de maisons de ville ou grands appartements, budget 600 000 – 900 000 €</li>
 <li><strong>Investisseurs</strong> visant la location meublée haut de gamme ou la location saisonnière</li>
-<li><strong>Parisiens en mobilité</strong> séduits par la LGV (2h Paris-Aix-en-Provence) et le cadre de vie</li>
+<li><strong>Parisiens en mobilité</strong> séduits par la LGV (2h Paris-Angers) et le cadre de vie</li>
 </ul>
 
 <h2>Les atouts à mettre en avant pour vendre vite</h2>
 
 <h3>L'authenticité du bâti</h3>
-<p>Les échoppes de aix-en-provencees, les immeubles en pierre blonde, les parquets anciens et les moulures sont des arguments de vente majeurs. Ne les cachez pas sous des faux plafonds ou du placo — les acheteurs veulent du « vrai Aix-en-Provence ».</p>
+<p>Les échoppes d'Angerss, les immeubles en pierre blonde, les parquets anciens et les moulures sont des arguments de vente majeurs. Ne les cachez pas sous des faux plafonds ou du placo — les acheteurs veulent du « vrai Angers ».</p>
 
 <h3>La vie de quartier</h3>
-<p>Le marché des Chartrons (dimanche matin), la rue Notre-Dame avec ses antiquaires, les quais pour le jogging et le vélo… Mentionnez ces éléments dans votre annonce, ils font partie du produit.</p>
+<p>Le marché des Centre-ville (dimanche matin), la rue Notre-Dame avec ses antiquaires, les quais pour le jogging et le vélo… Mentionnez ces éléments dans votre annonce, ils font partie du produit.</p>
 
 <h3>Les transports</h3>
 <p>La ligne C du tramway dessert le quartier. L'accès à la rocade est rapide via les quais. Précisez les distances : 10 min à pied du Grand Théâtre, 15 min en tram de la gare Saint-Jean.</p>
 
 <h2>Stratégie de prix : ne surjouez pas</h2>
-<p>Paradoxalement, les biens surévalués aux Chartrons mettent plus longtemps à se vendre. Les acheteurs connaissent le marché. Notre recommandation : estimez au prix juste et créez une urgence d'achat. Un bien bien positionné aux Chartrons se vend en <strong>30 à 45 jours</strong>.</p>
+<p>Paradoxalement, les biens surévalués aux Centre-ville mettent plus longtemps à se vendre. Les acheteurs connaissent le marché. Notre recommandation : estimez au prix juste et créez une urgence d'achat. Un bien bien positionné aux Centre-ville se vend en <strong>30 à 45 jours</strong>.</p>
 
 <h2>FAQ</h2>
-<h3>Faut-il faire des travaux avant de vendre aux Chartrons ?</h3>
-<p>Pour un bien en bon état, un simple rafraîchissement (peinture blanche, nettoyage des parquets) suffit. Pour un bien à rénover, mieux vaut vendre en l'état — les acheteurs des Chartrons aiment personnaliser et le coût des travaux ne sera pas entièrement récupéré dans le prix.</p>
+<h3>Faut-il faire des travaux avant de vendre aux Centre-ville ?</h3>
+<p>Pour un bien en bon état, un simple rafraîchissement (peinture blanche, nettoyage des parquets) suffit. Pour un bien à rénover, mieux vaut vendre en l'état — les acheteurs des Centre-ville aiment personnaliser et le coût des travaux ne sera pas entièrement récupéré dans le prix.</p>
 
-<h3>Quel est le meilleur moment pour vendre aux Chartrons ?</h3>
+<h3>Quel est le meilleur moment pour vendre aux Centre-ville ?</h3>
 <p>Le printemps (mars-juin) reste la meilleure période. Les familles cherchent à s'installer avant la rentrée. Septembre-octobre offre aussi un bon pic d'activité.</p>
 
-<p><strong>Estimez la valeur de votre bien aux Chartrons</strong> en quelques clics. Notre algorithme intègre les données spécifiques du quartier. <a href="/estimation">Obtenir mon estimation gratuite →</a></p>
+<p><strong>Estimez la valeur de votre bien aux Centre-ville</strong> en quelques clics. Notre algorithme intègre les données spécifiques du quartier. <a href="/estimation">Obtenir mon estimation gratuite →</a></p>
 HTML,
     ],
     [
-        'title' => 'DPE et valeur immobilière : ce que tout propriétaire de aix-en-provence doit savoir',
+        'title' => 'DPE et valeur immobilière : ce que tout propriétaire d'Angers doit savoir',
         'slug' => 'dpe-valeur-immobiliere-aix-proprietaire',
-        'meta_title' => 'DPE Aix-en-Provence : impact sur la valeur de votre bien immobilier',
-        'meta_description' => 'Comment le DPE influence le prix de vente de votre bien à Aix-en-Provence. Décotes par classe énergétique, aides à la rénovation et stratégies pour vendre malgré un mauvais DPE.',
+        'meta_title' => 'DPE Angers : impact sur la valeur de votre bien immobilier',
+        'meta_description' => 'Comment le DPE influence le prix de vente de votre bien à Angers. Décotes par classe énergétique, aides à la rénovation et stratégies pour vendre malgré un mauvais DPE.',
         'persona' => 'Propriétaire méfiant',
         'awareness_level' => 'problème',
         'status' => 'published',
         'content' => <<<'HTML'
-<h2>Le DPE est devenu un critère décisif à Aix-en-Provence</h2>
-<p>Depuis les réformes réglementaires, le Diagnostic de Performance Énergétique (DPE) n'est plus un simple document administratif. Il conditionne directement la valeur de votre bien, sa capacité à être loué, et la vitesse à laquelle il se vendra. À Aix-en-Provence, où le parc immobilier ancien est majoritaire, c'est un sujet qui concerne <strong>plus de 40 % des propriétaires</strong>.</p>
+<h2>Le DPE est devenu un critère décisif à Angers</h2>
+<p>Depuis les réformes réglementaires, le Diagnostic de Performance Énergétique (DPE) n'est plus un simple document administratif. Il conditionne directement la valeur de votre bien, sa capacité à être loué, et la vitesse à laquelle il se vendra. À Angers, où le parc immobilier ancien est majoritaire, c'est un sujet qui concerne <strong>plus de 40 % des propriétaires</strong>.</p>
 
-<h2>L'impact concret du DPE sur les prix à Aix-en-Provence</h2>
-<p>Les données du marché de aix-en-provence montrent des écarts significatifs :</p>
+<h2>L'impact concret du DPE sur les prix à Angers</h2>
+<p>Les données du marché d'Angers montrent des écarts significatifs :</p>
 <ul>
 <li><strong>Classe A-B</strong> : prime de +6 à +10 % par rapport au prix moyen du quartier</li>
 <li><strong>Classe C-D</strong> : prix dans la moyenne du marché, aucune décote</li>
@@ -139,12 +139,12 @@ HTML,
 </ul>
 
 <h3>Un exemple concret</h3>
-<p>Un appartement T3 de 70 m² à Caudéran, classé D, se vend autour de 310 000 €. Le même bien classé F se négocie entre 265 000 et 280 000 € — soit 30 000 à 45 000 € de différence. Mais attention : les travaux d'amélioration énergétique coûtent souvent moins que cette décote.</p>
+<p>Un appartement T3 de 70 m² à Belle-Beille, classé D, se vend autour de 310 000 €. Le même bien classé F se négocie entre 265 000 et 280 000 € — soit 30 000 à 45 000 € de différence. Mais attention : les travaux d'amélioration énergétique coûtent souvent moins que cette décote.</p>
 
 <h2>Faut-il rénover avant de vendre ?</h2>
 
 <h3>Quand la rénovation est rentable</h3>
-<p>Si votre bien est classé F ou G et que les travaux pour passer en D ou E coûtent moins de 15 000 €, c'est presque toujours rentable. Les interventions les plus efficaces à Aix-en-Provence :</p>
+<p>Si votre bien est classé F ou G et que les travaux pour passer en D ou E coûtent moins de 15 000 €, c'est presque toujours rentable. Les interventions les plus efficaces à Angers :</p>
 <ul>
 <li><strong>Isolation des combles</strong> : 2 000 à 5 000 €, gain de 1 à 2 classes</li>
 <li><strong>Remplacement des fenêtres</strong> : 5 000 à 10 000 € pour un T3, gain significatif en confort et DPE</li>
@@ -152,13 +152,13 @@ HTML,
 </ul>
 
 <h3>Quand il vaut mieux vendre en l'état</h3>
-<p>Si le bien nécessite une rénovation globale (toiture, façade, réseaux), vendez en l'état en ajustant le prix. Les investisseurs et les primo-accédants bricoleurs cherchent ce type de biens à Aix-en-Provence, surtout dans les quartiers en devenir comme la Bastide ou Saint-Michel.</p>
+<p>Si le bien nécessite une rénovation globale (toiture, façade, réseaux), vendez en l'état en ajustant le prix. Les investisseurs et les primo-accédants bricoleurs cherchent ce type de biens à Angers, surtout dans les quartiers en devenir comme la La Doutre ou La Doutre.</p>
 
-<h2>Les aides disponibles en Bouches-du-Rhône</h2>
+<h2>Les aides disponibles en Maine-et-Loire</h2>
 <ul>
 <li><strong>MaPrimeRénov'</strong> : jusqu'à 20 000 € selon les revenus et les travaux</li>
 <li><strong>Éco-PTZ</strong> : prêt à taux zéro jusqu'à 50 000 € pour la rénovation énergétique</li>
-<li><strong>Aides de Aix-en-Provence Métropole</strong> : subventions complémentaires pour les copropriétés</li>
+<li><strong>Aides d'Angers Métropole</strong> : subventions complémentaires pour les copropriétés</li>
 <li><strong>CEE (Certificats d'Économie d'Énergie)</strong> : primes versées par les fournisseurs d'énergie</li>
 </ul>
 

@@ -1,6 +1,6 @@
-# Estimation Immobilier Aix-en-Provence (PHP MVC)
+# Estimation Immobilier Angers (PHP MVC)
 
-Application SaaS d'estimation immobilière pour **Aix-en-Provence et ses alentours** en **PHP 8+**, architecture MVC légère, **MySQL (PDO)**.
+Application SaaS d'estimation immobilière pour **Angers et ses alentours** en **PHP 8+**, architecture MVC légère, **MySQL (PDO)**.
 
 ## Fonctionnalités
 
@@ -10,7 +10,7 @@ Application SaaS d'estimation immobilière pour **Aix-en-Provence et ses alentou
 - Stockage sécurisé en MySQL via requêtes préparées
 - Liste des leads avec filtres par score (`/leads?score=chaud|tiede|froid`)
 - Blog avec génération d'articles IA (OpenAI)
-- Guide des quartiers de aix-en-provence avec carte interactive
+- Guide des quartiers de angers avec carte interactive
 - Newsletter et pages légales (RGPD)
 - Mode maintenance configurable
 
@@ -47,7 +47,7 @@ Application SaaS d'estimation immobilière pour **Aix-en-Provence et ses alentou
 - `POST /api/estimation` → endpoint API JSON
 - `POST /lead` → insertion lead
 - `GET /leads` → visualisation + filtres des leads
-- `GET /quartiers` → guide des quartiers de aix-en-provence
+- `GET /quartiers` → guide des quartiers de angers
 - `GET /blog` → articles immobiliers
 - `GET /contact` → formulaire de contact
 

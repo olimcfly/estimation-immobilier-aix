@@ -1,7 +1,7 @@
 <div class="container">
     <a href="/admin/blog" class="btn btn-small btn-ghost" style="margin-bottom: 1rem; display: inline-block;">&larr; Retour CMS</a>
     <h1 style="font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700; margin: 0 0 0.25rem;">Générateur d'images IA</h1>
-    <p style="color:#6b6459;margin-bottom:1.5rem;font-size:0.9rem;">Générez des visuels immobiliers avec l'IA (gpt-image-1) pour vos articles de blog.</p>
+    <p style="color:#5a6275;margin-bottom:1.5rem;font-size:0.9rem;">Générez des visuels immobiliers avec l'IA (gpt-image-1) pour vos articles de blog.</p>
 
     <?php if (($message ?? '') !== ''): ?>
       <p class="success"><?= e((string) $message) ?></p>
@@ -28,7 +28,7 @@
       <h2>Nouvelle image</h2>
       <form method="post" action="/admin/images/generate" class="form-grid" id="image-form">
 
-        <fieldset style="border:1px solid var(--border, #e8dfd7);border-radius:8px;padding:1rem;margin-bottom:1rem;">
+        <fieldset style="border:1px solid var(--border, #dde1e8);border-radius:8px;padding:1rem;margin-bottom:1rem;">
           <legend style="font-weight:600;">Mode de prompt</legend>
           <label style="display:inline-flex;align-items:center;gap:0.4rem;margin-right:1.5rem;">
             <input type="radio" name="prompt_mode" value="seo" id="mode-seo" checked> Prompt SEO immobilier
@@ -49,13 +49,13 @@
 
           <label>Quartier (optionnel)
             <select name="quartier">
-              <option value="">Aix-en-Provence centre</option>
-              <option value="Chartrons">Chartrons</option>
-              <option value="Saint-Pierre">Saint-Pierre</option>
-              <option value="Saint-Michel">Saint-Michel</option>
-              <option value="Caudéran">Caudéran</option>
-              <option value="Bastide">Bastide</option>
-              <option value="Mériadeck">Mériadeck</option>
+              <option value="">Angers centre</option>
+              <option value="Centre-ville">Centre-ville</option>
+              <option value="Saint-Serge">Saint-Serge</option>
+              <option value="La Doutre">La Doutre</option>
+              <option value="Belle-Beille">Belle-Beille</option>
+              <option value="La Doutre">La Doutre</option>
+              <option value="Monplaisir">Monplaisir</option>
             </select>
           </label>
 
@@ -65,7 +65,7 @@
 
           <div style="margin:0.75rem 0;">
             <button type="button" class="btn btn-small btn-ghost" id="preview-prompt-btn">Prévisualiser le prompt</button>
-            <p id="prompt-preview" style="margin-top:0.5rem;padding:0.75rem;background:var(--bg, #faf9f7);border-radius:6px;font-style:italic;display:none;"></p>
+            <p id="prompt-preview" style="margin-top:0.5rem;padding:0.75rem;background:var(--bg, #f7f8fa);border-radius:6px;font-style:italic;display:none;"></p>
           </div>
         </div>
 
@@ -103,7 +103,7 @@
         <h2>Images générées (<?= count($images) ?>)</h2>
         <div style="display:grid;grid-template-columns:repeat(auto-fill, minmax(220px, 1fr));gap:1rem;margin-top:1rem;">
           <?php foreach ($images as $img): ?>
-            <div style="border:1px solid var(--border, #e8dfd7);border-radius:8px;overflow:hidden;">
+            <div style="border:1px solid var(--border, #dde1e8);border-radius:8px;overflow:hidden;">
               <img src="<?= e($img['url']) ?>" alt="<?= e($img['filename']) ?>" style="width:100%;height:180px;object-fit:cover;" loading="lazy">
               <div style="padding:0.75rem;">
                 <p style="font-size:0.8rem;word-break:break-all;margin-bottom:0.25rem;"><?= e($img['filename']) ?></p>

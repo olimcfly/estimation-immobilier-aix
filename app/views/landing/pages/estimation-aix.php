@@ -25,18 +25,18 @@ $formError = $form_error ?? '';
         <i class="fas fa-chart-line"></i> Estimation immobilière en ligne
       </p>
 
-      <h1>Estimation Immobilière <span class="lp-highlight">Aix-en-Provence</span> — Gratuite en 60 secondes</h1>
+      <h1>Estimation Immobilière <span class="lp-highlight">Angers</span> — Gratuite en 60 secondes</h1>
 
       <p class="lp-lead">
-        Obtenez une <strong>fourchette de prix fiable</strong> pour votre bien immobilier à Aix-en-Provence.
-        Basé sur les données réelles du marché de aix-en-provence. <strong>100% gratuit</strong>, sans engagement.
+        Obtenez une <strong>fourchette de prix fiable</strong> pour votre bien immobilier à Angers.
+        Basé sur les données réelles du marché d'Angers. <strong>100% gratuit</strong>, sans engagement.
       </p>
 
       <ul class="lp-trust-list">
         <li><i class="fas fa-bolt"></i> <strong>Résultat immédiat</strong> — en 60 secondes</li>
         <li><i class="fas fa-hand-holding-usd"></i> <strong>100% gratuit</strong> — aucun frais caché</li>
         <li><i class="fas fa-shield-alt"></i> <strong>Données sécurisées</strong> — RGPD conforme</li>
-        <li><i class="fas fa-chart-bar"></i> <strong>Marché actuel</strong> — prix réels Aix-en-Provence 2024</li>
+        <li><i class="fas fa-chart-bar"></i> <strong>Marché actuel</strong> — prix réels Angers 2024</li>
       </ul>
 
       <!-- Social proof compact -->
@@ -44,7 +44,7 @@ $formError = $form_error ?? '';
         <div class="lp-stars">
           <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
         </div>
-        <span>4.8/5 — Plus de <strong>2 400 estimations</strong> réalisées à Aix-en-Provence</span>
+        <span>4.8/5 — Plus de <strong>2 400 estimations</strong> réalisées à Angers</span>
       </div>
     </div>
 
@@ -62,7 +62,7 @@ $formError = $form_error ?? '';
       <?php endif; ?>
 
       <form action="/lp/submit" method="post" class="lp-form" id="lp-form">
-        <input type="hidden" name="landing_slug" value="<?= e((string) ($landing_slug ?? 'estimation-aix')) ?>">
+        <input type="hidden" name="landing_slug" value="<?= e((string) ($landing_slug ?? 'estimation-angers')) ?>">
         <input type="hidden" name="utm_source" value="">
         <input type="hidden" name="utm_medium" value="">
         <input type="hidden" name="utm_campaign" value="">
@@ -104,7 +104,7 @@ $formError = $form_error ?? '';
 
         <div class="lp-field">
           <label for="ville"><i class="fas fa-map-marker-alt"></i> Ville / Quartier</label>
-          <input type="text" id="ville" name="ville" value="Aix-en-Provence" placeholder="Aix-en-Provence, Chartrons, Caudéran...">
+          <input type="text" id="ville" name="ville" value="Angers" placeholder="Angers, Centre-ville, Belle-Beille...">
         </div>
 
         <button type="submit" class="lp-btn lp-btn-primary lp-btn-full">
@@ -127,14 +127,14 @@ $formError = $form_error ?? '';
   <div class="lp-container">
     <div class="lp-section-heading">
       <p class="lp-eyebrow"><i class="fas fa-award"></i> Pourquoi nous choisir</p>
-      <h2>L'estimation immobilière la plus fiable de <span class="lp-highlight">Aix-en-Provence</span></h2>
+      <h2>L'estimation immobilière la plus fiable de <span class="lp-highlight">Angers</span></h2>
     </div>
 
     <div class="lp-benefits-grid">
       <div class="lp-benefit-card">
         <div class="lp-benefit-icon"><i class="fas fa-database"></i></div>
         <h3>Données du marché réel</h3>
-        <p>Notre algorithme analyse les transactions récentes et les prix au m² actuels de chaque quartier de aix-en-provence.</p>
+        <p>Notre algorithme analyse les transactions récentes et les prix au m² actuels de chaque quartier d'Angers.</p>
       </div>
       <div class="lp-benefit-card">
         <div class="lp-benefit-icon"><i class="fas fa-clock"></i></div>
@@ -175,7 +175,7 @@ $formError = $form_error ?? '';
       <div class="lp-step">
         <div class="lp-step-number">2</div>
         <h3>Recevez votre estimation</h3>
-        <p>Notre algorithme calcule une fourchette de prix basée sur les données réelles du marché de aix-en-provence.</p>
+        <p>Notre algorithme calcule une fourchette de prix basée sur les données réelles du marché d'Angers.</p>
       </div>
       <div class="lp-step-arrow"><i class="fas fa-chevron-right"></i></div>
       <div class="lp-step">
@@ -194,7 +194,7 @@ $formError = $form_error ?? '';
   <div class="lp-container">
     <div class="lp-section-heading">
       <p class="lp-eyebrow"><i class="fas fa-users"></i> Ils nous font confiance</p>
-      <h2>Ce que disent nos clients à Aix-en-Provence</h2>
+      <h2>Ce que disent nos clients à Angers</h2>
     </div>
 
     <!-- Chiffres clés -->
@@ -224,21 +224,21 @@ $formError = $form_error ?? '';
           <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
         </div>
         <p class="lp-testimonial-text">"L'estimation était très proche du prix final de vente. Le conseiller m'a rappelé le jour même et m'a accompagné jusqu'à la signature. Très professionnel."</p>
-        <p class="lp-testimonial-author"><strong>Marie D.</strong> — Aix-en-Provence Chartrons</p>
+        <p class="lp-testimonial-author"><strong>Marie D.</strong> — Angers Centre-ville</p>
       </div>
       <div class="lp-testimonial">
         <div class="lp-testimonial-stars">
           <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
         </div>
         <p class="lp-testimonial-text">"Simple, rapide et gratuit. J'ai obtenu une fourchette de prix en moins d'une minute. L'avis de valeur m'a aidé à fixer le bon prix pour mon appartement."</p>
-        <p class="lp-testimonial-author"><strong>Pierre L.</strong> — Aix-en-Provence Saint-Pierre</p>
+        <p class="lp-testimonial-author"><strong>Pierre L.</strong> — Angers Saint-Serge</p>
       </div>
       <div class="lp-testimonial">
         <div class="lp-testimonial-stars">
           <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
         </div>
-        <p class="lp-testimonial-text">"Je cherchais une estimation fiable pour ma maison à Caudéran. Le service est sérieux et le rappel de l'expert m'a vraiment aidé à prendre ma décision."</p>
-        <p class="lp-testimonial-author"><strong>Sophie M.</strong> — Caudéran</p>
+        <p class="lp-testimonial-text">"Je cherchais une estimation fiable pour ma maison à Belle-Beille. Le service est sérieux et le rappel de l'expert m'a vraiment aidé à prendre ma décision."</p>
+        <p class="lp-testimonial-author"><strong>Sophie M.</strong> — Belle-Beille</p>
       </div>
     </div>
   </div>
@@ -251,7 +251,7 @@ $formError = $form_error ?? '';
   <div class="lp-container">
     <div class="lp-section-heading">
       <p class="lp-eyebrow"><i class="fas fa-question-circle"></i> Questions fréquentes</p>
-      <h2>Tout savoir sur l'estimation immobilière à Aix-en-Provence</h2>
+      <h2>Tout savoir sur l'estimation immobilière à Angers</h2>
     </div>
 
     <div class="lp-faq">
@@ -261,7 +261,7 @@ $formError = $form_error ?? '';
       </details>
       <details class="lp-faq-item">
         <summary>Comment est calculée l'estimation ?</summary>
-        <p>Notre algorithme analyse les transactions immobilières récentes à Aix-en-Provence, les prix au m² par quartier, le type de bien et sa surface pour vous fournir une fourchette de prix réaliste.</p>
+        <p>Notre algorithme analyse les transactions immobilières récentes à Angers, les prix au m² par quartier, le type de bien et sa surface pour vous fournir une fourchette de prix réaliste.</p>
       </details>
       <details class="lp-faq-item">
         <summary>Combien de temps faut-il pour recevoir le résultat ?</summary>
@@ -289,6 +289,6 @@ $formError = $form_error ?? '';
     <a href="#lp-form" class="lp-btn lp-btn-primary lp-btn-large">
       <i class="fas fa-paper-plane"></i> Estimer mon bien gratuitement
     </a>
-    <p class="lp-cta-sub">Plus de 2 400 estimations réalisées à Aix-en-Provence</p>
+    <p class="lp-cta-sub">Plus de 2 400 estimations réalisées à Angers</p>
   </div>
 </section>

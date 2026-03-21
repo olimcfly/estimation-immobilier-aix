@@ -1,6 +1,6 @@
 # Exemples d'Utilisation - Generateur d'Images
 
-Guide pratique avec cas d'usage reels pour le generateur d'images sociales et IA du CMS Estimation Immobilier Aix-en-Provence.
+Guide pratique avec cas d'usage reels pour le generateur d'images sociales et IA du CMS Estimation Immobilier Angers.
 
 ## Cas d'usage reels
 
@@ -33,7 +33,7 @@ Guide pratique avec cas d'usage reels pour le generateur d'images sociales et IA
 |-------|--------|
 | Persona | Proprietaire Inquiet |
 | Conscience | 2 |
-| Localite | Aix-en-Provence |
+| Localite | Angers |
 | Titre | Vous ne savez pas a quel prix vendre? |
 | Slogan | Une estimation transparente et sans engagement pour prendre la bonne decision |
 | CTA | Obtenir mon avis de valeur gratuit |
@@ -52,7 +52,7 @@ Guide pratique avec cas d'usage reels pour le generateur d'images sociales et IA
 |-------|--------|
 | Persona | Investisseur Strategiste |
 | Conscience | 4 |
-| Localite | Aix-en-Provence, secteur Montagne Sainte-Victoire |
+| Localite | Angers, secteur Montagne Sainte-Victoire |
 | Titre | Investir dans le neuf a Aix, une strategie gagnante |
 | Slogan | Rentabilite, plus-value, fiscalite optimisee: tous les chiffres pour decider |
 | CTA | Voir les opportunites d'investissement |

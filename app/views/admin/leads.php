@@ -1,7 +1,7 @@
 <div class="container">
     <div style="margin-bottom: 1.5rem;">
       <h1 style="font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700; margin: 0 0 0.25rem;">Leads</h1>
-      <p style="color: #6b6459; font-size: 0.9rem; margin: 0;">Liste des leads enregistrés depuis le formulaire d'estimation.</p>
+      <p style="color: #5a6275; font-size: 0.9rem; margin: 0;">Liste des leads enregistrés depuis le formulaire d'estimation.</p>
     </div>
 
     <?php if (!empty($dbError ?? '')): ?>

@@ -39,9 +39,9 @@ final class ActualiteServiceTest extends TestCase
 
     public function testSearchNewsWithCustomQuery(): void
     {
-        $result = $this->service->searchNews('prix immobilier Aix-en-Provence 2026');
+        $result = $this->service->searchNews('prix immobilier Angers 2026');
 
-        $this->assertSame('prix immobilier Aix-en-Provence 2026', $result['query']);
+        $this->assertSame('prix immobilier Angers 2026', $result['query']);
         $this->assertNotEmpty($result['results']);
     }
 
@@ -77,7 +77,7 @@ final class ActualiteServiceTest extends TestCase
     public function testGenerateArticleFallbackContainsCta(): void
     {
         $ideas = [
-            ['title' => 'Marché immobilier Aix-en-Provence', 'summary' => 'Les prix évoluent', 'angle' => 'Analyse'],
+            ['title' => 'Marché immobilier Angers', 'summary' => 'Les prix évoluent', 'angle' => 'Analyse'],
         ];
 
         $article = $this->service->generateArticleFromIdeas($ideas, 'test');
@@ -99,7 +99,7 @@ final class ActualiteServiceTest extends TestCase
         require_once __DIR__ . '/../../cron/generate-actualite.php.test-helpers.php';
 
         $this->assertSame('hello-world', cronSlugify('Hello World'));
-        $this->assertSame('estimation-immobilière-aix', cronSlugify('Estimation Immobilière Aix-en-Provence'));
+        $this->assertSame('estimation-immobilière-aix', cronSlugify('Estimation Immobilière Angers'));
         $this->assertSame('actualite', cronSlugify(''));
         $this->assertSame('test-123', cronSlugify('  Test 123  '));
     }

@@ -38,7 +38,7 @@ final class LeadNotificationService
         $estimation = number_format((float) $lead['estimation'], 0, ',', ' ');
         $urgenceLabel = self::urgenceLabel((string) $lead['urgence']);
         $motivationLabel = self::motivationLabel((string) $lead['motivation']);
-        $fromName = (string) Config::get('mail.from_name', 'Estimation Immobilier Aix-en-Provence');
+        $fromName = (string) Config::get('mail.from_name', 'Estimation Immobilier Angers');
 
         $subject = "Votre demande d'avis de valeur a bien été enregistrée";
 
@@ -53,40 +53,40 @@ final class LeadNotificationService
 
   <!-- Header -->
   <tr>
-    <td style="background:#8B1538;padding:30px 40px;text-align:center;">
-      <h1 style="margin:0;color:#ffffff;font-size:22px;">Estimation Immobilier Aix-en-Provence</h1>
+    <td style="background:#1E3A5F;padding:30px 40px;text-align:center;">
+      <h1 style="margin:0;color:#ffffff;font-size:22px;">Estimation Immobilier Angers</h1>
     </td>
   </tr>
 
   <!-- Body -->
   <tr>
     <td style="padding:35px 40px;">
-      <h2 style="margin:0 0 15px;color:#1a1410;font-size:20px;">Bonjour {$nom},</h2>
+      <h2 style="margin:0 0 15px;color:#1a1a2e;font-size:20px;">Bonjour {$nom},</h2>
       <p style="color:#333;line-height:1.7;margin:0 0 20px;">
         Nous avons bien reçu votre demande d'avis de valeur. Un conseiller immobilier spécialisé sur <strong>{$ville}</strong> vous recontactera très prochainement pour organiser un rendez-vous.
       </p>
 
       <!-- Recap -->
-      <table width="100%" cellpadding="0" cellspacing="0" style="background:#faf9f7;border-radius:8px;border:1px solid #e8dfd7;margin:20px 0;">
+      <table width="100%" cellpadding="0" cellspacing="0" style="background:#f7f8fa;border-radius:8px;border:1px solid #dde1e8;margin:20px 0;">
         <tr>
           <td style="padding:20px 25px;">
-            <h3 style="margin:0 0 15px;color:#8B1538;font-size:16px;">Récapitulatif de votre demande</h3>
+            <h3 style="margin:0 0 15px;color:#1E3A5F;font-size:16px;">Récapitulatif de votre demande</h3>
             <table width="100%" cellpadding="4" cellspacing="0">
               <tr>
-                <td style="color:#6b6459;width:40%;padding:6px 0;border-bottom:1px solid #e8dfd7;">Ville</td>
-                <td style="color:#1a1410;padding:6px 0;border-bottom:1px solid #e8dfd7;"><strong>{$ville}</strong></td>
+                <td style="color:#5a6275;width:40%;padding:6px 0;border-bottom:1px solid #dde1e8;">Ville</td>
+                <td style="color:#1a1a2e;padding:6px 0;border-bottom:1px solid #dde1e8;"><strong>{$ville}</strong></td>
               </tr>
               <tr>
-                <td style="color:#6b6459;padding:6px 0;border-bottom:1px solid #e8dfd7;">Estimation en ligne</td>
-                <td style="color:#1a1410;padding:6px 0;border-bottom:1px solid #e8dfd7;"><strong>{$estimation} &euro;</strong></td>
+                <td style="color:#5a6275;padding:6px 0;border-bottom:1px solid #dde1e8;">Estimation en ligne</td>
+                <td style="color:#1a1a2e;padding:6px 0;border-bottom:1px solid #dde1e8;"><strong>{$estimation} &euro;</strong></td>
               </tr>
               <tr>
-                <td style="color:#6b6459;padding:6px 0;border-bottom:1px solid #e8dfd7;">Délai souhaité</td>
-                <td style="color:#1a1410;padding:6px 0;border-bottom:1px solid #e8dfd7;">{$urgenceLabel}</td>
+                <td style="color:#5a6275;padding:6px 0;border-bottom:1px solid #dde1e8;">Délai souhaité</td>
+                <td style="color:#1a1a2e;padding:6px 0;border-bottom:1px solid #dde1e8;">{$urgenceLabel}</td>
               </tr>
               <tr>
-                <td style="color:#6b6459;padding:6px 0;">Raison</td>
-                <td style="color:#1a1410;padding:6px 0;">{$motivationLabel}</td>
+                <td style="color:#5a6275;padding:6px 0;">Raison</td>
+                <td style="color:#1a1a2e;padding:6px 0;">{$motivationLabel}</td>
               </tr>
             </table>
           </td>
@@ -94,18 +94,18 @@ final class LeadNotificationService
       </table>
 
       <!-- Next steps -->
-      <h3 style="margin:25px 0 10px;color:#1a1410;font-size:16px;">Prochaines étapes</h3>
+      <h3 style="margin:25px 0 10px;color:#1a1a2e;font-size:16px;">Prochaines étapes</h3>
       <table cellpadding="0" cellspacing="0">
         <tr>
-          <td style="padding:6px 10px 6px 0;vertical-align:top;color:#8B1538;font-weight:bold;">1.</td>
+          <td style="padding:6px 10px 6px 0;vertical-align:top;color:#1E3A5F;font-weight:bold;">1.</td>
           <td style="padding:6px 0;color:#333;line-height:1.6;">Un conseiller vous contacte pour convenir d'un rendez-vous</td>
         </tr>
         <tr>
-          <td style="padding:6px 10px 6px 0;vertical-align:top;color:#8B1538;font-weight:bold;">2.</td>
+          <td style="padding:6px 10px 6px 0;vertical-align:top;color:#1E3A5F;font-weight:bold;">2.</td>
           <td style="padding:6px 0;color:#333;line-height:1.6;">Visite de votre bien pour une évaluation précise</td>
         </tr>
         <tr>
-          <td style="padding:6px 10px 6px 0;vertical-align:top;color:#8B1538;font-weight:bold;">3.</td>
+          <td style="padding:6px 10px 6px 0;vertical-align:top;color:#1E3A5F;font-weight:bold;">3.</td>
           <td style="padding:6px 0;color:#333;line-height:1.6;">Remise de votre avis de valeur détaillé</td>
         </tr>
       </table>
@@ -119,8 +119,8 @@ final class LeadNotificationService
 
   <!-- Footer -->
   <tr>
-    <td style="background:#faf9f7;padding:20px 40px;text-align:center;border-top:1px solid #e8dfd7;">
-      <p style="margin:0;font-size:12px;color:#6b6459;">
+    <td style="background:#f7f8fa;padding:20px 40px;text-align:center;border-top:1px solid #dde1e8;">
+      <p style="margin:0;font-size:12px;color:#5a6275;">
         Cet email a été envoyé suite à votre demande d'avis de valeur sur notre site.<br>
         Vos données sont traitées conformément à notre politique de confidentialité.
       </p>
@@ -138,7 +138,7 @@ HTML;
 
     private static function sendAdminEmail(int $leadId, string $temperature, array $lead): void
     {
-        $adminEmail = (string) Config::get('mail.admin_email', 'contact@estimation-immobilier-aix.fr');
+        $adminEmail = (string) Config::get('mail.admin_email', 'contact@estimation-immobilier-angers.fr');
 
         $nom = htmlspecialchars((string) $lead['nom'], ENT_QUOTES, 'UTF-8');
         $email = htmlspecialchars((string) $lead['email'], ENT_QUOTES, 'UTF-8');
@@ -171,9 +171,9 @@ HTML;
 
   <!-- Header -->
   <tr>
-    <td style="background:#1a1410;padding:25px 40px;">
+    <td style="background:#1a1a2e;padding:25px 40px;">
       <h1 style="margin:0;color:#ffffff;font-size:18px;">Nouveau lead reçu</h1>
-      <p style="margin:5px 0 0;color:#D4AF37;font-size:14px;">#{$leadId} &mdash; {$date}</p>
+      <p style="margin:5px 0 0;color:#C7A94E;font-size:14px;">#{$leadId} &mdash; {$date}</p>
     </td>
   </tr>
 
@@ -193,23 +193,23 @@ HTML;
   <!-- Contact info -->
   <tr>
     <td style="padding:20px 40px;">
-      <h3 style="margin:0 0 12px;color:#8B1538;font-size:16px;">Coordonnées du prospect</h3>
+      <h3 style="margin:0 0 12px;color:#1E3A5F;font-size:16px;">Coordonnées du prospect</h3>
       <table width="100%" cellpadding="4" cellspacing="0">
         <tr>
-          <td style="color:#6b6459;width:35%;padding:6px 0;border-bottom:1px solid #e8dfd7;">Nom</td>
-          <td style="color:#1a1410;padding:6px 0;border-bottom:1px solid #e8dfd7;"><strong>{$nom}</strong></td>
+          <td style="color:#5a6275;width:35%;padding:6px 0;border-bottom:1px solid #dde1e8;">Nom</td>
+          <td style="color:#1a1a2e;padding:6px 0;border-bottom:1px solid #dde1e8;"><strong>{$nom}</strong></td>
         </tr>
         <tr>
-          <td style="color:#6b6459;padding:6px 0;border-bottom:1px solid #e8dfd7;">Email</td>
-          <td style="color:#1a1410;padding:6px 0;border-bottom:1px solid #e8dfd7;"><a href="mailto:{$email}" style="color:#8B1538;">{$email}</a></td>
+          <td style="color:#5a6275;padding:6px 0;border-bottom:1px solid #dde1e8;">Email</td>
+          <td style="color:#1a1a2e;padding:6px 0;border-bottom:1px solid #dde1e8;"><a href="mailto:{$email}" style="color:#1E3A5F;">{$email}</a></td>
         </tr>
         <tr>
-          <td style="color:#6b6459;padding:6px 0;border-bottom:1px solid #e8dfd7;">Téléphone</td>
-          <td style="color:#1a1410;padding:6px 0;border-bottom:1px solid #e8dfd7;"><a href="tel:{$telephone}" style="color:#8B1538;">{$telephone}</a></td>
+          <td style="color:#5a6275;padding:6px 0;border-bottom:1px solid #dde1e8;">Téléphone</td>
+          <td style="color:#1a1a2e;padding:6px 0;border-bottom:1px solid #dde1e8;"><a href="tel:{$telephone}" style="color:#1E3A5F;">{$telephone}</a></td>
         </tr>
         <tr>
-          <td style="color:#6b6459;padding:6px 0;">Adresse du bien</td>
-          <td style="color:#1a1410;padding:6px 0;">{$adresse}</td>
+          <td style="color:#5a6275;padding:6px 0;">Adresse du bien</td>
+          <td style="color:#1a1a2e;padding:6px 0;">{$adresse}</td>
         </tr>
       </table>
     </td>
@@ -218,27 +218,27 @@ HTML;
   <!-- Estimation details -->
   <tr>
     <td style="padding:0 40px 20px;">
-      <h3 style="margin:0 0 12px;color:#8B1538;font-size:16px;">Détails de la demande</h3>
+      <h3 style="margin:0 0 12px;color:#1E3A5F;font-size:16px;">Détails de la demande</h3>
       <table width="100%" cellpadding="4" cellspacing="0">
         <tr>
-          <td style="color:#6b6459;width:35%;padding:6px 0;border-bottom:1px solid #e8dfd7;">Ville</td>
-          <td style="color:#1a1410;padding:6px 0;border-bottom:1px solid #e8dfd7;"><strong>{$ville}</strong></td>
+          <td style="color:#5a6275;width:35%;padding:6px 0;border-bottom:1px solid #dde1e8;">Ville</td>
+          <td style="color:#1a1a2e;padding:6px 0;border-bottom:1px solid #dde1e8;"><strong>{$ville}</strong></td>
         </tr>
         <tr>
-          <td style="color:#6b6459;padding:6px 0;border-bottom:1px solid #e8dfd7;">Estimation en ligne</td>
-          <td style="color:#1a1410;padding:6px 0;border-bottom:1px solid #e8dfd7;"><strong>{$estimation} &euro;</strong></td>
+          <td style="color:#5a6275;padding:6px 0;border-bottom:1px solid #dde1e8;">Estimation en ligne</td>
+          <td style="color:#1a1a2e;padding:6px 0;border-bottom:1px solid #dde1e8;"><strong>{$estimation} &euro;</strong></td>
         </tr>
         <tr>
-          <td style="color:#6b6459;padding:6px 0;border-bottom:1px solid #e8dfd7;">Délai souhaité</td>
-          <td style="color:#1a1410;padding:6px 0;border-bottom:1px solid #e8dfd7;">{$urgenceLabel}</td>
+          <td style="color:#5a6275;padding:6px 0;border-bottom:1px solid #dde1e8;">Délai souhaité</td>
+          <td style="color:#1a1a2e;padding:6px 0;border-bottom:1px solid #dde1e8;">{$urgenceLabel}</td>
         </tr>
         <tr>
-          <td style="color:#6b6459;padding:6px 0;border-bottom:1px solid #e8dfd7;">Motivation</td>
-          <td style="color:#1a1410;padding:6px 0;border-bottom:1px solid #e8dfd7;">{$motivationLabel}</td>
+          <td style="color:#5a6275;padding:6px 0;border-bottom:1px solid #dde1e8;">Motivation</td>
+          <td style="color:#1a1a2e;padding:6px 0;border-bottom:1px solid #dde1e8;">{$motivationLabel}</td>
         </tr>
         <tr>
-          <td style="color:#6b6459;padding:6px 0;">Notes</td>
-          <td style="color:#1a1410;padding:6px 0;">{$notes}</td>
+          <td style="color:#5a6275;padding:6px 0;">Notes</td>
+          <td style="color:#1a1a2e;padding:6px 0;">{$notes}</td>
         </tr>
       </table>
     </td>
@@ -246,9 +246,9 @@ HTML;
 
   <!-- Footer -->
   <tr>
-    <td style="background:#faf9f7;padding:20px 40px;text-align:center;border-top:1px solid #e8dfd7;">
-      <p style="margin:0;font-size:12px;color:#6b6459;">
-        Notification automatique &mdash; Estimation Immobilier Aix-en-Provence
+    <td style="background:#f7f8fa;padding:20px 40px;text-align:center;border-top:1px solid #dde1e8;">
+      <p style="margin:0;font-size:12px;color:#5a6275;">
+        Notification automatique &mdash; Estimation Immobilier Angers
       </p>
     </td>
   </tr>

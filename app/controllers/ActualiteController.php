@@ -33,8 +33,8 @@ final class ActualiteController
             'page' => $page,
             'totalPages' => $totalPages,
             'total' => $total,
-            'page_title' => 'Actualités Immobilières Aix-en-Provence',
-            'meta_description' => 'Suivez l\'actualité du marché immobilier à Aix-en-Provence et en Bouches-du-Rhône. Analyses, tendances des prix, projets urbains et conseils pour vendeurs.',
+            'page_title' => 'Actualités Immobilières Angers',
+            'meta_description' => 'Suivez l\'actualité du marché immobilier à Angers et en Maine-et-Loire. Analyses, tendances des prix, projets urbains et conseils pour vendeurs.',
         ]);
     }
 

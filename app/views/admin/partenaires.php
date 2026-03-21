@@ -65,7 +65,7 @@
     flex-shrink: 0;
   }
 
-  .stat-icon.partner { background: rgba(139,21,56,0.1); color: var(--admin-primary); }
+  .stat-icon.partner { background: rgba(30,58,95,0.1); color: var(--admin-primary); }
   .stat-icon.actif { background: rgba(34,197,94,0.1); color: #22c55e; }
   .stat-icon.mandats { background: rgba(59,130,246,0.1); color: #3b82f6; }
   .stat-icon.ca { background: rgba(245,158,11,0.1); color: #f59e0b; }

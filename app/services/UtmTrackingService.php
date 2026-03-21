@@ -10,7 +10,7 @@ namespace App\Services;
  * UTM parameters tracked:
  *  - utm_source   (e.g. google)
  *  - utm_medium   (e.g. cpc)
- *  - utm_campaign (e.g. estimation-aix)
+ *  - utm_campaign (e.g. estimation-angers)
  *  - utm_term     (e.g. estimation immobilière aix)
  *  - utm_content  (e.g. ad-variante-a)
  *  - gclid        (Google Click ID — auto-tagged by Google Ads)

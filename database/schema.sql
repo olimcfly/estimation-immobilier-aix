@@ -1,3 +1,9 @@
+-- =============================================
+-- Base de données : immobilier_aix
+-- Estimation Immobilier Aix-en-Provence
+-- =============================================
+
+-- 1. Articles de blog
 CREATE TABLE IF NOT EXISTS articles (
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     website_id INT UNSIGNED NOT NULL,
@@ -15,6 +21,7 @@ CREATE TABLE IF NOT EXISTS articles (
     INDEX idx_status_created_at (status, created_at)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+-- 2. Révisions d'articles
 CREATE TABLE IF NOT EXISTS article_revisions (
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     article_id INT UNSIGNED NOT NULL,
@@ -35,6 +42,7 @@ CREATE TABLE IF NOT EXISTS article_revisions (
         ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+-- 3. Leads (prospects)
 CREATE TABLE IF NOT EXISTS leads (
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     website_id INT UNSIGNED NOT NULL,
@@ -75,6 +83,7 @@ CREATE TABLE IF NOT EXISTS leads (
     INDEX idx_date_signature (date_signature)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+-- 4. Partenaires (agents immobiliers)
 CREATE TABLE IF NOT EXISTS partenaires (
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     website_id INT UNSIGNED NOT NULL,
@@ -96,6 +105,7 @@ CREATE TABLE IF NOT EXISTS partenaires (
     INDEX idx_email (email)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+-- 5. Administrateurs
 CREATE TABLE IF NOT EXISTS admin_users (
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     email VARCHAR(180) NOT NULL UNIQUE,
@@ -107,6 +117,7 @@ CREATE TABLE IF NOT EXISTS admin_users (
     INDEX idx_admin_email (email)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+-- 6. Abonnés newsletter
 CREATE TABLE IF NOT EXISTS newsletter_subscribers (
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     email VARCHAR(180) NOT NULL UNIQUE,
@@ -115,6 +126,7 @@ CREATE TABLE IF NOT EXISTS newsletter_subscribers (
     INDEX idx_newsletter_confirmed_at (confirmed_at)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+-- 7. Templates de design
 CREATE TABLE IF NOT EXISTS design_templates (
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     slug VARCHAR(100) NOT NULL UNIQUE,
@@ -122,6 +134,81 @@ CREATE TABLE IF NOT EXISTS design_templates (
     created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+-- 8. Templates d'emails
+CREATE TABLE IF NOT EXISTS email_templates (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    slug VARCHAR(100) NOT NULL UNIQUE,
+    name VARCHAR(255) NOT NULL,
+    subject VARCHAR(255) NOT NULL,
+    body_html LONGTEXT NOT NULL,
+    signature TEXT NULL,
+    category ENUM('notification', 'client', 'sequence', 'marketing') NOT NULL DEFAULT 'notification',
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    INDEX idx_category (category)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- 9. Logs d'emails envoyés
+CREATE TABLE IF NOT EXISTS email_logs (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    recipient VARCHAR(180) NOT NULL,
+    subject VARCHAR(255) NOT NULL,
+    body_html LONGTEXT NULL,
+    status ENUM('sent', 'failed') NOT NULL DEFAULT 'sent',
+    template_id INT UNSIGNED NULL,
+    sent_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    INDEX idx_recipient (recipient),
+    INDEX idx_status (status),
+    INDEX idx_sent_at (sent_at)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- 10. Séquences d'emails automatiques
+CREATE TABLE IF NOT EXISTS email_sequences (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    persona VARCHAR(50) NULL,
+    trigger_event VARCHAR(50) NOT NULL DEFAULT 'lead_created',
+    status ENUM('draft', 'active', 'paused') NOT NULL DEFAULT 'draft',
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    INDEX idx_status (status),
+    INDEX idx_persona (persona)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- 11. Étapes des séquences d'emails
+CREATE TABLE IF NOT EXISTS email_sequence_steps (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    sequence_id INT UNSIGNED NOT NULL,
+    step_order INT UNSIGNED NOT NULL DEFAULT 1,
+    delay_days INT UNSIGNED NOT NULL DEFAULT 0,
+    subject VARCHAR(255) NOT NULL,
+    body_html LONGTEXT NOT NULL,
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    INDEX idx_sequence_order (sequence_id, step_order),
+    CONSTRAINT fk_seq_steps_sequence
+        FOREIGN KEY (sequence_id) REFERENCES email_sequences(id)
+        ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- 12. Personas des leads (scoring neuro)
+CREATE TABLE IF NOT EXISTS lead_personas (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    lead_id INT UNSIGNED NOT NULL UNIQUE,
+    neuropersona VARCHAR(50) NULL,
+    bant_budget TEXT NULL,
+    bant_authority TEXT NULL,
+    bant_need TEXT NULL,
+    bant_timeline TEXT NULL,
+    notes TEXT NULL,
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    INDEX idx_neuropersona (neuropersona),
+    CONSTRAINT fk_persona_lead
+        FOREIGN KEY (lead_id) REFERENCES leads(id)
+        ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- 13. Actualités générées par IA
 CREATE TABLE IF NOT EXISTS actualites (
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     website_id INT UNSIGNED NOT NULL,
@@ -146,6 +233,7 @@ CREATE TABLE IF NOT EXISTS actualites (
     INDEX idx_actualites_created (created_at)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+-- 14. Log du cron des actualités
 CREATE TABLE IF NOT EXISTS actualites_cron_log (
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     website_id INT UNSIGNED NOT NULL,
@@ -157,3 +245,7 @@ CREATE TABLE IF NOT EXISTS actualites_cron_log (
     created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     INDEX idx_cron_log_website (website_id, created_at)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- 15. Admin par défaut
+INSERT IGNORE INTO admin_users (email, name, created_at)
+VALUES ('contact@estimation-immobilier-aix.fr', 'Administrateur', NOW());

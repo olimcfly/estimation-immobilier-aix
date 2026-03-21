@@ -247,6 +247,9 @@ $migrations = [
             CONSTRAINT fk_persona_lead
                 FOREIGN KEY (lead_id) REFERENCES leads(id)
                 ON DELETE CASCADE
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+    "],
+
     ['actualites', "
         CREATE TABLE IF NOT EXISTS actualites (
             id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
@@ -329,8 +332,7 @@ echo "  Tables ignorées : {$skipped}\n";
 
 // Final verification
 $finalTables = $pdo->query("SHOW TABLES")->fetchAll(\PDO::FETCH_COLUMN);
-$requiredTables = ['articles', 'article_revisions', 'leads', 'partenaires', 'admin_users', 'newsletter_subscribers', 'design_templates', 'email_templates', 'email_logs', 'email_sequences', 'email_sequence_steps', 'lead_personas'];
-$requiredTables = ['articles', 'article_revisions', 'leads', 'admin_users', 'newsletter_subscribers', 'design_templates', 'actualites', 'actualites_cron_log'];
+$requiredTables = ['articles', 'article_revisions', 'leads', 'partenaires', 'admin_users', 'newsletter_subscribers', 'design_templates', 'email_templates', 'email_logs', 'email_sequences', 'email_sequence_steps', 'lead_personas', 'actualites', 'actualites_cron_log'];
 $missing = array_diff($requiredTables, $finalTables);
 
 if (empty($missing)) {

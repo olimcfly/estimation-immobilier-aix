@@ -26,7 +26,7 @@ final class LandingPageController
 
     // ─── Landing Pages ───────────────────────────────────────
 
-    public function estimationAix-en-Provence(): void
+    public function estimationAix(): void
     {
         UtmTrackingService::capture();
 
@@ -38,7 +38,7 @@ final class LandingPageController
         ]);
     }
 
-    public function vendreMaisonAix-en-Provence(): void
+    public function vendreMaisonAix(): void
     {
         UtmTrackingService::capture();
 

@@ -153,8 +153,8 @@ $router->post('/admin/sequences/save-persona', [AdminSequenceController::class, 
 $router->get('/admin/sequences/article-suggestions', [AdminSequenceController::class, 'articleSuggestions']);
 
 // Google Ads Landing Pages (capture pages — no navigation)
-$router->get('/lp/estimation-aix', [LandingPageController::class, 'estimationAix-en-Provence']);
-$router->get('/lp/vendre-maison-aix', [LandingPageController::class, 'vendreMaisonAix-en-Provence']);
+$router->get('/lp/estimation-aix', [LandingPageController::class, 'estimationAix']);
+$router->get('/lp/vendre-maison-aix', [LandingPageController::class, 'vendreMaisonAix']);
 $router->get('/lp/avis-valeur-gratuit', [LandingPageController::class, 'avisValeurGratuit']);
 $router->post('/lp/submit', [LandingPageController::class, 'submitLead']);
 

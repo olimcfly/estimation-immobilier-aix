@@ -6,4 +6,4 @@ if (php_sapi_name() === 'cli-server') {
         return false;
     }
 }
-require __DIR__ . '/public/index.php';
+require __DIR__ . '/index.php';

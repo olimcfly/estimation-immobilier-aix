@@ -6,7 +6,7 @@ if (!defined('CITY_NAME')) {
     define('CITY_NAME', 'Aix-en-Provence');
 }
 if (!defined('CITY_REGION')) {
-    define('CITY_REGION', 'Provence-Alpes-Côte d'Azur');
+    define('CITY_REGION', 'Provence-Alpes-Côte d\'Azur');
 }
 if (!defined('CITY_CODE_POSTAL')) {
     define('CITY_CODE_POSTAL', '13100');

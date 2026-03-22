@@ -138,7 +138,7 @@ HTML;
 
     private static function sendAdminEmail(int $leadId, string $temperature, array $lead): void
     {
-        $adminEmail = (string) Config::get('mail.admin_email', 'contact@estimation-immobilier-aix.fr');
+        $adminEmail = (string) Config::get('mail.admin_email', 'contact@estimation-immobilier-aix-en-provence.fr');
 
         $nom = htmlspecialchars((string) $lead['nom'], ENT_QUOTES, 'UTF-8');
         $email = htmlspecialchars((string) $lead['email'], ENT_QUOTES, 'UTF-8');

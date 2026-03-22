@@ -52,7 +52,7 @@ final class Mailer
 
         try {
             $smtpHost = (string) Config::get('mail.smtp_host');
-            $fromAddress = (string) Config::get('mail.from', 'no-reply@estimation-immobilier-aix.fr');
+            $fromAddress = (string) Config::get('mail.from', 'no-reply@estimation-immobilier-aix-en-provence.fr');
             $fromName = (string) Config::get('mail.from_name', 'Estimation Immobilier Aix-en-Provence');
             $smtpUser = (string) Config::get('mail.smtp_user');
 

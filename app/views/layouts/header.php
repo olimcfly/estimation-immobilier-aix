@@ -29,7 +29,7 @@
   <meta property="og:url" content="<?= e($canonicalUrl) ?>">
   <meta property="og:locale" content="fr_FR">
   <meta property="og:site_name" content="Estimation Immobilier Aix-en-Provence">
-  <meta property="og:image" content="https://estimation-immobilier-aix.fr/assets/images/og-estimation-aix.png">
+  <meta property="og:image" content="https://estimation-immobilier-aix-en-provence.fr/assets/images/og-estimation-aix.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
 
@@ -37,7 +37,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="<?= isset($page_title) ? htmlspecialchars($page_title, ENT_QUOTES, 'UTF-8') : 'Estimation Immobilier Aix-en-Provence' ?>">
   <meta name="twitter:description" content="<?= htmlspecialchars((string) ($meta_description ?? 'Avis de valeur immobilier gratuit à Aix-en-Provence. Résultat en 60 secondes.'), ENT_QUOTES, 'UTF-8') ?>">
-  <meta name="twitter:image" content="https://estimation-immobilier-aix.fr/assets/images/og-estimation-aix.png">
+  <meta name="twitter:image" content="https://estimation-immobilier-aix-en-provence.fr/assets/images/og-estimation-aix.png">
 
   <!-- Schema.org JSON-LD -->
   <script type="application/ld+json">
@@ -46,9 +46,9 @@
     "@type": "RealEstateAgent",
     "name": "Estimation Immobilier Aix-en-Provence",
     "description": "Avis de valeur et estimation immobilière gratuite à Aix-en-Provence et en Bouches-du-Rhône.",
-    "url": "https://estimation-immobilier-aix.fr",
+    "url": "https://estimation-immobilier-aix-en-provence.fr",
     "telephone": "+33442000000",
-    "email": "contact@estimation-immobilier-aix.fr",
+    "email": "contact@estimation-immobilier-aix-en-provence.fr",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Aix-en-Provence",

@@ -47,9 +47,9 @@ return [
         'endpoint' => $_ENV['PERPLEXITY_ENDPOINT'] ?? 'https://api.perplexity.ai/chat/completions',
     ],
     'mail' => [
-        'from' => $_ENV['MAIL_FROM_ADDRESS'] ?? $_ENV['MAIL_FROM'] ?? 'contact@estimation-immobilier-aix.fr',
+        'from' => $_ENV['MAIL_FROM_ADDRESS'] ?? $_ENV['MAIL_FROM'] ?? 'contact@estimation-immobilier-aix-en-provence.fr',
         'from_name' => $_ENV['MAIL_FROM_NAME'] ?? 'Estimation Immobilier Aix-en-Provence',
-        'admin_email' => $_ENV['MAIL_ADMIN_EMAIL'] ?? $_ENV['MAIL_FROM_ADDRESS'] ?? $_ENV['MAIL_FROM'] ?? 'contact@estimation-immobilier-aix.fr',
+        'admin_email' => $_ENV['MAIL_ADMIN_EMAIL'] ?? $_ENV['MAIL_FROM_ADDRESS'] ?? $_ENV['MAIL_FROM'] ?? 'contact@estimation-immobilier-aix-en-provence.fr',
         'smtp_host' => $_ENV['MAIL_SMTP_HOST'] ?? $_ENV['MAIL_HOST'] ?? '',
         'smtp_port' => (int) ($_ENV['MAIL_SMTP_PORT'] ?? $_ENV['MAIL_PORT'] ?? 587),
         'smtp_user' => $_ENV['MAIL_SMTP_USER'] ?? $_ENV['MAIL_USERNAME'] ?? '',

@@ -16,15 +16,15 @@ use PHPMailer\PHPMailer\SMTP;
 
 $hosts = [
     'mail1.o2switch.net',
-    'mail.estimation-immobilier-aix.fr',
-    'estimation-immobilier-aix.fr',
+    'mail.estimation-immobilier-aix-en-provence.fr',
+    'estimation-immobilier-aix-en-provence.fr',
 ];
 
 $ports = [465, 587];
 
 $smtpUser = $_ENV['MAIL_SMTP_USER'] ?? $_ENV['MAIL_USERNAME'] ?? '';
 $smtpPass = $_ENV['MAIL_SMTP_PASS'] ?? $_ENV['MAIL_PASSWORD'] ?? '';
-$mailFrom = $_ENV['MAIL_FROM_ADDRESS'] ?? $_ENV['MAIL_FROM'] ?? 'contact@estimation-immobilier-aix.fr';
+$mailFrom = $_ENV['MAIL_FROM_ADDRESS'] ?? $_ENV['MAIL_FROM'] ?? 'contact@estimation-immobilier-aix-en-provence.fr';
 $mailTo   = $_ENV['MAIL_TEST_TO'] ?? $mailFrom;
 
 // Load .env if dotenv is available

@@ -51,7 +51,7 @@ $smtpPort       = (int) ($_ENV['MAIL_SMTP_PORT'] ?? $_ENV['MAIL_PORT']      ?? 5
 $smtpUser       = $_ENV['MAIL_SMTP_USER']        ?? $_ENV['MAIL_USERNAME']  ?? '';
 $smtpPass       = $_ENV['MAIL_SMTP_PASS']        ?? $_ENV['MAIL_PASSWORD']  ?? '';
 $smtpEncryption = $_ENV['MAIL_SMTP_ENCRYPTION']  ?? $_ENV['MAIL_ENCRYPTION'] ?? 'tls';
-$fromAddress    = $_ENV['MAIL_FROM_ADDRESS']      ?? $_ENV['MAIL_FROM']      ?? 'no-reply@estimation-immobilier-aix.fr';
+$fromAddress    = $_ENV['MAIL_FROM_ADDRESS']      ?? $_ENV['MAIL_FROM']      ?? 'no-reply@estimation-immobilier-aix-en-provence.fr';
 $fromName       = $_ENV['MAIL_FROM_NAME']         ?? 'Estimation Immobilier Aix-en-Provence';
 
 // Destinataire = argument CLI ou SMTP user par défaut (envoi à soi-même)

@@ -16,7 +16,7 @@ use App\Core\Config;
 use App\Core\Database;
 use App\Models\AdminUser;
 
-$adminEmail = $argv[1] ?? $_ENV['ADMIN_EMAIL'] ?? 'contact@estimation-immobilier-aix.fr';
+$adminEmail = $argv[1] ?? $_ENV['ADMIN_EMAIL'] ?? 'contact@estimation-immobilier-aix-en-provence.fr';
 
 echo "=== Initialisation de la base de données ===\n\n";
 

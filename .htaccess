@@ -1,4 +1,5 @@
 ServerSignature Off
+DirectorySlash Off
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
@@ -10,8 +11,9 @@ ServerSignature Off
   RewriteRule ^assets/(.*)$ public/assets/$1 [L]
 
   # Front controller fallback.
+  # IMPORTANT: PAS de !-d ici, sinon Apache sert les répertoires physiques
+  # (ex: public/admin/) au lieu de router vers PHP.
   RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule ^ index.php [L,QSA]
 </IfModule>
 

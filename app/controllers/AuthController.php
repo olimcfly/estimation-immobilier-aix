@@ -90,6 +90,9 @@ final class AuthController
             return;
         }
 
+        // Auto-provision: create admin_users table + seed admin if email matches env config
+        $this->autoProvisionAdmin($email);
+
         $user = AdminUser::findByEmail($email);
 
         if ($user === null) {
@@ -111,10 +114,12 @@ final class AuthController
         );
 
         if (!$sent) {
+            // Fallback: afficher le code à l'écran si SMTP échoue
             View::renderBare('admin/login', [
                 'page_title' => 'Connexion Admin - Estimation Immobilier Aix-en-Provence',
-                'step' => 'email',
-                'error_message' => 'Impossible d\'envoyer l\'email. Vérifiez la configuration SMTP.',
+                'step' => 'code',
+                'login_email' => $email,
+                'success_message' => 'SMTP indisponible — votre code de connexion est : <strong>' . htmlspecialchars($code, ENT_QUOTES, 'UTF-8') . '</strong>',
             ]);
             return;
         }
@@ -163,6 +168,26 @@ final class AuthController
 
         header('Location: /admin');
         exit;
+    }
+
+    private function autoProvisionAdmin(string $email): void
+    {
+        $allowedEmails = array_filter(array_map('trim', [
+            $_ENV['ADMIN_EMAIL'] ?? '',
+            $_ENV['MAIL_FROM_ADDRESS'] ?? '',
+            $_ENV['MAIL_USERNAME'] ?? '',
+        ]));
+
+        if ($allowedEmails === [] || !in_array($email, $allowedEmails, true)) {
+            return;
+        }
+
+        try {
+            AdminUser::createTable();
+            AdminUser::seedDefaultAdmin($email);
+        } catch (\Throwable $e) {
+            error_log('Auto-provision admin failed: ' . $e->getMessage());
+        }
     }
 
     private function buildCodeEmail(string $code, string $name): string
@@ -294,8 +319,11 @@ final class AuthController
         return $_SESSION['csrf_token'];
     }
 
-    private function verifyCsrfToken(string $token): bool
+    public static function verifyCsrfToken(?string $token = null): bool
     {
+        if ($token === null) {
+            $token = (string) ($_POST['csrf_token'] ?? '');
+        }
         $sessionToken = $_SESSION['csrf_token'] ?? '';
         if ($sessionToken === '' || $token === '') {
             return false;

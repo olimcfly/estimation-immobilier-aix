@@ -20,6 +20,6 @@
     <p>Hébergement technique assuré par un prestataire cloud situé dans l’Union européenne.</p>
 
     <h2>Contact</h2>
-    <p>Email : <a href="mailto:contact@estimation-immobilier-aix.fr">contact@estimation-immobilier-aix.fr</a> — Téléphone : +33 5 56 00 00 00.</p>
+    <p>Email : <a href="mailto:contact@estimation-immobilier-aix-en-provence.fr">contact@estimation-immobilier-aix-en-provence.fr</a> — Téléphone : +33 5 56 00 00 00.</p>
   </div>
 </section>

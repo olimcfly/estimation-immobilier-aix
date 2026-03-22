@@ -92,9 +92,9 @@
             </a>
           </li>
           <li>
-            <a href="mailto:contact@estimation-immobilier-aix.fr">
+            <a href="mailto:contact@estimation-immobilier-aix-en-provence.fr">
               <i class="fas fa-envelope"></i>
-              <span>contact@estimation-immobilier-aix.fr</span>
+              <span>contact@estimation-immobilier-aix-en-provence.fr</span>
             </a>
           </li>
         </ul>

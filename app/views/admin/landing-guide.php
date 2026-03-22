@@ -100,7 +100,7 @@
 
     <h4 style="margin: 1.5rem 0 0.8rem; font-size: 0.95rem; font-weight: 700;">Exemple d'URL complète avec UTM :</h4>
     <div class="guide-code">
-<span class="string">https://estimation-immobilier-aix.fr/lp/estimation-aix</span>
+<span class="string">https://estimation-immobilier-aix-en-provence.fr/lp/estimation-aix</span>
   <span class="tag">?utm_source=</span><span class="string">google</span>
   <span class="tag">&amp;utm_medium=</span><span class="string">cpc</span>
   <span class="tag">&amp;utm_campaign=</span><span class="string">estimation-aix-2024</span>
@@ -141,13 +141,13 @@
     </p>
     <div class="guide-code">
 <span class="comment">-- Campagne "Estimation Aix-en-Provence" --</span>
-<span class="string">https://estimation-immobilier-aix.fr/lp/estimation-aix</span>
+<span class="string">https://estimation-immobilier-aix-en-provence.fr/lp/estimation-aix</span>
 
 <span class="comment">-- Campagne "Vendre Maison" --</span>
-<span class="string">https://estimation-immobilier-aix.fr/lp/vendre-maison-aix</span>
+<span class="string">https://estimation-immobilier-aix-en-provence.fr/lp/vendre-maison-aix</span>
 
 <span class="comment">-- Campagne "Avis de Valeur" --</span>
-<span class="string">https://estimation-immobilier-aix.fr/lp/avis-valeur-gratuit</span>
+<span class="string">https://estimation-immobilier-aix-en-provence.fr/lp/avis-valeur-gratuit</span>
     </div>
 
     <h4 style="margin: 1rem 0 0.8rem; font-size: 0.95rem; font-weight: 700;">4. Configurer le suivi de conversion</h4>
@@ -286,7 +286,7 @@
 <span class="keyword">Description 1 :</span> <span class="string">Obtenez une estimation gratuite de votre bien à Aix-en-Provence. Données du marché réel, résultat en 60 secondes. Sans engagement.</span>
 <span class="keyword">Description 2 :</span> <span class="string">Plus de 2 400 estimations réalisées à Aix-en-Provence. Note 4.8/5. Un expert vous rappelle sous 24h.</span>
 
-<span class="keyword">URL finale :</span> <span class="string">https://estimation-immobilier-aix.fr/lp/estimation-aix</span>
+<span class="keyword">URL finale :</span> <span class="string">https://estimation-immobilier-aix-en-provence.fr/lp/estimation-aix</span>
     </div>
 
     <h4 style="margin: 1.5rem 0 0.8rem; font-size: 0.95rem; font-weight: 700;">
@@ -300,7 +300,7 @@
 <span class="keyword">Description 1 :</span> <span class="string">Vendez votre maison au meilleur prix. Estimation gratuite basée sur le marché de aix-en-provence actuel. Expert local.</span>
 <span class="keyword">Description 2 :</span> <span class="string">Fixez le bon prix dès le départ. Rappel expert sous 24h. Service 100% gratuit, sans engagement.</span>
 
-<span class="keyword">URL finale :</span> <span class="string">https://estimation-immobilier-aix.fr/lp/vendre-maison-aix</span>
+<span class="keyword">URL finale :</span> <span class="string">https://estimation-immobilier-aix-en-provence.fr/lp/vendre-maison-aix</span>
     </div>
 
     <h4 style="margin: 1.5rem 0 0.8rem; font-size: 0.95rem; font-weight: 700;">
@@ -314,7 +314,7 @@
 <span class="keyword">Description 1 :</span> <span class="string">Recevez un avis de valeur gratuit pour votre bien à Aix-en-Provence. Analyse experte basée sur le marché actuel.</span>
 <span class="keyword">Description 2 :</span> <span class="string">Idéal pour vente, succession ou divorce. Avis professionnel affiné par un expert. Résultat sous 24h.</span>
 
-<span class="keyword">URL finale :</span> <span class="string">https://estimation-immobilier-aix.fr/lp/avis-valeur-gratuit</span>
+<span class="keyword">URL finale :</span> <span class="string">https://estimation-immobilier-aix-en-provence.fr/lp/avis-valeur-gratuit</span>
     </div>
   </div>
 

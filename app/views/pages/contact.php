@@ -60,8 +60,8 @@
             <i class="fas fa-envelope"></i> Email
           </p>
           <p class="info-value">
-            <a href="mailto:contact@estimation-immobilier-aix.fr">
-              contact@estimation-immobilier-aix.fr
+            <a href="mailto:contact@estimation-immobilier-aix-en-provence.fr">
+              contact@estimation-immobilier-aix-en-provence.fr
             </a>
           </p>
           <p class="info-desc">
@@ -257,7 +257,7 @@
           Envoyez-nous un email détaillé. Notre équipe vous répond en moins de 24h. 
           Idéal pour les questions complexes.
         </p>
-        <a href="mailto:contact@estimation-immobilier-aix.fr" class="btn btn-small" style="margin-top: 1rem;">
+        <a href="mailto:contact@estimation-immobilier-aix-en-provence.fr" class="btn btn-small" style="margin-top: 1rem;">
           <i class="fas fa-envelope"></i> Envoyer un email
         </a>
       </article>
